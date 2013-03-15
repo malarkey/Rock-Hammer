@@ -31,29 +31,6 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
 <head>
 <title>Rock Hammer</title>
-
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="cleartype" content="on">
@@ -118,10 +95,9 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 <div class="hero-unit">
 <h1>Rock Hammer</h1>
 <p>A curated project library for <a href="http://hammerformac.com">Hammer For Mac</a>. Rock Hammer contains baseline typography, plus styling for common HTML elements including images, forms and tables, as well as navigation, responsive modules and widgets</p>
-<p class="secondary"><a href="#" class="btn btn-large">Download the complete Rock Hammer</a> or just the <a href="#">Build folder</a></p>
+<p class="secondary"><a href="https://github.com/malarkey/rock-hammer/zipball/master" class="btn btn-large">Download the complete Rock Hammer</a></p>
 <ul class="secondary inline">
-<li><a href="#">Rock Hammer on Github</a></li>
-<li><a href="#">Tweet about Rock Hammer</a></li>
+<li><a href="https://github.com/malarkey/Rock-Hammer">Rock Hammer on Github</a></li>
 </ul>
 </div>
 
