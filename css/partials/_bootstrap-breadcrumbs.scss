@@ -1,0 +1,32 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/breadcrumbs.less
+
+.breadcrumb {
+list-style-type : none;
+margin : 0 0 $baselineheight;
+padding : $baselineheight / 2 $gutterwidth / 2;
+background-color : $breadcrumbbackgroundcolor;
+// @include breadcrumbgrad;
+border : $breadcrumbborderwidth $breadcrumbborderstyle $breadcrumbbordercolor;
+border-radius : $breadcrumbborderradius;
+@include font-size($breadcrumbfontsize);
+color : $breadcrumbcolor;
+
+> li {
+display : inline-block;
+*display : inline; 
+*zoom : 1;
+
+a {
+color : $linkcolor; }
+
+> .divider {
+color : $midneutralcolor; }
+}/*li*/
+
+> .active {
+color : $lightneutralcolor; }
+}/*breadcrumb*/

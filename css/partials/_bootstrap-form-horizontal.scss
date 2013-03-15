@@ -1,0 +1,71 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/forms.less
+
+.form-horizontal {
+
+.control-group {
+margin-bottom : $baselineheight;
+@include clearfix; }
+
+.control-label {
+float : left;
+width : 49%;
+padding-top : 5px;
+padding-right : $gutterwidth;
+text-align : right;
+@include box-sizing(border-box); }
+
+.controls {
+*display : inline-block;
+margin-left : 49%;
+*margin-left : 0;
+*padding-left : $gutterwidth;
+
+&:first-child {
+*padding-left : $gutterwidth; }
+}/*controls*/
+
+.help-block {
+margin-bottom : 0; }
+
+input,
+select,
+textarea {
+
++ .help-block {
+margin-top : $baselineheight / 2; }
+}/*input*/
+
+.form-actions {
+padding-left : 49%; }
+}
+
+.form-horizontal {
+
+input,
+textarea,
+select {
+display : inline-block;
+*display: inline;
+*zoom : 1;
+margin-bottom : 0;
+vertical-align : middle; }
+
+.hide {
+display : none; }
+
+label,
+.btn-group {
+display : inline-block; }
+
+.control-group {
+margin-bottom : $baselineheight / 2; }
+
+legend + .control-group {
+margin-top : $baselineheight;
+-webkit-margin-top-collapse : separate; }
+
+}/*form-horizontal*/

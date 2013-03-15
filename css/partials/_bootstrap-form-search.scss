@@ -1,0 +1,69 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/forms.less
+
+input.search-query {
+margin-bottom : 0;
+padding-right : 14px;
+padding-right : 4px \ 9;
+padding-left : 14px;
+padding-left : 4px \9;
+border-radius : 0; }
+
+.form-search .input-append .search-query,
+.form-search .input-prepend .search-query {
+border-radius : 0; }
+
+.form-search .input-append .search-query {
+border-radius : 14px, 0, 0, 14px; }
+
+.form-search .input-append .btn {
+border-radius : 0, 14px, 14px, 0; }
+
+.form-search .input-prepend .search-query {
+border-radius : 0, 14px, 14px, 0; }
+
+.form-search .input-prepend .btn {
+border-radius : 14px, 0, 0, 14px; }
+
+.form-search {
+
+input,
+textarea,
+select {
+display : inline-block;
+*display: inline;
+*zoom: 1;
+margin-bottom : 0;
+vertical-align : middle; }
+
+.hide {
+display : none; }
+
+label,
+.btn-group {
+display : inline-block; }
+
+.radio,
+.checkbox {
+margin-bottom : 0;
+padding-left : 0;
+vertical-align : middle; }
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+float : left;
+margin {
+right : 3px;
+left : 0; }
+}/*radio*/
+
+.control-group {
+margin-bottom : $baselineheight / 2; }
+
+legend + .control-group {
+margin-top : $baselineheight;
+-webkit-margin-top-collapse : separate; }
+}/*form-search*/

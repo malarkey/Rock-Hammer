@@ -1,0 +1,98 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/pagination.less
+
+.pagination {
+margin : 0 0 $baselineheight 0; }
+
+.pagination ul {
+display : inline-block;
+margin-left : 0;
+margin-bottom : 0;
+padding : 0; }
+
+.pagination ul > li {
+display : inline; }
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+float : left; 
+padding : $paginationpadding;
+font-family : $paginationfontfamily;
+@include font-size($basefontsize / 1.25);
+line-height : $baselineheight;
+text-decoration : none;
+background-color : $paginationbackgroundcolor;
+// @include paginationgrad;
+border : $paginationborderwidth $paginationborderstyle $paginationbordercolor;
+border-left-width : 0;
+color : $linkcolor; }
+
+.pagination ul > li > a:hover {
+background-color : $paginationbackgroundcolorhover;
+color : $paginationlinkcolorhover; }
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+background-color : $paginationbackgroundcoloractive;
+color : $paginationlinkcoloractive;
+text-decoration : none;
+cursor : default; }
+
+.pagination ul > .active > a:hover {
+background-color : $navbarlinkbackgroundcoloractive; }
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover {
+background-color : transparent;
+color : $lightneutralcolor;
+cursor : default; }
+
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+background-color : $paginationendbackgroundcolor;
+border-left-width : 1px;
+border-top-left-radius : $paginationborderradius; 
+border-bottom-left-radius : $paginationborderradius;
+color : $paginationendcolor; }
+
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+background-color : $paginationendbackgroundcolor;
+border-top-right-radius : $paginationborderradius; 
+border-bottom-right-radius : $paginationborderradius; 
+color : $paginationendcolor; }
+
+// alignment
+
+.pagination-centered {
+text-align : center; }
+
+.pagination-right {
+text-align : right; }
+
+// sizes
+
+.pagination-large {
+ul > li > a,
+ul > li > span {
+padding : 8px 22px;
+@include font-size(16); }
+}
+
+.pagination-small {
+ul > li > a,
+ul > li > span {
+padding : 4px 11px;
+@include font-size(14); }
+}
+
+.pagination-mini {
+ul > li > a,
+ul > li > span {
+padding : 2px 5px;
+@include font-size(12); }
+}

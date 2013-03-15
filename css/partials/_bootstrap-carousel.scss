@@ -1,0 +1,101 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/carousel.less
+
+.carousel {
+position : relative;
+margin-bottom : $baselineheight;
+line-height : 1; }
+
+.carousel-inner {
+position : relative;
+overflow : hidden;
+width : 100%;
+
+> .item {
+display : none;
+position : relative;
+@include transition (left $transitionduration ease); }
+
+> .item > img {
+display : block;
+line-height : 1; }
+
+> .active,
+> .next,
+> .prev { 
+display : block; }
+
+> .active {
+left : 0; }
+
+> .next,
+> .prev {
+position : absolute;
+top : 0;
+width : 100%; }
+
+> .next {
+left : 100%; }
+
+> .prev {
+left : -100%; }
+
+> .next.left,
+> .prev.right {
+left : 0; }
+
+> .active.left {
+left : -100%; }
+
+> .active.right {
+left : 100%; }
+}/*carousel-inner*/
+
+.carousel-control {
+position : absolute;
+top : 200px;
+left : -$gutterwidth;
+width : 40px;
+height : 40px;
+font {
+size : 60px;
+weight : 100; }
+line-height : 40px;
+color : $white;
+text-align : center;
+background-color : $primarycolor;
+border-radius : 23px;
+@include transition (background-color $transitionduration ease);
+
+&.right {
+left : auto;
+right : -$gutterwidth; }
+
+&:hover {
+background-color : darken($primarycolor,5%);
+color : $white;
+text-decoration : none; }
+}/*carousel-control*/
+
+.carousel-caption {
+position : absolute;
+left : 0;
+right : 0;
+bottom : 0;
+padding : 15px;
+background-color : $darkneutralcolor;
+background-color : rgba(0,0,0,.75); }
+
+.carousel-caption h4,
+.carousel-caption p {
+color : $white;
+line-height : $baselineheight; }
+
+.carousel-caption h4 {
+margin : 0 0 5px; }
+
+.carousel-caption p {
+margin-bottom : 0; }

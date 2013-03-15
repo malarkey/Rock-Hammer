@@ -1,0 +1,92 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/navbar.less
+
+.navbar {
+*position : relative;
+*z-index : 2;
+overflow : visible;
+margin : 0 0 $baselineheight 0; }
+
+.navbar__inner {
+min-height : $navbarheight;
+padding {
+left :  $gutterwidth;
+right : $gutterwidth; }
+background-color : $navbarbackgroundcolor;
+// @include navbargrad;
+border : $navbarborderwidth $navbarborderstyle $navbarbordercolor;
+border-radius : $navbarborderradius;
+@include clearfix; }
+
+.navbar .container {
+width : auto; }
+
+.nav-collapse.collapse {
+overflow : visible;
+height : auto; }
+
+.navbar__brand {
+float : left;
+display : block;
+padding : $baselineheight / 2 $gutterwidth;
+@include font-size($basefontsize / 1.25);
+color : $navbarbrandcolor; 
+
+&:hover {
+text-decoration : none; }
+}/*navbar__brand*/
+
+.navbar-text {
+margin-bottom : 0;
+line-height : $navbarheight;
+color : $navbarcolor; }
+
+.navbar-link {
+color : $navbarlinkcolor;
+
+&:hover {
+color : $navbarlinkcolorhover; }
+}/*navbar-text*/
+
+.navbar .divider-vertical {
+height : $navbarheight;
+margin : 0;
+border-left : 1px solid $navbardividerleft;
+border-right : 1px solid $navbardividerright; }
+
+.navbar .nav {
+display : block;
+position : relative;
+left : 0;
+float : left;
+margin : 0 $gutterwidth / 2 0 0; }
+
+.navbar .nav.pull-right {
+float : right; 
+margin-right : 0; }
+
+.navbar .nav > li {
+float : left; }
+
+.navbar .nav > li > a {
+float : none;
+padding : $baselineheight / 2 $gutterwidth;
+color : $navbarlinkcolor;
+@include font-size($basefontsize / 1.25);
+text-decoration : none; }
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+background-color : $navbarlinkbackgroundcolorhover;   
+color : $navbarlinkcolorhover;
+text-decoration : none; }
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+background-color : $navbarlinkbackgroundcoloractive;
+color : $navbarlinkcoloractive;
+text-decoration : none; }

@@ -1,0 +1,15 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
+body:after {
+content : 'bp5';
+display : none; }
+
+.t-hide {
+display : inline-block !important; 
+visibility : visible; }
+
+.d-hide {
+@include hidden; }

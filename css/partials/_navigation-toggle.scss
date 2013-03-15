@@ -1,0 +1,44 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: http://codepen.io/bradfrost/pen/sHvaz
+
+.navigation-toggle {
+float : right;
+display : block;
+padding : $baselineheight / 2 $gutterwidth / 2; }
+
+nav[role=navigation] {
+clear : both;
+background-color : $navigationbackgroundcolor;
+// @include navigationgrad;
+@include transition (all $transitionduration ease); }
+
+.js nav[role=navigation] {
+overflow : hidden;
+max-height : 0; }
+
+nav[role=navigation].active {
+max-height : 25em; }
+
+#navigation-toggle {
+list-style-type : none;
+@include zero;
+
+ul {
+list-style-type : none;
+@include zero; }
+
+a {
+display : block;
+padding : .8em;
+border-bottom : $navigationborderwidth $navigationborderstyle $navigationbordercolor;
+color : $navigationlinkcolor;
+text-transform : uppercase;
+
+&:hover {
+color : $navigationlinkcolorhover;
+text-decoration : none; }
+}
+}

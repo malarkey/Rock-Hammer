@@ -1,0 +1,37 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/forms.less
+
+.help-block,
+.help-inline {
+color : $formhelpcolor; 
+@include font-size($basefontsize / 1.25);
+line-height : 1.4; }
+
+.help-block {
+display : block; 
+margin-bottom : $baselineheight / 2; }
+
+.help-inline {
+display : inline-block;
+*display : inline;
+*zoom : 1;
+vertical-align : middle;
+padding-left : $gutterwidth / 2; }
+
+.help-block,
+.help-inline {
+color : $formhelpcolor; }
+
+.help-block {
+display : block; 
+margin-bottom : $baselineheight / 2; }
+
+.help-inline {
+display : inline-block;
+*display : inline;
+*zoom : 1;
+vertical-align : middle;
+padding-left : $gutterwidth; }

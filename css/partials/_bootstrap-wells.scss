@@ -1,0 +1,27 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/wells.less
+
+.well {
+min-height : 20px;
+padding : $gutterwidth / 2;
+margin-bottom : $baselineheight;
+background-color : $wellbackgroundcolor;
+border : $wellborderwidth $wellborderstyle $wellbordercolor;
+border-radius : $wellborderradius;
+@include box-shadow(inset 0 1px $wellshadowblur $wellshadow); 
+color : $wellcolor;
+
+p:last-child {
+margin-bottom : 0; }
+}
+
+.well--large {
+padding : $gutterwidth;
+@include box-shadow(inset 0 1px $wellshadowblur * 2 $wellshadow); }
+
+.well--small {
+padding : $gutterwidth / 4;
+@include box-shadow(inset 0 1px $wellshadowblur / 2 $wellshadow);  }

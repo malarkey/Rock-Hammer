@@ -1,0 +1,21 @@
+/* 
+
+Built on Rock Hammer by Stuff and Nonsense
+URL: http://stuffandnonsense.co.uk/projects/rock-hammer/ 
+
+*/
+
+// Define the ‘atmosphere’ of your design in this config file
+@import "config";
+
+// Sass mixins
+@import "partials/mixins";
+
+// All responsive design breakpoints
+@import "partials/bp2"; 
+@import "partials/bp3"; 
+@import "partials/bp4"; 
+@import "partials/bp5"; 
+@import "partials/bp6"; 
+
+// IE override styles

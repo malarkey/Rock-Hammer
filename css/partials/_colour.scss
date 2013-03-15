@@ -1,0 +1,157 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
+a {
+text-decoration : none;
+color : $linkcolor;
+
+&:visited {
+color : $linkcolorvisited; }
+
+&:hover {
+text-decoration : underline;
+color : $linkcolorhover; }
+
+&:focus {
+outline : thin dotted;
+color : $linkcolorfocus; }
+
+&:hover,
+&:active {
+outline : 0; }
+}
+
+::-moz-selection {
+background-color : lighten($primarycolor, 65%);
+color : $primarycolor;
+text-shadow : none; }
+
+::selection {
+background-color : lighten($primarycolor, 65%);
+color : $primarycolor;
+text-shadow : none; }
+
+// swatches
+
+.swatch {
+margin : 0 0 $baselineheight 0;
+padding : 0; }
+
+.swatch-row {
+display : block; 
+margin : 0;
+padding : 0;
+width : 200px;
+@include clearfix; }
+
+.swatch-row-one {
+background-color : rgb(0,0,0); }
+
+.swatch-row-two {
+background-color : rgb(255,255,255); }
+
+.swatch-row span {
+display : block;
+float : left; 
+width : 50px;
+height : 50px; }
+
+// base (primary)
+
+.swatch-base span:nth-child(1) {
+background-color : rgba($primarycolor,.9); }
+
+.swatch-base span:nth-child(2) {
+background-color : rgba($primarycolor,.8); }
+
+.swatch-base span:nth-child(3) {
+background-color : rgba($primarycolor,.7); }
+
+.swatch-base span:nth-child(4) {
+background-color : rgba($primarycolor,.6); }
+
+// secondary
+
+.swatch-secondary span:nth-child(1) {
+background-color : rgba($secondarycolor,.9); }
+
+.swatch-secondary span:nth-child(2) {
+background-color : rgba($secondarycolor,.8); }
+
+.swatch-secondary span:nth-child(3) {
+background-color : rgba($secondarycolor,.7); }
+
+.swatch-secondary span:nth-child(4) {
+background-color : rgba($secondarycolor,.6); }
+
+// tertiary
+
+.swatch-tertiary span:nth-child(1) {
+background-color : rgba($tertiarycolor,.9); }
+
+.swatch-tertiary span:nth-child(2) {
+background-color : rgba($tertiarycolor,.8); }
+
+.swatch-tertiary span:nth-child(3) {
+background-color : rgba($tertiarycolor,.7); }
+
+.swatch-tertiary span:nth-child(4) {
+background-color : rgba($tertiarycolor,.6); }
+
+// neutral
+
+.swatch-neutral span:nth-child(1) {
+background-color : rgba($neutralcolor,.9); }
+
+.swatch-neutral span:nth-child(2) {
+background-color : rgba($neutralcolor,.8); }
+
+.swatch-neutral span:nth-child(3) {
+background-color : rgba($neutralcolor,.7); }
+
+.swatch-neutral span:nth-child(4) {
+background-color : rgba($neutralcolor,.6); }
+
+// error
+
+.swatch-error span:nth-child(1) {
+background-color : rgba($errorcolor,.9); }
+
+.swatch-error span:nth-child(2) {
+background-color : rgba($errorcolor,.8); }
+
+.swatch-error span:nth-child(3) {
+background-color : rgba($errorcolor,.7); }
+
+.swatch-error span:nth-child(4) {
+background-color : rgba($errorcolor,.6); }
+
+// info
+
+.swatch-info span:nth-child(1) {
+background-color : rgba($infocolor,.9); }
+
+.swatch-info span:nth-child(2) {
+background-color : rgba($infocolor,.8); }
+
+.swatch-info span:nth-child(3) {
+background-color : rgba($infocolor,.7); }
+
+.swatch-info span:nth-child(4) {
+background-color : rgba($infocolor,.6); }
+
+// success
+
+.swatch-success span:nth-child(1) {
+background-color : rgba($successcolor,.9); }
+
+.swatch-success span:nth-child(2) {
+background-color : rgba($successcolor,.8); }
+
+.swatch-success span:nth-child(3) {
+background-color : rgba($successcolor,.7); }
+
+.swatch-success span:nth-child(4) {
+background-color : rgba($successcolor,.6); }

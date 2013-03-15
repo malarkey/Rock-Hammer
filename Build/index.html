@@ -1,0 +1,2006 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+
+<!-- 
+Rock Hammer by Andy Clarke
+Version: 0.1
+URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+-->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+<title>Rock Hammer</title>
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- For all browsers -->
+<link rel='stylesheet' href='css/rock-hammer.css'>
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<script src='js/vendor/selectivizr-min.js'></script>
+<link rel='stylesheet' href='css/lte-ie8.css'>
+<![endif]-->
+
+<!-- JavaScript -->
+<script src='js/vendor/modernizr-2.6.2-min.js'></script>
+
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="shortcut icon" href="img/favicon.png">
+<!-- <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png"> -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon-72x72-precomposed.png"> -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon-114x114-precomposed.png"> -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/h/apple-touch-icon-144x144-precomposed.png"> -->
+<!--iOS -->
+<!-- <meta name="apple-mobile-web-app-title" content="Rock Hammer"> -->
+<!-- <meta name="viewport" content="initial-scale=1.0"> (Use if apple-mobile-web-app-capable below is set to yes) -->
+<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+<!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+<!-- Startup images -->
+<!-- <link rel="apple-touch-startup-image" href="img/startup/startup-320x460.png" media="screen and (max-device-width:320px)"> -->
+<!-- <link rel="apple-touch-startup-image" href="img/startup/startup-640x920.png" media="(max-device-width:480px) and (-webkit-min-device-pixel-ratio:2)"> -->
+<!-- <link rel="apple-touch-startup-image" href="img/startup/startup-640x1096.png" media="(max-device-width:548px) and (-webkit-min-device-pixel-ratio:2)"> -->
+<!-- <link rel="apple-touch-startup-image" sizes="1024x748" href="img/startup/startup-1024x748.png" media="screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:landscape)"> -->
+<!-- <link rel="apple-touch-startup-image" sizes="768x1004" href="img/startup/startup-768x1004.png" media="screen and (min-device-width:481px) and (max-device-width:1024px) and (orientation:portrait)"> -->
+<!-- Windows 8 / RT -->
+<meta name="msapplication-TileImage" content="img/h/apple-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#000">
+</head>
+
+<body class="samples" id="rock-hammer">
+
+<a href="#navigation-toggle" class="navigation-toggle">Menu</a>
+<nav id="navigation-toggle" role="navigation">
+<ul>
+<li><a href="#panel-typography">Typography</a></li>
+<li><a href="#panel-colour">Colour</a></li>
+<li><a href="#panel-images">Images</a></li>
+<li><a href="#panel-navigation">Navigation</a></li>
+<li><a href="#panel-modules">Modules</a></li>
+<li><a href="#panel-forms">Forms</a></li>
+<li><a href="#panel-tables">Tables</a></li>
+<li><a href="#panel-widgets">Widgets</a></li>
+</ul>
+</nav>
+
+<div class="container">
+
+<section class="l-panel l-introduction">
+
+<div class="hero-unit">
+<h1>Rock Hammer</h1>
+<p>A curated project library for <a href="http://hammerformac.com">Hammer For Mac</a>. Rock Hammer contains baseline typography, plus styling for common HTML elements including images, forms and tables, as well as navigation, responsive modules and widgets</p>
+<p class="secondary"><a href="#" class="btn btn-large">Download the complete Rock Hammer</a> or just the <a href="#">Build folder</a></p>
+<ul class="secondary inline">
+<li><a href="#">Rock Hammer on Github</a></li>
+<li><a href="#">Tweet about Rock Hammer</a></li>
+</ul>
+</div>
+
+</section><!-- section -->
+
+<!-- Next ============================== -->
+
+<section class="l-panel" id="panel-typography">
+
+<div class="l-trigger">
+<div class="l-wrap">
+<div class="l-summary">
+<h1><a href="#panel-typography-hidden" data-toggle="collapse" data-target="#panel-typography-hidden">Typography</a></h1>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>Rock Hammer&#8217;s baseline typography defaults including headings, block and text-level text elements and all types of lists.</p>
+<p><a href="#rock-hammer" title="Go to top">Top</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+</div><!-- l-trigger -->
+
+<div class="l-hidden collapse" id="panel-typography-hidden">
+
+<!-- examples start -->
+
+<div class="l-wrap">
+<h2>Headings</h2>
+
+<div class="l-summary">
+<p>First-level headings are marked up using <code>&#8249;h1&#8250;</code> tags.</p>
+<p class="secondary"><b>Typeface:</b> CaeciliaLTStd-Roman</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<h1>Heading level one</h1>
+<p>The heading above is a first-level, heading one that may be used for page titles as well as titles in sectioning elements including <code>&#8249;body&#8250;</code>, <code>&#8249;section&#8250;</code> and <code>&#8249;article&#8250;</code>.</p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<p>Second-level headings are marked up using <code>&#8249;h2&#8250;</code> tags.</p>
+<p class="secondary"><b>Typeface:</b> CaeciliaLTStd-Roman</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<h2>Heading level two</h2>
+
+<p>The heading above is a second-level, heading two. You may use more than one to create a document, section or article outline.</p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<p>Third-level headings are marked up using <code>&#8249;h3&#8250;</code> tags.</p>
+<p class="secondary"><b>Typeface:</b> CaeciliaLTStd-Roman</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<h3>Heading level three</h3>
+
+<p>The heading above is a third-level, heading three. You may use more than one to create a document, section or article outline.</p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<p>Fourth, fifth and sixth level headings are marked up using <code>&#8249;h4&#8250; &#8249;h5&#8250; &#8249;h6&#8250;</code> tags.</p>
+<p class="secondary"><b>Typeface:</b> CaeciliaLTStd-Roman</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<p>The headings above are a fourth, fifth and sixth level, headings four, five and six. Use to create a document, section or article outline.</p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Paragraphs</h2>
+
+<div class="l-summary">
+<h3>Unclassified paragraph</h3>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Lead paragraph</h3>
+<p>An additional <code>lead</code> class alters a paragraph&#8217;s presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p class="lead">A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Secondary paragraph</h3>
+<p>An additional <code>secondary</code> class alters a paragraph&#8217;s presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p class="secondary">A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Tertiary paragraph</h3>
+<p>An additional <code>tertiary</code> class alters a paragraph&#8217;s presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p class="tertiary">A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Quotations</h2>
+
+<div class="l-summary"> 
+<p>Block quotes are marked up using <code>&#8249;blockquote&#8250;</code> tags. You may use an optional <code>&#8249;cite&#8250;</code> element to cite an attribution.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<blockquote>
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+<small><cite>Rock Hammer</cite></small>
+</blockquote>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+
+<div class="l-summary">
+<p>An additional <code>pull-right</code> class alters a block quote&#8217;s presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<blockquote class="pull-right">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+<small><cite>Rock Hammer</cite></small>
+</blockquote>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Lists</h2>
+
+<div class="l-summary">
+<p class="secondary">There are several types of HTML list. List items are marked up using <code>&#8249;li&#8250;</code>.</p>
+
+<ul style="margin-left:22px;padding-left:22px;">
+<li style="float:left;width:32px;list-style-type:disc;font-size:6.4rem;"></li>
+<li style="float:left;width:32px;list-style-type:circle;font-size:6.4rem;"></li>
+<li style="float:left;width:32px;list-style-type:square;font-size:6.4rem;"></li>
+<li style="float:left;width:32px;list-style-type:decimal;font-size:3rem;"></li>
+<li style="float:left;width:32px;list-style-type:lower-alpha;font-size:3rem;"></li>
+</ul>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<ul style="margin-bottom:3rem;margin-left:22px;font-size:1.4rem;overflow:hidden;">
+<li style="float:left;width:49%;list-style-type:none;">None</li>
+<li style="float:left;width:49%;list-style-type:disc;">Disc</li>
+<li style="float:left;width:49%;list-style-type:circle;">Circle</li>
+<li style="float:left;width:49%;list-style-type:square;">Square</li>
+<li style="float:left;width:49%;list-style-type:decimal;">Decimal</li>
+<li style="float:left;width:49%;list-style-type:decimal-leading-zero;">Decimal leading zero</li>
+<li style="float:left;width:49%;list-style-type:upper-roman;">Upper roman</li>
+<li style="float:left;width:49%;list-style-type:lower-greek;">Lower greek</li>
+<li style="float:left;width:49%;list-style-type:lower-alpha;">Lower alpha</li>
+<li style="float:left;width:49%;list-style-type:upper-alpha;">Upper alpha</li>
+<li style="float:left;width:49%;list-style-type:armenian;">Armenian</li>
+<li style="float:left;width:49%;list-style-type:georgian;">Georgian</li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Unordered list</h3>
+<p>Unordered lists are marked up using <code>&#8249;ul&#8250;</code> tags. An unordered list describes a collection of items.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<ul>
+<li>Unordered list item</li>
+<li>Unordered list item</li>
+<li>Unordered list item</li>
+<li>Unordered list item</li>
+<li>Unordered list item</li>
+<li>Unordered list item</li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Nested unordered list</h3>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<ul>
+<li>Unordered list item</li>
+<li>
+<ul>
+<li>Nested unordered list item</li>
+<li>Nested unordered list item</li>
+<li>Nested unordered list item</li>
+</ul>
+</li>
+<li>Unordered list item</li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<p>An additional <code>inline</code> class alters a list&#8217;s presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<ul class="inline">
+<li>Inline list item</li>
+<li>Inline list item</li>
+<li>Inline list item</li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+
+<div class="l-summary">
+<h3>Ordered list</h3>
+<p>Ordered lists are marked up using <code>&#8249;ol&#8250;</code> tags. An ordered list may have various numbering schemes presented through CSS.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<ol>
+<li>Ordered list item</li>
+<li>Ordered list item</li>
+<li>Ordered list item</li>
+<li>Ordered list item</li>
+<li>Ordered list item</li>
+<li>Ordered list item</li>
+</ol>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Nested ordered list</h3>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<ol>
+<li>Ordered list item</li>
+<li>
+<ol>
+<li>Nested ordered list item</li>
+<li>Nested ordered list item</li>
+<li>Nested ordered list item</li>
+</ol>
+</li>
+<li>Ordered list item</li>
+</ol>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Definition list</h3>
+
+<p>A definition list <code>&#8249;dl&#8250;</code> consists of pairs of definition terms <code>&#8249;dt&#8250;</code> and definition descriptions <code>&#8249;dd&#8250;</code>.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<dl>
+<dt>Rock Hammer</dt>
+<dd>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</dd>
+</dl>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Horizontal definition list</h3>
+<p>An additional <code>dl-horizontal</code> class alters a definition list&#8217;s presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<dl class="dl-horizontal">
+<dt>Rock Hammer</dt>
+<dd>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</dd>
+</dl>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Text level elements</h2>
+<p>Text level <abbr title="HyperText Markup Language">HTML</abbr> elements may be used within other elements. They include: <em>em</em> and <strong>strong</strong> for semantic emphasis, <i>i</i> and <b>b</b> for presentational formatting, <abbr title="Abbreviation">abbr</abbr> abbreviations, <cite>cite</cite> citations, <code>code</code> example, <del>del</del>, <ins>ins</ins> for visibly deleted and inserted content, <dfn>dfn</dfn> definitions, <mark>mark</mark> for highlighted passages and <sup>sup</sup> superscript and <sub>sub</sub> subscript.</p>
+
+</div><!-- l-wrap -->
+
+</div><!-- l-hidden -->
+</section><!-- section -->
+
+<!-- Next ============================== -->
+
+<section class="l-panel" id="panel-colour">
+
+<div class="l-trigger">
+<div class="l-wrap">
+<div class="l-summary">
+<h1><a href="#panel-colour-hidden" data-toggle="collapse" data-target="#panel-colour-hidden">Colour</a></h1>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>Colour that creates atmosphere and an interaction vocabulary. What can I press, what can&#8217;t I press, what have I pressed?</p>
+<p><a href="#rock-hammer" title="Go to top">Top</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+</div><!-- l-trigger -->
+
+<div class="l-hidden collapse" id="panel-colour-hidden">
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Primary colour</h3>
+<p class="secondary">rgb(146,154,0)</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<div class="swatch swatch-base">
+<div class="swatch-row swatch-row-one clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="swatch-row swatch-row-two clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Secondary colour</h3>
+<p class="secondary">rgb(164,50,21)</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<div class="swatch swatch-secondary">
+<div class="swatch-row swatch-row-one clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="swatch-row swatch-row-two clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Tertiary colour</h3>
+<p class="secondary">rgb(41,47,54)</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<div class="swatch swatch-tertiary">
+<div class="swatch-row swatch-row-one clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="swatch-row swatch-row-two clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Neutral colour</h3>
+<p class="secondary">rgb(41,47,54)</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<div class="swatch swatch-neutral">
+<div class="swatch-row swatch-row-one clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="swatch-row swatch-row-two clearfix">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+</div><!-- l-hidden -->
+</section><!-- section -->
+
+<!-- Next ============================== -->
+
+<section class="l-panel" id="panel-images">
+
+<div class="l-trigger">
+<div class="l-wrap">
+<div class="l-summary">
+<h1><a href="#panel-images-hidden" data-toggle="collapse" data-target="#panel-images-hidden">Images</a></h1>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>Textural treatments for images including backgrounds, borders, shapes and shadows.</p>
+<p><a href="#rock-hammer" title="Go to top">Top</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+</div><!-- l-trigger -->
+
+<div class="l-hidden collapse" id="panel-images-hidden">
+
+<div class="l-wrap">
+<div class="l-summary">
+<p><b>Note:</b> <code>img-rounded</code> and <code>img-circle</code> are unsupported by IE7-8.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p><img src="img/tmp/rock-hammer-1.jpg" width="128" alt="" class="img-rounded">
+<img src="img/tmp/rock-hammer-2.jpg" width="128" alt="" class="img-circle">
+<img src="img/tmp/rock-hammer-3.jpg" width="128" alt="" class="img-polaroid"></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Figures and figcaptions</h3>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<figure>
+<img src="img/tmp/rock-hammer-1.jpg" width="128" alt="" class="img-rounded">
+<figcaption>Figure caption</figcaption>
+</figure>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+</div><!-- l-hidden -->
+</section><!-- section -->
+
+<!-- Next ============================== -->
+
+<section class="l-panel" id="panel-navigation">
+
+<div class="l-trigger">
+<div class="l-wrap">
+<div class="l-summary">
+<h1><a href="#panel-navigation-hidden" data-toggle="collapse" data-target="#panel-navigation-hidden">Navigation</a></h1>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>Commonly used navigation patterns including tabs and pills, breadcrumbs and pagination.</p>
+<p><a href="#rock-hammer" title="Go to top">Top</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+</div><!-- l-trigger -->
+
+<div class="l-hidden collapse" id="panel-navigation-hidden">
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Basic navbar</h3>
+<p>Basic navbar is marked up using <code>&#8249;ul&#8250;</code> tags with an additional <code>navbar</code> and <code>navbar--inner</code> classes.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navbar -->
+<div class="navbar">
+<div class="navbar__inner">
+<a class="navbar__brand" href="#">Rock Hammer</a>
+<ul class="nav">
+<li class="active"><a href="#">One</a></li>
+<li><a href="#">Two</a></li>
+<!-- <li class="divider-vertical"></li> -->
+<li><a href="#">Three</a></li>
+</ul>
+</div>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Tabs</h2>
+
+<div class="l-summary">
+<h3>Tabbed navigation</h3>
+<p>All navigation units are marked up using <code>&#8249;ul&#8250;</code> tags with an additional <code>nav nav-tabs</code> classes.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navs -->
+<div class="tabbable">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade active" id="tab1">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- tab-pane -->
+
+<!-- Next -->
+
+<div class="tab-pane fade" id="tab2">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+</div><!-- tab-pane -->
+</div><!-- tab-content -->
+</div><!-- tabbable -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Navigation tabbed below</h3>
+<p>An additional <code>tabs-below</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navs -->
+<div class="tabbable tabs-below">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade active" id="tab1">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- tab-pane -->
+
+<!-- Next -->
+
+<div class="tab-pane fade" id="tab2">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+</div><!-- tab-pane -->
+</div><!-- tab-content -->
+</div><!-- tabbable -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Navigation tabbed left</h3>
+<p>An additional <code>tabs-left</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navs -->
+<div class="tabbable tabs-left">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade active" id="tab1">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- tab-pane -->
+
+<!-- Next -->
+
+<div class="tab-pane fade" id="tab2">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+</div><!-- tab-pane -->
+</div><!-- tab-content -->
+</div><!-- tabbable -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Navigation tabbed right</h3>
+<p>An additional <code>tabs-right</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navs -->
+<div class="tabbable tabs-right">
+<ul class="nav nav-tabs">
+<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+<li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade active" id="tab1">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- tab-pane -->
+
+<!-- Next -->
+
+<div class="tab-pane fade" id="tab2">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- tab-pane -->
+
+<!-- Next -->
+
+<div class="tab-pane fade" id="tab3">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+</div><!-- tab-pane -->
+
+</div><!-- tab-content -->
+</div><!-- tabbable -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Breadcrumbs</h3>
+<p>Breadcrumbs are marked up using <code>&#8249;ul&#8250;</code> tags with an additional <code>breadcrumb</code> class.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#breadcrumbs -->
+<ul class="breadcrumb">
+<li><a href="#">Home</a> <span class="divider">/</span></li>
+<li><a href="#">One</a> <span class="divider">/</span></li>
+<li class="active">Two</li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Pill shaped navigation</h3>
+<p>Pills are marked up using <code>&#8249;ul&#8250;</code> tags with additional <code>nav</code> and <code>nav-pills</code> classes.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navs -->
+<ul class="nav nav-pills">
+<li class="disabled"><a href="#">One</a></li>
+<li class="active"><a href="#">Two</a></li>
+<li><a href="#">Three</a></li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>List navigation</h3>
+<p>Lists are marked up using <code>&#8249;ul&#8250;</code> tags with additional <code>nav</code> and <code>nav-list</code> classes. <code>nav-header</code> class also alters the presentation of list items.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navs -->
+<ul class="nav nav-list">
+<li class="nav-header">Nav header</li>
+<li><a href="#">One</a></li>
+<li><a href="#">Two</a></li>
+<li><a href="#">Three</a></li>
+<li class="divider"></li>
+<li><a href="#">Four</a></li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Stacked tabbed navigation</h3>
+<p>Stacked tabs are marked up using <code>&#8249;ul&#8250;</code> tags with additional <code>nav</code>, <code>nav-tabs</code> and <code>nav-stacked</code> classes.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navs -->
+<ul class="nav nav-tabs nav-stacked">
+<li class="active"><a href="#">One</a></li>
+<li><a href="#">Two</a></li>
+<li><a href="#">Three</a></li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Stacked pill shaped navigation</h3>
+<p>Stacked pills are marked up using <code>&#8249;ul&#8250;</code> tags with additional <code>nav</code>, <code>nav-pills</code> and <code>nav-stacked</code> classes.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#navs -->
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a href="#">One</a></li>
+<li><a href="#">Two</a></li>
+<li><a href="#">Three</a></li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Pagination</h2>
+<div class="l-summary">
+<p>All pagination units are marked up using <code>&#8249;ul&#8250;</code> tags with an additional <code>pagination</code> class.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#pagination -->
+<div class="pagination">
+<ul>
+<li><a href="#">Prev</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">Next</a></li>
+</ul>
+</div>
+
+<div class="pagination">
+<ul>
+<li><a href="#" title="Previous">&#8592;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#8594;</a></li>
+</ul>
+</div>
+
+<div class="pagination">
+<ul>
+<li><a href="#" title="Previous">&#171;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#187;</a></li>
+</ul>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Centered pagination</h3>
+<p>An additional <code>pagination-centered</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#pagination -->
+<div class="pagination pagination-centered">
+<ul>
+<li><a href="#">Prev</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">Next</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-centered">
+<ul>
+<li><a href="#" title="Previous">&#8592;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#8594;</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-centered">
+<ul>
+<li><a href="#" title="Previous">&#171;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#187;</a></li>
+</ul>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Right aligned pagination</h3>
+<p>An additional <code>pagination-right</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#pagination -->
+<div class="pagination pagination-right">
+<ul>
+<li><a href="#">Prev</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">Next</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-right">
+<ul>
+<li><a href="#" title="Previous">&#8592;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#8594;</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-right">
+<ul>
+<li><a href="#" title="Previous">&#171;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#187;</a></li>
+</ul>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Pagination sizes</h3>
+<p>Additional <code>pagination-large</code>, <code>pagination-small</code> and <code>pagination-mini</code> classes alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#pagination -->
+<div class="pagination pagination-large">
+<ul>
+<li><a href="#">Prev</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">Next</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-large">
+<ul>
+<li><a href="#" title="Previous">&#171;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#187;</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-small">
+<ul>
+<li><a href="#">Prev</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">Next</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-small">
+<ul>
+<li><a href="#" title="Previous">&#171;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#187;</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-mini">
+<ul>
+<li><a href="#">Prev</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#">Next</a></li>
+</ul>
+</div>
+
+<div class="pagination pagination-mini">
+<ul>
+<li><a href="#" title="Previous">&#171;</a></li>
+<li><a href="#">1</a></li>
+<li class="active"><a href="#">2</a></li>
+<li><a href="#">3</a></li>
+<li><a href="#">4</a></li>
+<li><a href="#" title="Next">&#187;</a></li>
+</ul>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h2>Pager</h2>
+<p>Pager units are marked up using <code>&#8249;ul&#8250;</code> tags with an additional <code>pager</code> class.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html -->
+<ul class="pager">
+<li><a href="#">&larr; <abbr>Prev</abbr></a></li>
+<li><a href="#">Next &rarr;</a></li>
+</ul>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+</div><!-- hidden -->
+
+</section><!-- section -->
+
+<!-- Next ============================== -->
+
+<section class="l-panel" id="panel-modules">
+
+<div class="l-trigger">
+<div class="l-wrap">
+<div class="l-summary">
+<h1><a href="#panel-modules-hidden" data-toggle="collapse" data-target="#panel-modules-hidden">Modules</a></h1>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>Commonly used content module patterns including hero and media units, plus textural styling of alert boxes.</p>
+<p><a href="#rock-hammer" title="Go to top">Top</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+</div><!-- l-trigger -->
+
+<div class="l-hidden collapse" id="panel-modules-hidden">
+
+<div class="l-wrap">
+<h2>Hero unit</h2>
+<p>Hero units are marked up using <code>&#8249;div&#8250;</code> tags with an additional <code>hero-unit</code> class.</p>
+<!-- http://twitter.github.com/bootstrap/components.html#misc -->
+<div class="hero-unit">
+<h1>Rock Hammer</h1>
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+<p><a href="#" class="btn btn-primary btn-large">Learn more</a></p>
+</div>
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Media</h3>
+<p>All media units are marked up using <code>&#8249;div&#8250;</code> tags with additional <code>media-unit</code>, <code>media-body</code> and <code>media-heading</code> classes. Optional <code>pull-left</code> and <code>pull-right</code> classes float anchored images.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#media -->
+<div class="media">
+<a class="pull-left" href="#"><img class="media-object" width="64" src="img/tmp/rock-hammer-1.jpg"></a>
+<div class="media-body">
+<h4 class="media-heading">Rock Hammer</h4>
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- media-body -->
+</div><!-- media -->
+
+<!-- Next -->
+
+<div class="media">
+<a class="pull-right" href="#"><img class="media-object" width="64" src="img/tmp/rock-hammer-2.jpg"></a>
+<div class="media-body">
+<h4 class="media-heading">Rock Hammer</h4>
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- media-body -->
+</div><!-- media -->
+
+<!-- Next -->
+
+<div class="media">
+<a class="pull-left" href="#"><img class="media-object" width="64" src="img/tmp/rock-hammer-3.jpg"></a>
+<div class="media-body">
+<h4 class="media-heading">Rock Hammer</h4>
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- media-body -->
+</div><!-- media -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Alerts</h2>
+<div class="l-summary">
+<p>All alert units are marked up using <code>&#8249;div&#8250;</code> tags with an additional <code>alert</code> class.</p>
+<p>Additional <code>alert--error</code>, <code>alert--info</code> and <code>alert--success</code> classes alters their presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#alerts -->
+<div class="alert">
+<strong>Rock Hammer</strong> A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.
+</div>
+
+<!-- Next -->
+
+<div class="alert alert--error">
+<strong>Rock Hammer</strong> A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.
+</div>
+
+<!-- Next -->
+
+<div class="alert alert--info">
+<strong>Rock Hammer</strong> A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.
+</div>
+
+<!-- Next -->
+
+<div class="alert alert--success">
+<strong>Rock Hammer</strong> A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Wells</h2>
+<div class="l-summary">
+<p>All well units are marked up using <code>&#8249;div&#8250;</code> tags with an additional <code>well</code> class.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/components.html#media -->
+<div class="well">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<p>An additional <code>well--large</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<div class="well well--large">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div>
+
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<p>An additional <code>well--small</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<div class="well well--small">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div>
+
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+</div><!-- hidden -->
+
+</section><!-- section -->
+
+<!-- Next ============================== -->
+
+<section class="l-panel" id="panel-forms">
+
+<div class="l-trigger">
+<div class="l-wrap">
+<div class="l-summary">
+<h1><a href="#panel-forms-hidden" data-toggle="collapse" data-target="#panel-forms-hidden">Forms</a></h1>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>Multiple form layout configurations and styling for form inputs and button shapes.</p>
+<p><a href="#rock-hammer" title="Go to top">Top</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+</div><!-- l-trigger -->
+
+<div class="l-hidden collapse" id="panel-forms-hidden">
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Standard form</h3>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/base-css.html#forms -->
+<form>
+<fieldset>
+<legend>Rock Hammer</legend>
+<label>Your name</label>
+<input type="text" placeholder="eg: Andrew Doyle">
+<span class="help-block">A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</span>
+</fieldset>
+
+<fieldset>
+<label class="checkbox">
+<input type="checkbox"> I agree to terms and conditions</label>
+<button class="btn">Submit</button>
+</fieldset>
+</form>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Search form</h3>
+<p>An additional <code>form-search</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/base-css.html#forms -->
+<form class="form-search">
+<input type="text" class="input-medium search-query">
+<button class="btn">Search</button>
+</form>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Inline form</h3>
+<p>An additional <code>form-inline</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/base-css.html#forms -->
+<form class="form-inline">
+<input type="text" class="input-medium">
+<input type="password" class="input-medium">
+<label class="checkbox"><input type="checkbox"> I agree to terms and conditions</label>
+<button class="btn">Submit</button>
+</form>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Horizontal form</h3>
+<p>An additional <code>form-horizontal</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/base-css.html#forms -->
+<form class="form-horizontal">
+
+<div class="control-group">
+<label class="control-label" for="email">Email</label>
+<div class="controls">
+<input type="text" id="email" name="email">
+</div><!-- controls -->
+</div><!-- control-group -->
+
+
+<div class="control-group">
+<label class="control-label" for="password">Password</label>
+<div class="controls">
+<input type="password" id="password" name="password">
+</div><!-- controls -->
+</div><!-- control-group -->
+
+<div class="control-group">
+<div class="controls">
+<label class="checkbox"><input type="checkbox"> Remember me</label>
+</div><!-- controls -->
+</div><!-- control-group -->
+
+<div class="control-group">
+<div class="controls">
+<button class="btn">Submit</button>
+</div><!-- controls -->
+</div><!-- control-group -->
+
+</form><!-- form-horizontal -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Form elements</h3>
+</div><!-- l-summary -->
+
+<div class="l-content">
+
+<form>
+
+<p><label for="text">The input below is <code>text</code></label><br>
+<input type="text" id="text" placeholder="Placeholder"></p>
+
+<p><label for="email">The input below is <code>email</code></label><br>
+<input type="email" id="email"></p>
+
+<p><label for="url">The input below is <code>url</code></label><br>
+<input type="url" id="url"></p>
+
+<p><label for="number">The input below is <code>number</code></label><br>
+<input type="number" id="number"></p>
+
+<p><label for="tel">The input below is <code>tel</code></label><br>
+<input type="tel" id="tel"></p>
+
+<p>The control below is <code>select</code><br>
+<select>
+<option>Jan</option>
+<option>Feb</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+</select>
+</p>
+
+<p>The control below is a multiple <code>select</code><br>
+<select multiple="multiple">
+<option>Jan</option>
+<option>Feb</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+</select>
+</p>
+
+<ul>
+<li><label class="checkbox"><input type="checkbox"> Checkbox option</label></li>
+<li><label class="checkbox"><input type="checkbox"> Checkbox option</label></li>
+</ul>
+
+<p><label class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+Radio option</label>
+
+<label class="radio">
+<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+Radio option</label></p>
+
+<p><label for="textarea">The input below is a <code>textarea</code></label><br>
+<textarea id="textarea"> </textarea></p>
+
+</form>
+
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<h2>Buttons</h2>
+
+<p>Buttons are marked up using either <code>&#8249;button&#8250;</code>, <code>&#8249;input&#8250;</code> or <code>&#8249;a&#8250;</code> tags with an additional <code>btn</code> class. Additional classes alter their presentation.</p>
+
+<div class="l-summary">
+<h3>Standard button</h3>
+<p>An additional <code>btn</code> class creates a standard button.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p><button type="button" class="btn">Button</button>
+<input type="submit" class="btn" value="Submit">
+<a href="#" class="btn">Anchor</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Primary button</h3>
+<p>An additional <code>btn-primary</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p><button type="button" class="btn btn-primary">Button</button>
+<input type="submit" class="btn btn-primary" value="Submit">
+<a href="#" class="btn btn-primary">Anchor</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Info button</h3>
+<p>An additional <code>btn-info</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p><button type="button" class="btn btn-info">Button</button>
+<input type="submit" class="btn btn-info" value="Submit">
+<a href="#" class="btn btn-info">Anchor</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Success button</h3>
+<p>An additional <code>btn-success</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p><button type="button" class="btn btn-success">Button</button>
+<input type="submit" class="btn btn-success" value="Submit">
+<a href="#" class="btn btn-success">Anchor</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Warning button</h3>
+<p>An additional <code>btn-warning</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p><button type="button" class="btn btn-warning">Button</button>
+<input type="submit" class="btn btn-warning" value="Submit">
+<a href="#" class="btn btn-warning">Anchor</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Inverted button</h3>
+<p>An additional <code>btn-inverse</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p><button type="button" class="btn btn-inverse">Button</button>
+<input type="submit" class="btn btn-inverse" value="Submit">
+<a href="#" class="btn btn-inverse">Anchor</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Button sizes</h3>
+<p>Additional <code>btn-mini</code>, <code>btn-small</code>, <code>btn-large</code> and <code>btn-extlarge</code> classes alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p><button type="button" class="btn btn-mini">Button</button>
+<button type="button" class="btn btn-small">Button</button>
+<button type="button" class="btn btn-large">Button</button>
+<button type="button" class="btn btn-extlarge">Button</button></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+</div><!-- hidden -->
+
+</section><!-- section -->
+
+<!-- Next ============================== -->
+
+<section class="l-panel" id="panel-tables">
+
+<div class="l-trigger">
+<div class="l-wrap">
+<div class="l-summary">
+<h1><a href="#panel-tables-hidden" data-toggle="collapse" data-target="#panel-tables-hidden">Tables</a></h1>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>Multiple tabular data table configurations and styling, including bordered, condensed and striped styles.</p>
+<p><a href="#rock-hammer" title="Go to top">Top</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+</div><!-- l-trigger -->
+
+<div class="l-hidden collapse" id="panel-tables-hidden">
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Unclassified table</h3>
+<p>Tabular data is marked up using <code>&#8249;table&#8250;</code> tags with an additional <code>table</code> class.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+
+<table class="table">
+
+<thead>
+<tr>
+<th scope="col">Header</th>
+<th>Header</th>
+<th>Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+</tbody>
+
+</table>
+
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Condensed table</h3>
+<p>An additional <code>table-condensed</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+
+<table class="table table-condensed">
+
+<thead>
+<tr>
+<th scope="col">Header</th>
+<th>Header</th>
+<th>Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+</tbody>
+
+</table>
+
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Striped table</h3>
+<p>An additional <code>table-striped</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+
+<table class="table table-striped">
+
+<thead>
+<tr>
+<th scope="col">Header</th>
+<th>Header</th>
+<th>Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+</tbody>
+
+</table>
+
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Bordered table</h3>
+<p>An additional <code>table-bordered</code> class alters the presentation.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+
+<table class="table table-bordered">
+
+<thead>
+<tr>
+<th scope="col">Header</th>
+<th>Header</th>
+<th>Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+</tbody>
+
+</table>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Bordered and striped table</h3>
+<p>Additional <code>table-condensed</code>, <code>table-bordered</code> and <code>table-striped</code> classes may be combined.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+
+<table class="table table-bordered table-striped">
+
+<thead>
+<tr>
+<th scope="col">Header</th>
+<th>Header</th>
+<th>Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row">Data</th>
+<td>Data</td>
+<td>Data</td>
+</tr>
+</tbody>
+
+</table>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+</div><!-- hidden -->
+
+</section><!-- section -->
+
+<!-- Next ============================== -->
+
+<section class="l-panel" id="panel-widgets">
+
+<div class="l-trigger">
+<div class="l-wrap">
+<div class="l-summary">
+<h1><a href="#panel-widgets-hidden" data-toggle="collapse" data-target="#panel-widgets-hidden">Widgets</a></h1>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<p>Commonly used dynamic content modules including a vertical collapsing accordion and horizontal scrolling carousel.</p>
+<p><a href="#rock-hammer" title="Go to top">Top</a></p>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+</div><!-- l-trigger -->
+
+<div class="l-hidden collapse" id="panel-widgets-hidden">
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Accordion</h3>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<div class="accordion" id="accordion">
+
+<div class="accordion__group">
+<div class="accordion__heading">
+<a class="accordion__toggle" data-toggle="collapse" data-parent="#accordion" href="#accordion__collapse__01">
+Rock Hammer
+</a>
+</div><!-- accordion-heading -->
+
+<div id="accordion__collapse__01" class="accordion__body collapse in">
+<div class="accordion__inner">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- accordion-inner -->
+</div><!-- accordion-body -->
+</div><!-- accordion-group -->
+
+<!-- Next -->
+
+<div class="accordion__group">
+<div class="accordion__heading">
+<a class="accordion__toggle" data-toggle="collapse" data-parent="#accordion" href="#accordion__collapse__02">
+Rock Hammer
+</a>
+</div>
+
+<div id="accordion__collapse__02" class="accordion__body collapse">
+<div class="accordion__inner">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- accordion-inner -->
+</div><!-- accordion-body -->
+</div><!-- accordion-group -->
+
+<!-- Next -->
+
+<div class="accordion__group">
+<div class="accordion__heading">
+<a class="accordion__toggle" data-toggle="collapse" data-parent="#accordion" href="#accordion__collapse__03">
+Rock Hammer
+</a>
+</div>
+
+<div id="accordion__collapse__03" class="accordion__body collapse">
+<div class="accordion__inner">
+<p>A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div><!-- accordion-inner -->
+</div><!-- accordion-body -->
+</div><!-- accordion-group -->
+
+<!-- Last -->
+
+</div><!-- accordion -->
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h2>Carousel</h2>
+</div><!-- l-summary -->
+
+<div class="l-content">
+<!-- http://twitter.github.com/bootstrap/javascript.html#carousel -->
+<div id="myCarousel" class="carousel slide">
+<div class="carousel-inner">
+<div class="item active">
+<img src="img/tmp/rock-hammer-1.jpg" alt="" />
+<div class="carousel-caption">
+<h4>Rock Hammer</h4>
+<p class="secondary">A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div>
+</div>
+
+<div class="item">
+<img src="img/tmp/rock-hammer-2.jpg" alt="" />
+<div class="carousel-caption">
+<h4>Rock Hammer</h4>
+<p class="secondary">A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks. In field geology, they are used to obtain a fresh surface of a rock in order to determine its composition, nature, mineralogy, history and field estimate of rock strength. In fossil collecting and mineral collecting, they are employed to break rocks with the aim of revealing fossils inside. Geologists&#8217; hammers are also sometimes used for scale in a photograph.</p>
+</div>
+</div>
+
+<div class="item">
+<img src="img/tmp/rock-hammer-3.jpg" alt="" />
+<div class="carousel-caption">
+<h4>Rock Hammer</h4>
+<p class="secondary">A geologist&#8217;s hammer, rock hammer, rock pick or geological pick is a hammer used for splitting and breaking rocks.</p>
+</div>
+</div>
+</div>
+<a class="carousel-control left" href="#myCarousel" data-slide="prev" title="Prev">&#171;</a>
+<a class="carousel-control right" href="#myCarousel" data-slide="next" title="Next">&#187;</a>
+</div>
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
+</div><!-- hidden -->
+
+</section><!-- section -->
+
+<!-- Final ============================== -->
+
+<footer role="contentinfo" class="donthatetimvandamme">
+<small>Rock Hammer v0.1 by <a href="http://stuffandnonsense.co.uk">Stuff and Nonsense</a>.</small> 
+<small>Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.</small>
+<small>Thanks to:
+<a href="http://twitter.com/aaronallport">Aaron Allport</a>, 
+<a href="https://twitter.com/chriscoyier">Chris Coyier</a>
+<a href="http://twitter.com/brad_frost">Brad Frost</a> and 
+<a href="http://twitter.com/twbootstrap">Bootstrap</a>.
+</small>
+</footer>
+</div><!-- container -->
+
+<script src='js/vendor/jquery-1.8.3-min.js'></script>
+<script src='js/vendor/jquery/jquery.scrollTo.min.js'></script>
+<script src='js/vendor/bootstrap-min.js'></script>
+<script src='js/main.js'></script>
+
+<script>
+var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<!-- Remove if unused --> <script src='js/nav-patterns/nav-toggle.js'></script>
+<!-- Remove if unused --> <script src='js/nav-patterns/left-nav-flyout.js'></script>
+</body>
+</html>

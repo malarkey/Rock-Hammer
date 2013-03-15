@@ -1,0 +1,36 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/media.less
+
+.media,
+.media-body {
+overflow : hidden;
+*overflow : visible;
+zoom : 1; }
+
+.media,
+.media .media {
+margin-top : 15px; }
+
+.media:first-child {
+margin-top : 0; }
+
+.media-object {
+display : block; }
+
+.media-heading {
+margin : 0 0 5px; }
+
+.media .pull-left {
+float : left;
+margin-right : $gutterwidth / 2; }
+
+.media .pull-right {
+float : right;
+margin-left : $gutterwidth / 2; }
+
+.media-list {
+margin-left : 0;
+list-style-type : none; }

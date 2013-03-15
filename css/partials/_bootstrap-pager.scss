@@ -1,0 +1,46 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/pager.less
+
+.pager {
+list-style-type : none;
+margin : $baselineheight 0;
+padding : 0;
+text-align : center;
+@include clearfix; }
+
+.pager li {
+display : inline; }
+
+.pager li > a,
+.pager li > span {
+display : inline-block;
+padding : $pagerpadding;
+background-color : $pagerbackgroundcolor;
+// @include pagergrad;
+border : $pagerborderwidth $pagerborderstyle $pagerbordercolor;
+border-radius : $pagerborderradius;
+font-family : $pagerfontfamily;
+@include font-size($basefontsize / 1.25);
+color : $pagercolor; }
+
+.pager li > a:hover {
+text-decoration : none;
+background-color : $pagerbackgroundcolorhover;  }
+
+.pager .next > a,
+.pager .next > span {
+float : right; }
+
+.pager .previous > a,
+.pager .previous > span {
+float : left; }
+
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > span {
+color : $textcolor;
+background-color : transparent;
+cursor : default; }

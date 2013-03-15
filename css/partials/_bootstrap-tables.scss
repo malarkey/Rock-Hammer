@@ -1,0 +1,104 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/tables.less
+
+table {
+max-width : 100%;
+background-color : $tablebackgroundcolor;
+border-collapse : collapse;
+border-spacing : 0;
+font-family : $tablefontfamily; }
+
+.table {
+width : 100%;
+max-width : 100%;
+margin-bottom : $baselineheight;
+
+th,
+td {
+padding : $tablepadding;
+vertical-align : top;
+border-top : $tableborderwidth $tableborderstyle $tablebordercolor;
+@include font-size($basefontsize / 1.25);
+line-height : $baselineheight;
+text-align : left; }
+
+th {
+font-weight : bold; }
+
+thead th {
+vertical-align : bottom; }
+
+colgroup + thead tr:first-child th,
+colgroup + thead tr:first-child td,
+thead:first-child tr:first-child th,
+thead:first-child tr:first-child td {
+border-top : 0; }
+
+tbody + tbody {
+border-top : $tableborderwidth * 2 $tableborderstyle $tablebordercolor; }
+
+tbody tr td,
+tbody tr th {
+@include transition(background-color $transitionduration 0 ease); }
+
+tbody tr:hover td,
+tbody tr:hover th {
+background-color : $tablebackgroundhover; }
+}
+
+// CONDENSED ====================================================
+
+.table-condensed {
+
+th,
+td {
+padding : 4px 5px; }
+}
+
+// BORDERED ====================================================
+
+.table-bordered {
+border : $tableborderwidth $tableborderstyle $tablebordercolor;
+border-left : 0;
+border-collapse : separate;
+*border-collapse : collapsed;
+
+th,
+td {
+border-left : $tableborderwidth $tableborderstyle $tablebordercolor; }
+
+caption + thead tr:first-child th,
+caption + tbody tr:first-child th,
+caption + tbody tr:first-child td,
+colgroup + thead tr:first-child th,
+colgroup + tbody tr:first-child th,
+colgroup + tbody tr:first-child td,
+thead:first-child tr:first-child th,
+tbody:first-child tr:first-child th,
+tbody:first-child tr:first-child td {
+border-top : 0; }
+
+}
+
+// STRIPED ====================================================
+
+.table-striped {
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+background-color : $tablebackgroundstripe; }
+}
+
+// HOVER ====================================================
+
+.table-hover {
+
+tbody {
+tr:hover td,
+tr:hover th {
+background-color : $tablebackgroundhover; }
+}
+}

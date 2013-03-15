@@ -1,0 +1,211 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/forms.less
+
+form {
+margin : 0 0 $baselineheight 0;
+font-family : $formfontfamily;
+
+p {
+margin-bottom : $baselineheight / 2; }
+
+ul {
+list-style-type : none;
+margin : 0 0 $baselineheight 0;
+padding : 0; }
+
+br {
+display : none; }
+}
+
+fieldset {
+margin-bottom : $baselineheight;
+padding : 0;
+border-width : 0; 
+
+&:last-of-type {
+margin-bottom : 0; }
+}
+
+legend {
+display : block;
+width : 100%;
+margin-bottom : $baselineheight * 2;
+*margin-left : -7px;
+padding : 0 0 $baselineheight / 2 0;
+border : 0;
+color : $textcolor;
+@include font-size($basefontsize * 1.5);
+font-weight : bold;
+line-height : $baselineheight;
+white-space : normal; 
+
+small {
+font-size : $baselineheight * .75;
+color : $formsmallcolor; }
+}
+
+label,
+input,
+button,
+select,
+textarea {
+font-family : $formfontfamily; }
+
+label {
+display : block;
+margin-bottom : $baselineheight / 4;
+@include font-size($basefontsize); }
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"]{
+display : inline-block;
+margin-bottom : $baselineheight / 2;
+padding : $forminputpadding;
+@include font-size($basefontsize);
+line-height : $baselineheight;
+color : inherit;
+border-radius : $forminputborderradius;
+vertical-align : middle; }
+
+input,
+textarea {
+width : 100%;
+@include box-sizing(border-box); }
+
+textarea {
+height : auto;
+resize-x : none; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+background-color : $formbinputbackgroundcolor;
+// @include formbinputgrad;
+border : $forminputborderwidth $forminputborderstyle $forminputbordercolor;
+
+&:hover {
+border-color : $forminputbordercolorhover; }
+
+&:focus {
+border-color : $forminputbordercolorfocus;
+outline : 0;
+outline : thin dotted \ 9; }
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+margin : 4px 0 0;
+*margin-top : 0; 
+margin-top : 1px \ 9; 
+line-height : normal; }
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+width : auto; }
+
+select {
+padding : 0;
+width : 90%; }
+
+select[multiple],
+select[size] {
+height : auto; }
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+outline : thin dotted #333;
+outline : 5px auto -webkit-focus-ring-color;
+outline-offset : -2px; }
+
+input,
+textarea {
+@include placeholder($formplaceholdercolor); }
+
+// radio / checkbox
+
+.radio,
+.checkbox {
+min-height : $baselineheight;
+@include font-size($basefontsize); }
+
+.radio input[type="radio"],
+.checkbox input[type="checkbox"] {
+float : left;
+margin-right : $gutterwidth / 2; }
+
+.controls > .radio:first-child,
+.controls > .checkbox:first-child {
+padding-top : 5px; }
+
+.radio.inline,
+.checkbox.inline {
+display : inline-block;
+padding-top : 5px;
+margin-bottom : 0;
+vertical-align : middle; }
+
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+margin-left : $gutterwidth / 2; }
+
+// sizes
+
+// General classes for quick sizes
+.input-mini       { width : 60px; }
+.input-small      { width : 90px; }
+.input-medium     { width : 150px; }
+.input-large      { width : 210px; }
+.input-xlarge     { width : 270px; }
+.input-xxlarge    { width : 530px; }
+
+// disabled
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+opacity : .25; }
+
+// actions
+
+.form-actions {
+margin-top : $baselineheight;
+margin-bottom : $baselineheight;
+padding : ($baselineheight - 1) $gutterwidth $baselineheight;
+@include clearfix; }

@@ -1,0 +1,61 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/alerts.less
+
+.alert {
+padding : $alertpadding;
+margin-bottom : $baselineheight;
+background-color : $alertbackgroundcolor;
+// @include alertgrad;
+border : $alertborderwidth $alertborderstyle $alertbordercolor;
+border-radius : $alertborderradius;
+@include font-size($alertfontsize);
+color : $alertcolor;
+
+> h4 {
+margin : 0;
+color : $alertcolor; }
+}/*alert*/
+
+.alert--success {
+background-color : $successcolor;
+border-color : $alertbordercolorsuccess;
+color : $alertcolorsuccess; 
+
+> h4 {
+color : $alertcolorsuccess; }
+}/*alert--success*/
+
+.alert--danger,
+.alert--error {
+background-color : $errorcolor;
+border-color : $alertbordercolorerror;
+color : $alertcolorerror; 
+
+> h4 {
+color : $alertcolorerror; }
+}/*alert--error*/
+
+.alert--info {
+background-color : $infocolor;
+border-color : $alertbordercolorinfo;
+color : $alertcolorinfo; 
+
+>  h4 {
+color : $alertcolorinfo; }
+}/*alert--info*/
+
+.alert--block {
+padding {
+top : 14px;
+bottom : 14px; }
+
+> p,
+> ul {
+margin-bottom : 0; }
+
+> p + p {
+margin-top : 5px; }
+}/*alert--block*/

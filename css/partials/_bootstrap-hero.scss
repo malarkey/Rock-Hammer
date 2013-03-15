@@ -1,0 +1,23 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/hero-unit.less
+
+.hero-unit {
+margin-bottom : $baselineheight / 2;
+padding : $gutterwidth;
+background-color : $herobackgroundcolor;
+// @include herograd;
+border : $heroborderwidth $heroborderstyle $herobordercolor;
+border-radius : $heroborderradius;
+color : $herocolor;
+
+p {
+@include font-size($basefontsize * 1.25);
+
+&:last-child {
+margin-bottom : 0; }
+}/*p*/
+
+}/*hero-unit*/

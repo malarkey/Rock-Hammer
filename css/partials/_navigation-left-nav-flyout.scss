@@ -1,0 +1,43 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: http://codepen.io/bradfrost/pen/IEBrz
+
+.wrap {
+position : relative;
+@include transition (all $transitionduration ease); }
+
+.wrap.active {
+left : 16em; }
+
+.navigation-left-nav-flyout-toggle {
+float : left;
+display : block;
+padding : 1em; }
+
+nav[role=navigation] {
+background-color : $neutralcolor;
+clear : both;
+overflow : hidden; }
+
+.js nav[role=navigation] {
+position : absolute;
+top : 0;
+left : -16em;
+width : 16em;
+height : 100%; }
+
+#navigation-left-nav-flyout ul {
+list-style-type : none;
+@include zero; }
+
+#navigation-left-nav-flyout a {
+display : block;
+min-height : 44px;
+line-height : 44px;
+color : $white;
+border-bottom : $borderwidth $borderstyle $midneutralcolor; 
+
+.content {
+clear : both; }

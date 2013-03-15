@@ -1,0 +1,157 @@
+<h1 id="rock-hammerhttpstuffandnonsensecoukprojectsrock-hammer"><a href="http://stuffandnonsense.co.uk/projects/rock-hammer/">Rock Hammer</a></h1>
+
+<p><a href="http://stuffandnonsense.co.uk/projects/rock-hammer/">Rock Hammer</a> is dedicated to <a href="http://beardyscientist.com">Alex Clarke</a>, a real life geologist.</p>
+
+<p>What’s Rock Hammer? It’s a curated project library for <a href="http://hammerformac.com">Hammer For Mac</a> designed and developed by <a href="http://stuffandnonsense.co.uk">Stuff and Nonsense</a> and friends. Rock Hammer contains baseline typography, styling for common HTML elements including images, forms and tables, as well as navigation, responsive modules and widgets. These are the foundation for every project we start. Rock Hammer can be used as a design/style template or pattern primer or as the foundation for developing a responsive website.</p>
+
+<p>Clone the repo, <code>git clone git@github.com:malarkey/rock-hammer.git</code>, (whatever that means) or <a href="https://github.com/malarkey/rock-hammer/zipball/master">download the latest release</a>. View <a href="http://stuffandnonsense.co.uk/projects/rock-hammer/">the project website</a> for more information.</p>
+
+<ol>
+  <li>
+    <h2 id="getting-started-with-rock-hammer">Getting started with Rock Hammer</h2>
+  </li>
+</ol>
+
+<p>Rock Hammer works with <a href="http://hammerformac.com">Hammer For Mac</a>. If you develop in Windows or you don’t (yet) use Hammer, skip to the section ‘Using Only the Build Folder‘ below.</p>
+
+<p>For styling, Rock Hammer uses <a href="http://sass-lang.org">Sass</a>. Hammer For Mac compiles Sass into CSS so you won’t need the Terminal. In most cases, you’ll need to edit just three .scss files to get started:</p>
+
+<p><em>rockhammer.scss</em></p>
+
+<p>Configure which Sass partials you need for your individual project. We’ve included some of the most useful parts of Bootstrap, but if you don’t need styles for a carousel or a hero box, there’s no sense in including them. Comment out the partials you don’t need //</p>
+
+<p><em>lte-ie8.scss</em></p>
+
+<p>For versions of Microsoft Internet Explorer that didn’t implement CSS3 Media Queries, this file contains compiled styles from all stylesheets inside Media Queries. Use this file to also serve styles specifically to Internet Explorer 8 and before. We’re looking into a more streamlined Sass solution. One that doesn’t require a degree in geology.</p>
+
+<p><em>_config.scss</em></p>
+
+<p>You’ll do most of your work in this config file; everything from setting typefaces and choosing colours to defining styles for HTML elements and widgets. Follow steps one to four for the broadest brushstrokes, then make finer strokes by defining styles for popular interface elements:</p>
+
+<ol>
+  <li><em>NAVIGATION</em>				2. <em>MODULES</em></li>
+</ol>
+
+<p>Site navigation				Hero
+Basic navbar				Alerts
+Breadcrumbs					Wells
+Pagination
+Pager</p>
+
+<ol>
+  <li><em>FORMS</em>					4. <em>TABLES</em></li>
+</ol>
+
+<p>Inputs
+Help						5. <em>MISC</em>
+Buttons</p>
+
+<ol>
+  <li>
+    <h2 id="rock-hammers-structure">Rock Hammer’s structure</h2>
+  </li>
+</ol>
+
+<p>Rock Hammer includes Sass partials for the three components of ‘design atmosphere:’</p>
+
+<p>2.1. <em>Colour</em>: Emotion and interaction vocabulary.</p>
+
+<p>2.2. <em>Typography</em>: Typefaces, type treatments and white space.</p>
+
+<p>2.3. <em>Texture</em>: Decorative elements, line-work, patterns and shapes.</p>
+
+<p>2.4. <em>Partials</em>:</p>
+
+<ul>
+  <li>Site-wide styles</li>
+  <li>Misc HTML elements</li>
+  <li>Placeholders for Modernizr classes</li>
+  <li>@2x images</li>
+</ul>
+
+<p>2.5. Utilities such as mixins, normalise and reset and print styles.</p>
+
+<p>2.6. Layout for structural styles. Use it in combination with breakpoint files _bp2 – bp6 as required.</p>
+
+<p>2.7. Speaking of breakpoints, there are six placeholder breakpoint files included. Use them as you need. The defaults are:</p>
+
+<p>$bp2 		480px		30em		
+$bp3 		600px		37.5em  	
+$bp4 		768px		48em 		
+$bp5 		992px	 	62em		
+$bp6 		1382px		86.375em 	</p>
+
+<p>2.8. Matching HTML partials and Sass partials for forms, tables, navigation and other commonly used interface elements derived from Bootstrap. If there are Bootstrap components you use regularly, add them to the partials folder. Don’t forget to reference them from rock-hammer.scss too.</p>
+
+<p>2.9. Matching HTML partials and Sass partials for responsive navigation patterns. We’ve included three popular patterns but feel free to add more. Brad Frost’s <a href="http://bradfrost.github.com/this-is-responsive/patterns.html#navigation">Responsive Patterns</a> is a cracking place to start.</p>
+
+<p>_navigation-footer-anchor.scss
+_navigation-left-nav-flyout.scss
+_navigation-toggle.scss</p>
+
+<p>To use these navigation patterns: </p>
+
+<ul>
+  <li>Copy the HTML from your chosen pattern into the &lt;body&gt; of a new template</li>
+  <li>Uncomment the pattern you’ve chosen in rock-hammer.scss</li>
+</ul>
+
+<ol>
+  <li>
+    <h2 id="using-only-the-build-folder">Using Only the Build Folder</h2>
+  </li>
+</ol>
+
+<p>We built Rock Hammer to work with <a href="http://hammerformac.com">Hammer For Mac</a>. It’s great. You should try it. But if you develop on Windows or haven’t yet used Hammer:</p>
+
+<ol>
+  <li>
+    <p>First, you’re weird. Nice. But weird. Sorry.</p>
+  </li>
+  <li>
+    <p>You can still use Rock Hammer’s compiled HTML, CSS and Javascript. It won‘t be as good as developing from the original Rock Hammer, but what are you going to do?</p>
+  </li>
+</ol>
+
+<h2 id="css-preprocessor-options">CSS Preprocessor Options</h2>
+
+<ul>
+  <li>SCSS</li>
+</ul>
+
+<h2 id="author">Author</h2>
+
+<p><strong>Andy Clarke</strong></p>
+
+<ul>
+  <li>http://twitter.com/malarkey</li>
+  <li>http://github.com/malarkey</li>
+  <li>http://stuffandnonsense.co.uk</li>
+</ul>
+
+<h2 id="default-theme-design">Default theme design</h2>
+
+<p><strong>Sue Davies</strong></p>
+
+<ul>
+  <li>http://twitter.com/suehayesdavies</li>
+</ul>
+
+<h2 id="javascript">Javascript</h2>
+
+<p><strong>Aaron Allport</strong></p>
+
+<ul>
+  <li>http://twitter.com/aaronallport</li>
+  <li>https://github.com/aaronallport</li>
+  <li>http://www.aaronallport.com</li>
+</ul>
+
+<h2 id="components">Components</h2>
+
+<p><a href="http://stuffandnonsense.co.uk/projects/320andup">320 and Up</a>
+<a href="http://twitter.github.com/bootstrap">Bootstrap</a>
+<a href="http://jquery.com">jQuery</a>
+<a href="http://modernizr.com">Modernizr</a>
+<a href="http://bradfrost.github.com/this-is-responsive/patterns.html">Responsive Patterns</a>
+<a href="http://selectivizr.com">Selectivizr</a></p>

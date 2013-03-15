@@ -1,0 +1,22 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
+@mixin alertgrad 		{ @include vertical($alertcolor, darken($alertcolor, 10%)); }
+@mixin breadcrumbgrad	{ @include vertical($breadcrumbbackgroundcolor, darken($breadcrumbbackgroundcolor, 10%)); }
+@mixin buttongrad 		{ @include vertical($buttonbackgroundcolor, darken($buttonbackgroundcolor, 10%)); }
+@mixin errorgrad 		{ @include vertical($errorcolor, darken($errorcolor, 10%)); }
+@mixin forminputgrad 	{ @include vertical($white, $lighterneutralcolor); }
+@mixin greygrad 		{ @include vertical($white, darken($lighterneutralcolor, 10%)); }
+@mixin herograd 		{ @include vertical($herobackgroundcolor, darken($herobackgroundcolor, 10%)); }
+@mixin infograd 		{ @include vertical($infocolor, darken($infocolor, 10%)); }
+@mixin inversegrad 		{ @include vertical($inversecolor, darken($inverscolor, 10%)); }
+@mixin navigationgrad 	{ @include vertical($navigationbackgroundcolor, darken($navigationbackgroundcolor, 10%)); }
+@mixin navbargrad 		{ @include vertical($navbarbackgroundcolor, darken($navbarbackgroundcolor, 10%)); }
+@mixin paginationgrad 	{ @include vertical($paginationbackgroundcolor, darken($paginationbackgroundcolor, 10%)); }
+@mixin pagergrad 		{ @include vertical($pagerbackgroundcolor, darken($pagerbackgroundcolor, 10%)); }
+@mixin primarygrad 		{ @include vertical($primarycolor, darken($primarycolor, 10%)); }
+@mixin successgrad 		{ @include vertical($successcolor, darken($successcolor, 10%)); }
+@mixin warninggrad 		{ @include vertical($warningcolor, darken($warningcolor, 10%)); }
+@mixin wellgrad 		{ @include vertical($wellbackgroundcolor, darken($wellbackgroundcolor, 10%)); }

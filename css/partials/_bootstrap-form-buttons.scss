@@ -1,0 +1,200 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/buttons.less
+
+.btn {
+display : inline-block;
+*display : inline;
+*zoom : 1;
+padding : $buttonpadding;
+margin-bottom : 0;
+*margin-left : .3em;
+font : {
+weight : normal;
+family : $buttonfontfamily; }
+@include font-size($buttonfontsize);
+line-height : $baselineheight;
+color : $buttoncolor;
+text-align : center;
+vertical-align : middle;
+background-color : $buttonbackgroundcolor;
+// @include buttongrad;
+border : $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+border-bottom-color : $buttonbottombordercolor;
+border-radius : $buttonborderradius;
+cursor : pointer;
+
+&:visited,
+&:hover,
+&:active {
+color : darken($buttoncolor, 20%); 
+text-decoration : none; }
+
+}/*btn*/
+
+
+.btn:first-child { 
+*margin-left : 0; }
+
+.btn-disabled {
+opacity : .5;
+cursor : default; }
+
+.btn-error {
+background-color : $errorcolor;
+// @include errorgrad;
+border : {
+color : $buttonbordercolorerror;
+bottom-color : darken($buttonbordercolorerror, 10%); }
+color : $buttoncolorerror;
+
+&:visited,
+&:active,
+&:hover {
+background-color : darken($errorcolor, 10%); 
+color : darken($buttoncolorerror, 5%); }
+}/*btn-error*/
+
+.btn-info {
+background-color : $infocolor;
+// @include infograd;
+border : {
+color : $buttonbordercolorinfo;
+bottom-color : darken($buttonbordercolorinfo, 10%); }
+color : $buttoncolorinfo;
+
+&:visited,
+&:active,
+&:hover {
+background-color : darken($infocolor, 10%); 
+color : darken($buttoncolorinfo, 5%); }
+}/*btn-info*/
+
+.btn-inverse {
+background-color : $inversecolor;
+// @include inversegrad;
+border : {
+color : $buttonbordercolorinverse;
+bottom-color : darken($buttonbordercolorinverse, 10%); }
+color : $buttoncolorinverse;
+
+&:visited,
+&:active,
+&:hover {
+background-color : darken($inversecolor, 5%); 
+color : darken($buttoncolorinverse, 5%); }
+}/*btn-inverse*/
+
+.btn-primary {
+background-color : $primarycolor;
+// @include primarygrad;
+border : {
+color : $buttonbordercolorprimary;
+bottom-color: darken($buttonbordercolorprimary, 10%); }
+color : $buttoncolorprimary;
+
+&:visited,
+&:active,
+&:hover { 
+background-color : darken($primarycolor, 3%); 
+color : darken($buttoncolorprimary, 5%); }
+}/*btn-primary*/
+
+.btn-success {
+background-color : $successcolor;
+// @include successgrad;
+border : {
+color : $buttonbordercolorsuccess;
+bottom-color : darken($successcolor, 10%); }
+color : $buttoncolorsuccess;
+
+&:visited,
+&:active,
+&:hover { 
+background-color : darken($successcolor, 5%); 
+color : darken($buttoncolorsuccess, 5%); }
+}/*btn-success*/
+
+.btn-warning {
+background-color : $warningcolor;
+// @include warninggrad;
+border : {
+color : $buttonbordercolorwarning;
+bottom-color : darken($buttonbordercolorwarning, 10%); }
+color : $buttoncolorwarning;
+
+&:visited,
+&:active,
+&:hover {
+background-color : darken($warningcolor, 5%); 
+color : darken($buttoncolorwarning, 5%); }
+}/*btn-warning*/
+
+.btn-extlarge {
+padding : 11px 22px;
+@include font-size($buttonfontsize * 2);
+border-width : $buttonborderwidth * 2;
+border-radius : $borderradius * 2; } 
+
+.btn.btn-large {
+*padding : {
+top : 7px;
+bottom : 7px; }
+}/*btn.btn-large*/
+
+.btn-large {
+padding : 11px 18px;
+@include font-size($buttonfontsize * 1.25);
+line-height : inherit;
+border-width : $buttonborderwidth * 2;
+border-radius : $borderradius * 2; }
+
+.btn-small {
+padding : 5px 10px;
+@include font-size($buttonfontsize / 1.5);
+line-height : inherit; }
+
+.btn-mini {
+padding : 3px 5px;
+@include font-size($buttonfontsize / 1.75);
+line-height : inherit; }
+
+.btn-group {
+position : relative;
+*zoom : 1;
+*margin-left : .3em;
+margin-bottom : $baselineheight; 
+
+.btn {
+position : relative;
+float : left;
+margin-left : -1px;
+border-radius : 0; }
+
+.btn:first-child {
+margin-left : 0;
+border-radius : 2px, 0, 2px, 0; } 
+
+.btn:last-child {
+border-radius : 0, 2px, 0, 2px; }
+
+.btn.large:first-child {
+margin-left : 0;
+border-radius : 4px, 0, 4px, 0; }
+
+.btn.large:last-child {
+border-radius : 0, 4px, 0, 4px; }
+}/*btn.btn-group*/
+
+.btn-toolbar {
+clear : both;
+margin-top : $baselineheight / 2;
+margin-bottom : $baselineheight / 2; 
+
+.btn-group {
+display : inline-block;
+*display : inline;
+*zoom : 1; }
+}/*btn.btn-toolbar*/

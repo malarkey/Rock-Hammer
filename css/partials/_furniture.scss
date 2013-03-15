@@ -1,0 +1,234 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
+// 1. ROOT 					==============================
+// 2. TYPOGRAPHY 			==============================
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+// 5. ELEMENTS 				==============================
+// 6. LAYOUT 				==============================
+
+.l-panel {
+border-top : $borderwidth $borderstyle lighten($primarycolor, 25%);
+border-bottom : 7px $borderstyle $neutralcolor;
+
+&:first-child { 
+border-top-width : 0;
+border-bottom-width : 0; }
+
+&:nth-child(2) { 
+border-top-width : 0; }
+
+&:last-of-type { 
+margin-bottom : $baselineheight; 
+border-bottom-width : 0; }
+}
+
+.l-trigger {
+padding : $baselineheight $gutterwidth / 2;
+background-color : $primarycolor;
+background-image : -webkit-gradient(linear, 0 0, 0 100%, from(rgba($primarycolor,.6)), to(rgba($primarycolor,.9))), url(l-trigger.png);
+background-image : -webkit-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger.png);
+background-image : -moz-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger.png);
+background-image : -ms-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger.png);
+background-image : -o-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger.png);
+background-position : 0 0, 50% 100%;
+background-repeat : repeat-x;
+border-bottom : $borderwidth * 2 $borderstyle darken($primarycolor,5%);
+color : $white;
+
+&:first-of-type {
+border-top-width : 0; } 
+
+h1, p {
+text-shadow : 0 1px 1px rgba($black, .25), 0 0 10px rgba($primarycolor, 1); }
+
+h1 {
+@include font-size(24);
+font-weight : normal;
+text-transform : uppercase; }
+
+p {
+margin-bottom : $baselineheight / 2; }
+
+p:last-child {
+margin-bottom : 0;
+@include font-size(14);
+text-align : right; }
+
+a, a:visited {
+display : block;
+color : $white; 
+
+&:hover {
+color : rgba($white,.9); 
+text-decoration : none; }
+}
+}
+
+.l-panel:nth-child(2) .l-trigger {
+background-color : $primarycolor;
+background-image : -webkit-gradient(linear, 0 0, 0 100%, from(rgba($primarycolor,.6)), to(rgba($primarycolor,.9))), url(l-trigger-first.png);
+background-image : -webkit-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger-first.png);
+background-image : -moz-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger-first.png);
+background-image : -ms-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger-first.png);
+background-image : -o-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger-first.png);
+background-position : 0 0, 50% 0; }
+
+.l-wrap {
+margin : 0 auto; }
+
+.l-hidden {
+// margin-bottom : $baselineheight * 2;
+// padding : $baselineheight * 2 $gutterwidth / 2 $baselineheight / 2 $gutterwidth / 2; 
+
+&.in {
+margin-bottom : $baselineheight * 2;
+padding : $baselineheight * 2 $gutterwidth / 2 $baselineheight / 2 $gutterwidth / 2; }
+
+.l-wrap {
+margin-bottom : $baselineheight * 2;
+
+> h2 {
+text-transform : uppercase;
+@include font-size(32);
+font-weight : normal;
+color : rgba($textcolor, .5); }
+}
+
+.l-content {
+border-bottom : $borderwidth $borderstyle $bordercolor; }
+
+&:last-of-type {
+border-bottom-width : 0; }
+}
+
+.l-introduction {
+margin : 0;
+padding : 0;
+background-color : rgb(245,244,231);
+background-image : url(l-introduction.png);
+background-position : 50% 100%;
+background-repeat : repeat-x;
+
+.hero-unit {
+margin : 0;
+padding : $gutterwidth $baselineheight / 2 $gutterwidth * 2;
+background-color : transparent;
+border-width : 0; 
+
+.secondary {
+@include font-size(14);
+text-align : center; }
+}
+}
+
+#panel-images-hidden img {
+max-width : 120px;
+margin-right : $gutterwidth / 2; }
+
+#panel-typography-hidden:active {
+display : block !important; }
+
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================
+
+// MEDIA QUERIES 		==============================
+
+@media only #{$media} and ($feature: $bp4) {
+
+.samples {
+
+.l-introduction {
+padding : $baselineheight * 2 0 $baselineheight * 4 0; 
+
+.hero-unit {
+margin : 0 auto;
+padding : 0;
+width : 90%;
+max-width : 768px;
+@include box-sizing(border-box); }
+}
+
+nav[role=navigation] {
+width : 100%;
+background-color : rgb(71,63,63);
+color : $white;
+
+ul {
+margin : 0 auto;
+width : 90%;
+max-width : 768px; 
+
+a, a:visited { color : $white; }
+}
+}
+}
+
+.hidden hr {
+margin : 0 auto;
+width : 90%;
+max-width : 768px; }
+
+.l-wrap {
+@include clearfix; 
+width : 90%;
+max-width : 768px; }
+
+.l-summary {
+float : left;
+margin-right : -100%;
+width : 38.4375%;
+padding-right : $gutterwidth;
+@include box-sizing(border-box); }
+
+#panel-typography .l-trigger .l-summary,
+#panel-colour .l-trigger .l-summary,
+#panel-images .l-trigger .l-summary,
+#panel-navigation .l-trigger .l-summary,
+#panel-modules .l-trigger .l-summary,
+#panel-forms .l-trigger .l-summary,
+#panel-tables .l-trigger .l-summary,
+#panel-widgets .l-trigger .l-summary {
+min-height : 40px;
+background-image : url(l-trigger-icons.png); 
+background-repeat : no-repeat; }
+
+#panel-typography .l-trigger .l-summary {
+background-position : 95% 0; }
+
+#panel-colour .l-trigger .l-summary {
+background-position : 95% -300px; }
+
+#panel-images .l-trigger .l-summary {
+background-position : 95% -600px; }
+
+#panel-navigation .l-trigger .l-summary {
+background-position : 95% -100px; }
+
+#panel-modules .l-trigger .l-summary {
+background-position : 95% -700px; }
+
+#panel-forms .l-trigger .l-summary {
+background-position : 95% -400px; }
+
+#panel-tables .l-trigger .l-summary {
+background-position : 95% -500px; }
+
+#panel-widgets .l-trigger .l-summary {
+background-position : 95% -800px; }
+
+.l-content {
+clear : right;
+float : left;
+margin-left : 41.0417%;
+margin-right : -100%;
+width : 58.9583%; }
+
+[role="contentinfo"] small {
+display : block; }
+
+}

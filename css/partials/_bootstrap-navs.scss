@@ -1,0 +1,261 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/navs.less
+
+.nav {
+list-style-type : none;
+margin : 0 0 $baselineheight 0; 
+padding : 0; }
+
+.nav > li > a {
+display : block;
+margin : 0; 
+padding : 0; }
+
+.nav > li > a:hover {
+text-decoration : none;
+background-color : $navbarlinkbackgroundcolorhover; }
+
+.nav > li > a > img {
+max-width : none; }
+
+.nav > .pull-right {
+float : right; }
+
+.nav-header {
+display : block;
+padding : 3px $gutterwidth / 2;
+@include font-size(11);
+font-weight : bold;
+line-height : $baselineheight;
+color : $lightneutralcolor;
+text-transform : uppercase; }
+
+.nav li + .nav-header {
+margin-top : 9px; }
+
+// List
+
+.nav-list {
+padding-left : $gutterwidth / 2;
+padding-right : $gutterwidth / 2;
+margin-bottom : 0; }
+
+.nav-list > li > a,
+.nav-list .nav-header {
+margin-left :  -$gutterwidth / 2;
+margin-right : -$gutterwidth / 2; }
+
+.nav-list > li > a {
+padding : 3px 15px;
+color : $linkcolor; }
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+color: $white;
+background-color : $linkcolor;
+}
+.nav-list [class^="icon-"],
+.nav-list [class*=" icon-"] {
+margin-right : 2px; }
+
+// Tabs and pills
+
+.nav-tabs,
+.nav-pills {
+@include clearfix; }
+
+.nav-tabs > li,
+.nav-pills > li {
+float : left; }
+
+.nav-tabs > li > a,
+.nav-pills > li > a {
+padding-right : 11px;
+padding-left : 11px;
+margin-right : 2px;
+line-height : 14px; }
+
+// Tabs
+
+.nav-tabs {
+padding-left : $gutterwidth / 2;
+border-bottom : $borderwidth $borderstyle $bordercolor; }
+
+.nav-tabs > li {
+margin-bottom : -1px; }
+
+.nav-tabs > li > a {
+padding-top : 8px;
+padding-bottom : 8px;
+line-height : $baselineheight;
+border : $borderwidth $borderstyle transparent;
+border-radius : $borderradius $borderradius 0 0;
+
+&:hover {
+border-color : $lighterneutralcolor $lighterneutralcolor $bordercolor;
+border-bottom-color : transparent; }
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+color : $linkcolor;
+background-color : $bodycolor;
+border : $borderwidth $borderstyle $bordercolor;
+border-bottom-color : transparent;
+cursor : default; }
+
+// Pills
+
+.nav-pills > li > a {
+padding-top : 8px;
+padding-bottom : 8px;
+margin-top : 2px;
+margin-bottom : 2px;
+border-radius : $borderradius * 4;
+color : $linkcolor; }
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover {
+color : $white;
+background-color : $linkcolor; }
+
+// Stacked tabs and pills
+
+.nav-stacked > li {
+float : none; }
+
+.nav-stacked > li > a {
+margin-right : 0; }
+
+// Tabs
+
+.nav-tabs.nav-stacked {
+border-bottom : 0; }
+
+.nav-tabs.nav-stacked > li > a {
+border : $borderwidth $borderstyle $bordercolor;
+border-radius : 0; }
+
+.nav-tabs.nav-stacked > li:first-child > a {
+border-top-radius : $borderradius; }
+
+.nav-tabs.nav-stacked > li:last-child > a {
+.border-bottom-radius : $borderradius; }
+
+.nav-tabs.nav-stacked > li > a:hover {
+border-color : $bordercolor;
+z-index : 2; }
+
+// Pills
+.nav-pills.nav-stacked > li > a {
+margin-bottom : 3px; }
+
+.nav-pills.nav-stacked > li:last-child > a {
+margin-bottom : 1px; }
+
+// Tabbable
+
+.tabbable {
+padding : 0;
+@extend .clearfix; }
+
+.tab-content {
+overflow : auto; }
+
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+border-bottom : 0; }
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+display : none; }
+
+.tab-content > .active,
+.pill-content > .active {
+display : block; }
+
+.tabs-below > .nav-tabs {
+border-top : $borderwidth $borderstyle $bordercolor;
+}
+.tabs-below > .nav-tabs > li {
+margin-top : -1px;
+margin-bottom : 0; }
+
+.tabs-below > .nav-tabs > li > a {
+border-radius : 0 0 $borderradius $borderradius; }
+
+.tabs-below > .nav-tabs > li > a:hover {
+border-bottom-color : $bordercolor;
+border-top-color : transparent; }
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover {
+border-color : transparent $bordercolor $bordercolor $bordercolor;
+}
+
+// Left and right
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+float : none; }
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+min-width : 74px;
+margin-right : 0;
+margin-bottom : 3px; }
+
+// Tabs left
+
+.tabs-left > .nav-tabs {
+float : left;
+margin-right : 19px;
+border-right : $borderwidth $borderstyle $bordercolor; }
+
+.tabs-left > .nav-tabs > li > a {
+margin-right : -1px;
+border-radius : $borderradius 0 0 $borderradius; }
+
+.tabs-left > .nav-tabs > li > a:hover {
+border-color : $lighterneutralcolor $bordercolor $lighterneutralcolor $lighterneutralcolor; 
+border-right-color : transparent; }
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover {
+border-color : $bordercolor transparent $bordercolor $bordercolor;
+*border-right-color : $white; }
+
+// Tabs right
+
+.tabs-right > .nav-tabs {
+float : right;
+margin-left : 19px;
+padding : 0;
+border-left : $borderwidth $borderstyle $bordercolor; }
+
+.tabs-right > .nav-tabs > li > a {
+margin-left : -1px;
+border-radius : 0 $borderradius $borderradius 0; }
+
+.tabs-right > .nav-tabs > li > a:hover {
+border-color : $lighterneutralcolor $lighterneutralcolor $lighterneutralcolor $bordercolor;
+border-left-color : transparent; }
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover {
+border-color: $bordercolor $bordercolor $bordercolor transparent;
+*border-left-color : $white; }
+
+// Disabled
+
+.nav > .disabled > a {
+color : $lightneutralcolor; }
+
+.nav > .disabled > a:hover {
+text-decoration : none;
+background-color : transparent;
+cursor : default; }
