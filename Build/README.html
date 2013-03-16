@@ -6,61 +6,64 @@
 
 <p>Clone the repo, <code>git clone git@github.com:malarkey/rock-hammer.git</code>, (whatever that means) or <a href="https://github.com/malarkey/rock-hammer/zipball/master">download the latest release</a>. View <a href="http://stuffandnonsense.co.uk/projects/rock-hammer/">the project website</a> for more information.</p>
 
-<ol>
-  <li>
-    <h2 id="getting-started-with-rock-hammer">Getting started with Rock Hammer</h2>
-  </li>
-</ol>
+<h2 id="getting-started-with-rock-hammer">1. Getting started with Rock Hammer</h2>
 
 <p>Rock Hammer works with <a href="http://hammerformac.com">Hammer For Mac</a>. If you develop in Windows or you don’t (yet) use Hammer, skip to the section ‘Using Only the Build Folder‘ below.</p>
 
 <p>For styling, Rock Hammer uses <a href="http://sass-lang.org">Sass</a>. Hammer For Mac compiles Sass into CSS so you won’t need the Terminal. In most cases, you’ll need to edit just three .scss files to get started:</p>
 
-<p><em>rockhammer.scss</em></p>
+<h3 id="rockhammerscss">rockhammer.scss</h3>
 
 <p>Configure which Sass partials you need for your individual project. We’ve included some of the most useful parts of Bootstrap, but if you don’t need styles for a carousel or a hero box, there’s no sense in including them. Comment out the partials you don’t need //</p>
 
-<p><em>lte-ie8.scss</em></p>
+<h3 id="lte-ie8scss">lte-ie8.scss</h3>
 
 <p>For versions of Microsoft Internet Explorer that didn’t implement CSS3 Media Queries, this file contains compiled styles from all stylesheets inside Media Queries. Use this file to also serve styles specifically to Internet Explorer 8 and before. We’re looking into a more streamlined Sass solution. One that doesn’t require a degree in geology.</p>
 
-<p><em>_config.scss</em></p>
+<h3 id="configscss">_config.scss</h3>
 
 <p>You’ll do most of your work in this config file; everything from setting typefaces and choosing colours to defining styles for HTML elements and widgets. Follow steps one to four for the broadest brushstrokes, then make finer strokes by defining styles for popular interface elements:</p>
 
-<ol>
-  <li><em>NAVIGATION</em>				2. <em>MODULES</em></li>
-</ol>
+<h3 id="navigation">1. NAVIGATION</h3>
 
-<p>Site navigation				Hero
-Basic navbar				Alerts
-Breadcrumbs					Wells
-Pagination
-Pager</p>
+<ul>
+  <li>Site navigation				</li>
+  <li>Basic navbar				</li>
+  <li>Breadcrumbs					</li>
+  <li>Pagination</li>
+  <li>Pager</li>
+</ul>
 
-<ol>
-  <li><em>FORMS</em>					4. <em>TABLES</em></li>
-</ol>
+<h3 id="modules">2. MODULES</h3>
 
-<p>Inputs
-Help						5. <em>MISC</em>
-Buttons</p>
+<ul>
+  <li>Hero</li>
+  <li>Alerts</li>
+  <li>Wells</li>
+</ul>
 
-<ol>
-  <li>
-    <h2 id="rock-hammers-structure">Rock Hammer’s structure</h2>
-  </li>
-</ol>
+<h3 id="forms">3. FORMS</h3>
+
+<ul>
+  <li>Inputs</li>
+  <li>Help						</li>
+  <li>Buttons</li>
+</ul>
+
+<h3 id="tables">4. TABLES</h3>
+<p>### 5. MISC</p>
+
+<h2 id="rock-hammers-structure">2. Rock Hammer’s structure</h2>
 
 <p>Rock Hammer includes Sass partials for the three components of ‘design atmosphere:’</p>
 
-<p>2.1. <em>Colour</em>: Emotion and interaction vocabulary.</p>
+<p>2.1. <strong>Colour</strong>: Emotion and interaction vocabulary.</p>
 
-<p>2.2. <em>Typography</em>: Typefaces, type treatments and white space.</p>
+<p>2.2. <strong>Typography</strong>: Typefaces, type treatments and white space.</p>
 
-<p>2.3. <em>Texture</em>: Decorative elements, line-work, patterns and shapes.</p>
+<p>2.3. <strong>Texture</strong>: Decorative elements, line-work, patterns and shapes.</p>
 
-<p>2.4. <em>Partials</em>:</p>
+<p>2.4. <strong>Partials</strong>:</p>
 
 <ul>
   <li>Site-wide styles</li>
@@ -75,19 +78,23 @@ Buttons</p>
 
 <p>2.7. Speaking of breakpoints, there are six placeholder breakpoint files included. Use them as you need. The defaults are:</p>
 
-<p>$bp2 		480px		30em		
-$bp3 		600px		37.5em  	
-$bp4 		768px		48em 		
-$bp5 		992px	 	62em		
-$bp6 		1382px		86.375em 	</p>
+<ul>
+  <li>$bp2 		480px		30em		</li>
+  <li>$bp3 		600px		37.5em  	</li>
+  <li>$bp4 		768px		48em 		</li>
+  <li>$bp5 		992px	 	62em		</li>
+  <li>$bp6 		1382px		86.375em 	</li>
+</ul>
 
 <p>2.8. Matching HTML partials and Sass partials for forms, tables, navigation and other commonly used interface elements derived from Bootstrap. If there are Bootstrap components you use regularly, add them to the partials folder. Don’t forget to reference them from rock-hammer.scss too.</p>
 
 <p>2.9. Matching HTML partials and Sass partials for responsive navigation patterns. We’ve included three popular patterns but feel free to add more. Brad Frost’s <a href="http://bradfrost.github.com/this-is-responsive/patterns.html#navigation">Responsive Patterns</a> is a cracking place to start.</p>
 
-<p>_navigation-footer-anchor.scss
-_navigation-left-nav-flyout.scss
-_navigation-toggle.scss</p>
+<ul>
+  <li>_navigation-footer-anchor.scss</li>
+  <li>_navigation-left-nav-flyout.scss</li>
+  <li>_navigation-toggle.scss</li>
+</ul>
 
 <p>To use these navigation patterns: </p>
 
@@ -96,11 +103,7 @@ _navigation-toggle.scss</p>
   <li>Uncomment the pattern you’ve chosen in rock-hammer.scss</li>
 </ul>
 
-<ol>
-  <li>
-    <h2 id="using-only-the-build-folder">Using Only the Build Folder</h2>
-  </li>
-</ol>
+<h2 id="using-only-the-build-folder">3. Using Only the Build Folder</h2>
 
 <p>We built Rock Hammer to work with <a href="http://hammerformac.com">Hammer For Mac</a>. It’s great. You should try it. But if you develop on Windows or haven’t yet used Hammer:</p>
 
@@ -113,7 +116,7 @@ _navigation-toggle.scss</p>
   </li>
 </ol>
 
-<h2 id="css-preprocessor-options">CSS Preprocessor Options</h2>
+<h3 id="css-preprocessor-options">CSS Preprocessor Options</h3>
 
 <ul>
   <li>SCSS</li>
@@ -129,7 +132,7 @@ _navigation-toggle.scss</p>
   <li>http://stuffandnonsense.co.uk</li>
 </ul>
 
-<h2 id="default-theme-design">Default theme design</h2>
+<h3 id="default-theme-design">Default theme design</h3>
 
 <p><strong>Sue Davies</strong></p>
 
@@ -137,7 +140,7 @@ _navigation-toggle.scss</p>
   <li>http://twitter.com/suehayesdavies</li>
 </ul>
 
-<h2 id="javascript">Javascript</h2>
+<h3 id="javascript">Javascript</h3>
 
 <p><strong>Aaron Allport</strong></p>
 
@@ -147,11 +150,13 @@ _navigation-toggle.scss</p>
   <li>http://www.aaronallport.com</li>
 </ul>
 
-<h2 id="components">Components</h2>
+<h3 id="components">Components</h3>
 
-<p><a href="http://stuffandnonsense.co.uk/projects/320andup">320 and Up</a>
-<a href="http://twitter.github.com/bootstrap">Bootstrap</a>
-<a href="http://jquery.com">jQuery</a>
-<a href="http://modernizr.com">Modernizr</a>
-<a href="http://bradfrost.github.com/this-is-responsive/patterns.html">Responsive Patterns</a>
-<a href="http://selectivizr.com">Selectivizr</a></p>
+<ol>
+  <li><a href="http://stuffandnonsense.co.uk/projects/320andup">320 and Up</a></li>
+  <li><a href="http://twitter.github.com/bootstrap">Bootstrap</a></li>
+  <li><a href="http://jquery.com">jQuery</a></li>
+  <li><a href="http://modernizr.com">Modernizr</a></li>
+  <li><a href="http://bradfrost.github.com/this-is-responsive/patterns.html">Responsive Patterns</a></li>
+  <li><a href="http://selectivizr.com">Selectivizr</a></li>
+</ol>
