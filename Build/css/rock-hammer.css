@@ -313,6 +313,9 @@ sub {
   font-size: 12.8px;
   font-size: 1.28rem; }
 
+.spaced {
+  letter-spacing: 1px; }
+
 a {
   text-decoration: none;
   color: #929a00; }
@@ -596,10 +599,11 @@ a {
 /*carousel-inner*/
 .carousel-control {
   position: absolute;
-  top: 200px;
+  top: 50%;
   left: -24px;
-  width: 40px;
-  height: 40px;
+  margin-top: -22px;
+  width: 44px;
+  height: 44px;
   line-height: 40px;
   color: white;
   text-align: center;
@@ -2133,12 +2137,6 @@ nav[role=navigation].active {
       letter-spacing: -1px; }
 
   /*hero-unit*/
-  .c {
-    padding: 1em .5em 0; }
-
-  .c li {
-    padding: 0 .5em; }
-
   .navigation-footer-anchor li {
     display: inline-block;
     margin-right: 24px; }
@@ -2178,18 +2176,4 @@ nav[role=navigation].active {
 @media only screen and (min-width: 86.375em) {
   body:after {
     content: 'bp6';
-    display: none; }
-
-  .c-nav a {
-    position: absolute;
-    top: 40%;
-    left: -4em;
-    margin-top: -1em;
-    padding: 0;
-    width: 4em;
-    height: 2em; }
-
-  .c-nav a.next {
-    left: auto;
-    right: -4em;
-    border-width: 0; } }
+    display: none; } }

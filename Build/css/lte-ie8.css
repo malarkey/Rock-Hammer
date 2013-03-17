@@ -60,12 +60,6 @@ body:after {
     letter-spacing: -1px; }
 
 /*hero-unit*/
-.c {
-  padding: 1em .5em 0; }
-
-.c li {
-  padding: 0 .5em; }
-
 .navigation-footer-anchor li {
   display: inline-block;
   margin-right: 24px; }
@@ -106,17 +100,3 @@ body:after {
 body:after {
   content: 'bp6';
   display: none; }
-
-.c-nav a {
-  position: absolute;
-  top: 40%;
-  left: -4em;
-  margin-top: -1em;
-  padding: 0;
-  width: 4em;
-  height: 2em; }
-
-.c-nav a.next {
-  left: auto;
-  right: -4em;
-  border-width: 0; }
