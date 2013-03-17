@@ -6,22 +6,3 @@
 body:after {
 content : 'bp6';
 display : none; }
-
-
-
-
-// See _module-carousel-three.scss
-
-.c-nav a {
-position : absolute;
-top : 40%;
-left : -4em;
-margin-top : -1em;
-padding : 0;
-width : 4em;
-height : 2em; }
-
-.c-nav a.next {
-left : auto;
-right : -4em;
-border-width : 0; }

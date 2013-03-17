@@ -207,3 +207,6 @@ bottom : -.25em; }
 
 .tertiary {
 @include font-size($basefontsize / 1.25); }
+
+.spaced {
+letter-spacing : 1px; }

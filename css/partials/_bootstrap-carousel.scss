@@ -56,17 +56,18 @@ left : 100%; }
 
 .carousel-control {
 position : absolute;
-top : 200px;
+top : 50%;
 left : -$gutterwidth;
-width : 40px;
-height : 40px;
+margin-top : -22px;
+width : 44px;
+height : 44px;
 font {
 size : 60px;
 weight : 100; }
 line-height : 40px;
 color : $white;
 text-align : center;
-background-color : $primarycolor;
+background-color : $linkcolor;
 border-radius : 23px;
 @include transition (background-color $transitionduration ease);
 
@@ -75,7 +76,7 @@ left : auto;
 right : -$gutterwidth; }
 
 &:hover {
-background-color : darken($primarycolor,5%);
+background-color : darken($linkcolor,5%);
 color : $white;
 text-decoration : none; }
 }/*carousel-control*/
