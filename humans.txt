@@ -1,0 +1,36 @@
+/* humanstxt.org */
+
+Name: 					eg: Andy Clarke
+Site:					eg: http://stuffandnonsense.co.uk
+Twitter:				eg: @malarkey
+Location:				eg: UK
+
+Default theme design:
+
+Name: 					eg: Sue Davies
+Site:					eg: http://stuffandnonsense.co.uk
+Twitter:				eg: @suehayesdavies
+Location:				eg: UK
+
+Javascript:
+
+Name: 					eg: Aaron Allport
+Site:					eg: http://www.aaronallport.com
+Twitter:				eg: @aaronallport
+Location:				eg: UK
+
+/* SITE */
+
+Standards: 
+
+HTML5
+CSS3
+
+Components: 
+
+320 and Up: 			http://stuffandnonsense.co.uk/projects/320andup 
+Bootstrap: 				http://twitter.github.com/bootstrap
+jQuery: 				http://jquery.com
+Modernizr: 				http://modernizr.com
+Responsive Patterns:	http://bradfrost.github.com/this-is-responsive/patterns.html
+Selectivizr: 			http://selectivizr.com
