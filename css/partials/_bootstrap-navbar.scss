@@ -12,9 +12,8 @@ margin : 0 0 $baselineheight 0; }
 
 .navbar__inner {
 min-height : $navbarheight;
-padding {
-left :  $gutterwidth;
-right : $gutterwidth; }
+padding-left :  $gutterwidth;
+padding-right : $gutterwidth; 
 background-color : $navbarbackgroundcolor;
 // @include navbargrad;
 border : $navbarborderwidth $navbarborderstyle $navbarbordercolor;

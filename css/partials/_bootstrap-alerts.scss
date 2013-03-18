@@ -48,9 +48,8 @@ color : $alertcolorinfo; }
 }/*alert--info*/
 
 .alert--block {
-padding {
-top : 14px;
-bottom : 14px; }
+padding-top : 14px;
+padding-bottom : 14px;
 
 > p,
 > ul {
