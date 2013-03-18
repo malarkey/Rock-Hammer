@@ -14,33 +14,33 @@
 border-top : $borderwidth $borderstyle lighten($primarycolor, 25%);
 border-bottom : 7px $borderstyle $neutralcolor;
 
-&:first-child { 
+&:first-child {
 border-top-width : 0;
 border-bottom-width : 0; }
 
-&:nth-child(2) { 
+&:nth-child(2) {
 border-top-width : 0; }
 
-&:last-of-type { 
-margin-bottom : $baselineheight; 
+&:last-of-type {
+margin-bottom : $baselineheight;
 border-bottom-width : 0; }
 }
 
 .l-trigger {
 padding : $baselineheight $gutterwidth / 2;
 background-color : $primarycolor;
-background-image : -webkit-gradient(linear, 0 0, 0 100%, from(rgba($primarycolor,.6)), to(rgba($primarycolor,.9))), url(l-trigger.png);
-background-image : -webkit-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger.png);
-background-image : -moz-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger.png);
-background-image : -ms-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger.png);
-background-image : -o-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger.png);
+background-image : -webkit-gradient(linear, 0 0, 0 100%, from(rgba($primarycolor,.6)), to(rgba($primarycolor,.9))), url(/img/tmp/l-trigger.png);
+background-image : -webkit-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(/img/tmp/l-trigger.png);
+background-image : -moz-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(/img/tmp/l-trigger.png);
+background-image : -ms-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(/img/tmp/l-trigger.png);
+background-image : -o-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(/img/tmp/l-trigger.png);
 background-position : 0 0, 50% 100%;
 background-repeat : repeat-x;
 border-bottom : $borderwidth * 2 $borderstyle darken($primarycolor,5%);
 color : $white;
 
 &:first-of-type {
-border-top-width : 0; } 
+border-top-width : 0; }
 
 h1, p {
 text-shadow : 0 1px 1px rgba($black, .25), 0 0 10px rgba($primarycolor, 1); }
@@ -60,21 +60,21 @@ text-align : right; }
 
 a, a:visited {
 display : block;
-color : $white; 
+color : $white;
 
 &:hover {
-color : rgba($white,.9); 
+color : rgba($white,.9);
 text-decoration : none; }
 }
 }
 
 .l-panel:nth-child(2) .l-trigger {
 background-color : $primarycolor;
-background-image : -webkit-gradient(linear, 0 0, 0 100%, from(rgba($primarycolor,.6)), to(rgba($primarycolor,.9))), url(l-trigger-first.png);
-background-image : -webkit-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger-first.png);
-background-image : -moz-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger-first.png);
-background-image : -ms-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger-first.png);
-background-image : -o-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(l-trigger-first.png);
+background-image : -webkit-gradient(linear, 0 0, 0 100%, from(rgba($primarycolor,.6)), to(rgba($primarycolor,.9))), url(/img/tmp/tmp/l-trigger-first.png);
+background-image : -webkit-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(/img/tmp/l-trigger-first.png);
+background-image : -moz-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(/img/tmp/l-trigger-first.png);
+background-image : -ms-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(/img/tmp/l-trigger-first.png);
+background-image : -o-linear-gradient(top, rgba($primarycolor,.6), rgba($primarycolor,.9)), url(/img/tmp/l-trigger-first.png);
 background-position : 0 0, 50% 0; }
 
 .l-wrap {
@@ -82,7 +82,7 @@ margin : 0 auto; }
 
 .l-hidden {
 // margin-bottom : $baselineheight * 2;
-// padding : $baselineheight * 2 $gutterwidth / 2 $baselineheight / 2 $gutterwidth / 2; 
+// padding : $baselineheight * 2 $gutterwidth / 2 $baselineheight / 2 $gutterwidth / 2;
 
 &.in {
 margin-bottom : $baselineheight * 2;
@@ -109,7 +109,7 @@ border-bottom-width : 0; }
 margin : 0;
 padding : 0;
 background-color : rgb(245,244,231);
-background-image : url(l-introduction.png);
+background-image : url(/img/tmp/l-introduction.png);
 background-position : 50% 100%;
 background-repeat : repeat-x;
 
@@ -117,7 +117,7 @@ background-repeat : repeat-x;
 margin : 0;
 padding : $gutterwidth $baselineheight / 2 $gutterwidth * 2;
 background-color : transparent;
-border-width : 0; 
+border-width : 0;
 
 .secondary {
 @include font-size(14);
@@ -143,7 +143,7 @@ display : block !important; }
 .samples {
 
 .l-introduction {
-padding : $baselineheight * 2 0 $baselineheight * 4 0; 
+padding : $baselineheight * 2 0 $baselineheight * 4 0;
 
 .hero-unit {
 margin : 0 auto;
@@ -161,7 +161,7 @@ color : $white;
 ul {
 margin : 0 auto;
 width : 90%;
-max-width : 768px; 
+max-width : 768px;
 
 a, a:visited { color : $white; }
 }
@@ -174,7 +174,7 @@ width : 90%;
 max-width : 768px; }
 
 .l-wrap {
-@include clearfix; 
+@include clearfix;
 width : 90%;
 max-width : 768px; }
 
@@ -194,7 +194,7 @@ padding-right : $gutterwidth;
 #panel-tables .l-trigger .l-summary,
 #panel-widgets .l-trigger .l-summary {
 min-height : 40px;
-background-image : url(l-trigger-icons.png); 
+background-image : url(/img/tmp/l-trigger-icons.png);
 background-repeat : no-repeat; }
 
 #panel-typography .l-trigger .l-summary {

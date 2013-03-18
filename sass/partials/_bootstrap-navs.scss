@@ -6,12 +6,12 @@
 
 .nav {
 list-style-type : none;
-margin : 0 0 $baselineheight 0; 
+margin : 0 0 $baselineheight 0;
 padding : 0; }
 
 .nav > li > a {
 display : block;
-margin : 0; 
+margin : 0;
 padding : 0; }
 
 .nav > li > a:hover {
@@ -221,7 +221,7 @@ margin-right : -1px;
 border-radius : $borderradius 0 0 $borderradius; }
 
 .tabs-left > .nav-tabs > li > a:hover {
-border-color : $lighterneutralcolor $bordercolor $lighterneutralcolor $lighterneutralcolor; 
+border-color : $lighterneutralcolor $bordercolor $lighterneutralcolor $lighterneutralcolor;
 border-right-color : transparent; }
 
 .tabs-left > .nav-tabs .active > a,

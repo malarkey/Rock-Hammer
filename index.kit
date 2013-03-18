@@ -1,28 +1,32 @@
-<!-- @include _variables.html -->
+<!-- $title = Rock Hammer is Awesome -->
+<!-- @include partials/_variables.kit -->
 <!doctype html>
 
-<!-- @include _license.html -->
-<!-- @include _conditional.html -->
+<!-- @include partials/utilities/_license.kit -->
+<!-- @include partials/utilities/_conditional.kit -->
 
 <head>
 <title><!-- $title --></title>
-<!-- @include _head-meta.html -->
+<!-- @include partials/head/_head-meta.kit -->
 
 <!-- For all browsers -->
-<!-- @stylesheet rock-hammer -->
+<link rel="stylesheet" href="css/rock-hammer.css">
+
 
 <!--[if (lt IE 9) & (!IEMobile)]>
-<!-- @javascript selectivizr-min -->
-<!-- @stylesheet lte-ie8 -->
+<script src="/js/vendor/selectivizr-min.min.js"></script>
+
+<link rel="stylesheet" href="css/lte-ie8.css">
 <![endif]-->
 
 <!-- JavaScript -->
-<!-- @javascript modernizr-2.6.2-min -->
+<script src="/js/vendor/modernizr-2.6.2-min.js"></script>
 
-<!-- @include _head-icons.html -->
-<!-- @include _head-ios.html -->
-<!-- @include _head-ios-startup.html -->
-<!-- @include _head-windows.html -->
+
+<!-- @include partials/head/_head-icons.kit -->
+<!-- @include partials/head/_head-ios.kit -->
+<!-- @include partials/head/_head-ios-startup.kit -->
+<!-- @include partials/head/_head-windows.kit -->
 </head>
 
 <body class="samples" id="<!-- $id -->">
@@ -197,7 +201,7 @@
 <div class="l-wrap">
 <h2>Quotations</h2>
 
-<div class="l-summary"> 
+<div class="l-summary">
 <p>Block quotes are marked up using <code>&#8249;blockquote&#8250;</code> tags. You may use an optional <code>&#8249;cite&#8250;</code> element to cite an attribution.</p>
 </div><!-- l-summary -->
 
@@ -421,7 +425,7 @@
 </div><!-- l-trigger -->
 
 <div class="l-hidden collapse" id="panel-colour-hidden">
-<!-- @include _colour.html -->
+<!-- @include partials/utilities/_colour.kit -->
 
 </div><!-- l-hidden -->
 </section><!-- section -->
@@ -501,7 +505,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-navbar.html -->
+<!-- @include partials/bootstrap/_bootstrap-navbar.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -516,7 +520,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-tabbable.html -->
+<!-- @include partials/bootstrap/_bootstrap-tabbable.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -529,7 +533,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-tabbable-below.html -->
+<!-- @include partials/bootstrap/_bootstrap-tabbable-below.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -542,7 +546,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-tabbable-left.html -->
+<!-- @include partials/bootstrap/_bootstrap-tabbable-left.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -555,7 +559,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-tabbable-right.html -->
+<!-- @include partials/bootstrap/_bootstrap-tabbable-right.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -568,7 +572,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-breadcrumbs.html -->
+<!-- @include partials/bootstrap/_bootstrap-breadcrumbs.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -581,7 +585,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-nav-pills.html -->
+<!-- @include partials/bootstrap/_bootstrap-nav-pills.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -594,7 +598,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-nav-list.html -->
+<!-- @include partials/bootstrap/_bootstrap-nav-list.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -607,7 +611,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-nav-tabs-stacked.html -->
+<!-- @include partials/bootstrap/_bootstrap-nav-tabs-stacked.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -620,7 +624,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-nav-pills-stacked.html -->
+<!-- @include partials/bootstrap/_bootstrap-nav-pills-stacked.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -633,7 +637,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-pagination.html -->
+<!-- @include partials/bootstrap/_bootstrap-pagination.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -646,7 +650,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-pagination-centered.html -->
+<!-- @include partials/bootstrap/_bootstrap-pagination-centered.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -659,7 +663,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-pagination-right.html -->
+<!-- @include partials/bootstrap/_bootstrap-pagination-right.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -672,7 +676,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-pagination-sizes.html -->
+<!-- @include partials/bootstrap/_bootstrap-pagination-sizes.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -685,7 +689,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-pager.html -->
+<!-- @include partials/bootstrap/_bootstrap-pager.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -715,7 +719,7 @@
 <div class="l-wrap">
 <h2>Hero unit</h2>
 <p>Hero units are marked up using <code>&#8249;div&#8250;</code> tags with an additional <code>hero-unit</code> class.</p>
-<!-- @include _bootstrap-hero.html -->
+<!-- @include partials/bootstrap/_bootstrap-hero.kit -->
 </div><!-- l-wrap -->
 
 <!-- Next -->
@@ -727,7 +731,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-media.html -->
+<!-- @include partials/bootstrap/_bootstrap-media.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -741,7 +745,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-alerts.html -->
+<!-- @include partials/bootstrap/_bootstrap-alerts.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -754,7 +758,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-wells.html -->
+<!-- @include partials/bootstrap/_bootstrap-wells.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -817,7 +821,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-form-standard -->
+<!-- @include partials/bootstrap/_bootstrap-form-standard -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -830,7 +834,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-form-search -->
+<!-- @include partials/bootstrap/_bootstrap-form-search -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -843,7 +847,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-form-inline.html -->
+<!-- @include partials/bootstrap/_bootstrap-form-inline.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -856,7 +860,7 @@
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-form-horizontal.html -->
+<!-- @include partials/bootstrap/_bootstrap-form-horizontal.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -1310,7 +1314,7 @@ Radio option</label></p>
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-accordion.html -->
+<!-- @include partials/bootstrap/_bootstrap-accordion.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -1322,7 +1326,7 @@ Radio option</label></p>
 </div><!-- l-summary -->
 
 <div class="l-content">
-<!-- @include _bootstrap-carousel.html -->
+<!-- @include partials/bootstrap/_bootstrap-carousel.kit -->
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
@@ -1332,12 +1336,14 @@ Radio option</label></p>
 
 <!-- Final ============================== -->
 
-<!-- @include _contentinfo.html -->
+<!-- @include partials/structure/_contentinfo.kit -->
 </div><!-- container -->
 
-<!-- @include _scripts.html -->
+<!-- @include partials/utilities/_scripts.kit -->
 
-<!-- Remove if unused --> <!-- @javascript nav-toggle -->
-<!-- Remove if unused --> <!-- @javascript left-nav-flyout -->
+<!-- Remove if unused --> <script src="/js/nav-patterns/nav-toggle.js"></script>
+<!-- Remove if unused --> <script src="/js/nav-patterns/left-nav-flyout.js"></script>
+
+
 </body>
 </html>
