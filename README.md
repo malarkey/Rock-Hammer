@@ -4,7 +4,7 @@
 
 What’s Rock Hammer? It’s a curated project library for [Hammer For Mac](http://hammerformac.com) designed and developed by [Stuff and Nonsense](http://stuffandnonsense.co.uk) and friends. Rock Hammer contains baseline typography, styling for common HTML elements including images, forms and tables, as well as navigation, responsive modules and widgets. These are the foundation for every project we start. Rock Hammer can be used as a design/style template or pattern primer or as the foundation for developing a responsive website.
 
-Clone the repo, `git clone git@github.com:malarkey/rock-hammer.git`, (whatever that means) or [download the latest release](https://github.com/malarkey/rock-hammer/zipball/master).
+Clone the repo, `git clone git@github.com:malarkey/Rock-Hammer.git`, (whatever that means) or [download the latest release](https://github.com/malarkey/rock-hammer/zipball/master).
 
 
 
