@@ -475,10 +475,17 @@ a {
   -moz-transition: height 0.25s ease-in;
   -ms-transition: height 0.25s ease-in;
   -o-transition: height 0.25s ease-in;
-  transition: height 0.25s ease-in; }
+  transition: height 0.25s ease-in;
+  opacity: 0; }
 
 .collapse.in {
-  height: auto; }
+  height: auto;
+  opacity: 1;
+  -webkit-transition: opacity 0.25s linear;
+  -moz-transition: opacity 0.25s linear;
+  -ms-transition: opacity 0.25s linear;
+  -o-transition: opacity 0.25s linear;
+  transition: opacity 0.25s linear; }
 
 .alert {
   padding: 8px 35px 8px 14px;
@@ -1416,7 +1423,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333;
+  outline: thin dotted #333333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -2054,7 +2061,7 @@ nav[role=navigation].active {
     widows: 3; }
 
   pre, blockquote {
-    border: 1px solid #666;
+    border: 1px solid #666666;
     page-break-inside: avoid; }
 
   abbr[title]:after {
@@ -2159,7 +2166,7 @@ nav[role=navigation].active {
 
   #navigation-left-nav-flyout li {
     display: inline-block;
-    margin: 0 .25em; } }
+    margin: 0 0.25em; } }
 @media only screen and (min-width: 62em) {
   body:after {
     content: 'bp5';

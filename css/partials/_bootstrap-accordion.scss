@@ -23,8 +23,16 @@ border-top : $borderwidth $borderstyle $bordercolor; }
 .collapse {
 position : relative;
 height : 0;
+
 overflow : hidden;
-@include transition(height $transitionduration ease-in); }
+@include transition(height $transitionduration ease-in);
+
+// Added for fade-in of panel content
+opacity: 0; }
 
 .collapse.in {
-height : auto; }
+height : auto; 
+
+// Added for fade-in of panel content
+opacity : 1; 
+@include transition(opacity ($transitionduration) linear); }
