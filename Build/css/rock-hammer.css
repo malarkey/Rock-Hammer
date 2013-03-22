@@ -1432,6 +1432,11 @@ textarea:-moz-placeholder {
   font-size: 14px;
   font-size: 1.4rem;
   color: #8a7b7b; }
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #8a7b7b; }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   font-size: 14px;
