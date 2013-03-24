@@ -20,6 +20,7 @@
 //		=pager							Pager
 //		=pagination						Pagination
 //		=tables							Tables
+//		=tooltip						Tooltip
 //		=wells							Wells
 
 
@@ -101,8 +102,6 @@ $codefont 						: Monaco, Courier New, monospace;
 
 
 
-
-
 // STEP THREE: COLOUR ================================================
 
 
@@ -176,6 +175,18 @@ $borderradius 					: 4px;
 
 // 4. TABLES
 // 5. MISC
+//    Tooltip
+
+
+
+
+// TYPOGRAPHY =============================================================================
+
+// Background colour for blockquotes, ins, and mark
+$basefontbackgroundcolor		: $lightestneutralcolor; 
+
+
+
 
 
 // NAVIGATION =============================================================================
@@ -659,3 +670,26 @@ $tablefontfamily 				: $altfontfamily;
 
 // Set a default duration for CSS transitions
 $transitionduration				: .25s;
+
+
+
+
+// =tooltip ============
+
+// Set tooltip font size
+$tooltipfontsize				: 11px;
+
+// Set tooltip font color
+$tooltipcolor					: $white;
+
+// Set tooltip background colour
+$tooltipbackgroundcolor			: $secondarycolor;
+
+// Set tooltip’s border radius. Default is $borderradius defined above
+$tooltipborderradius 			: $borderradius;
+
+// Set tooltip arrow width
+$tooltiparrowwidth				: 5px;
+
+// Set tooltip arrow colour
+$tooltiparrowcolor				: $tooltipbackgroundcolor;

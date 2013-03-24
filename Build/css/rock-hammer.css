@@ -1232,6 +1232,59 @@ table {
 .table-hover tbody tr:hover th {
   background-color: #f6f5f5; }
 
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  display: block;
+  visibility: visible;
+  font-size: 11pxpx;
+  font-size: 1.1pxrem;
+  line-height: 1.4; }
+
+/*tooltip*/
+.tooltip-inner {
+  max-width: 200px;
+  padding: 8px;
+  background-color: #a43215;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  text-decoration: none; }
+
+/*tooltip-inner */
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid; }
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #a43215; }
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: 5px; }
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #a43215; }
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #a43215; }
+
+/*tooltip*/
 .well {
   min-height: 20px;
   padding: 12px;
@@ -1423,7 +1476,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #333333;
+  outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -2066,7 +2119,7 @@ nav[role=navigation].active {
     widows: 3; }
 
   pre, blockquote {
-    border: 1px solid #666666;
+    border: 1px solid #666;
     page-break-inside: avoid; }
 
   abbr[title]:after {
@@ -2171,7 +2224,7 @@ nav[role=navigation].active {
 
   #navigation-left-nav-flyout li {
     display: inline-block;
-    margin: 0 0.25em; } }
+    margin: 0 .25em; } }
 @media only screen and (min-width: 62em) {
   body:after {
     content: 'bp5';

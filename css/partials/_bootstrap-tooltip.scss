@@ -1,0 +1,64 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/tooltip.less
+
+.tooltip {
+position : absolute;
+z-index : 1000;
+display : block;
+visibility : visible;
+@include font-size($tooltipfontsize);
+line-height : 1.4;
+
+}/*tooltip*/
+
+.tooltip-inner {
+max-width : 200px;
+padding : 8px;
+background-color : $tooltipbackgroundcolor;
+border-radius : $tooltipborderradius;
+color : $tooltipcolor;
+text-align : center;
+text-decoration : none;
+}/*tooltip-inner */
+
+// Arrows
+.tooltip-arrow {
+position : absolute;
+width : 0;
+height : 0;
+border-color : transparent;
+border-style : solid; }
+
+.tooltip {
+&.top .tooltip-arrow {
+bottom : 0;
+left : 50%;
+margin-left : -$tooltiparrowwidth;
+border-width : $tooltiparrowwidth $tooltiparrowwidth 0;
+border-top-color : $tooltiparrowcolor; }
+
+&.right .tooltip-arrow {
+top : 50%;
+left : 0;
+margin-top : -$tooltiparrowwidth;
+border-width : $tooltiparrowwidth $tooltiparrowwidth $tooltiparrowwidth 0;
+border-right-color : $tooltiparrowwidth; }
+
+&.left .tooltip-arrow {
+top : 50%;
+right : 0;
+margin-top : -$tooltiparrowwidth;
+border-width : $tooltiparrowwidth 0 $tooltiparrowwidth $tooltiparrowwidth;
+border-left-color : $tooltiparrowcolor; }
+
+&.bottom .tooltip-arrow {
+top : 0;
+left : 50%;
+margin-left : -$tooltiparrowwidth;
+border-width : 0 $tooltiparrowwidth $tooltiparrowwidth;
+border-bottom-color : $tooltiparrowcolor; }
+
+}/*tooltip*/

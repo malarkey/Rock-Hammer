@@ -91,7 +91,7 @@ padding-right : $gutterwidth / 2; }
 blockquote  {
 margin : 0 0 $baselineheight 0;
 padding : $gutterwidth / 2;
-background-color : $lightestneutralcolor;
+background-color : $basefontbackgroundcolor;
 font-style : normal;
 
 small {
@@ -162,12 +162,12 @@ dfn {
 font-style : italic; }
 
 ins {
-background-color : $lightestneutralcolor;
+background-color : $basefontbackgroundcolor;
 color : $textcolor;
 text-decoration : none; }
 
 mark {
-background-color : $lightestneutralcolor;
+background-color : $basefontbackgroundcolor;
 color : $textcolor;
 font-style : italic;
 font-weight : bold; }
