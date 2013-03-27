@@ -313,6 +313,9 @@ sub {
   font-size: 12.8px;
   font-size: 1.28rem; }
 
+.amp {
+  font-family: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua"); }
+
 .spaced {
   letter-spacing: 1px; }
 
@@ -1563,6 +1566,10 @@ textarea[readonly] {
     content: ""; }
   .form-actions:after {
     clear: both; }
+
+[placeholder]:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity .5s .5s ease; }
 
 .help-block,
 .help-inline {

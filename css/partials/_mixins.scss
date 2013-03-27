@@ -3,6 +3,29 @@
 // URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
 // Version: <!-- $license -->
 
+// Typography =============================================
+
+@mixin font-size($font-size: 16){
+font-size : #{$font-size}px;
+font-size : #{$font-size / 10}rem; }
+
+@mixin css-hyphens($val:auto) {
+-webkit-hyphens : $val;
+-moz-hyphens : $val;
+-ms-hyphens : $val;
+-o-hyphens : $val;
+hyphens : $val; }
+
+@mixin smallcaps($color, $font-weight) {
+font-variant : small-caps;
+font-weight : $font-weight;
+text-transform : lowercase;
+color : $color; }
+
+
+
+
+
 // chromeframe
 
 @mixin chromeframe {
@@ -126,10 +149,6 @@ content-justify : $justify; }
 -moz-flex-direction : $direction;
 -o-flex-direction : $direction;
 flex-direction : $direction; }
-
-@mixin font-size($font-size: 16){
-font-size : #{$font-size}px;
-font-size : #{$font-size / 10}rem; }
 
 @mixin horizontal($startColor : $white, $endColor : $lighterneutralcolor) {
 background-color: $endColor;

@@ -97,6 +97,9 @@ $baseheadingfontcolor 			: inherit;
 $altfontfamily 					: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $altlineheight 					: 1.35em;
 
+// You can choose a special typeface just for ampersands too
+$ampfontfamily 					: local('Georgia'), local('Garamond'), local('Palatino'), local('Book Antiqua');
+
 //  And if your site’s for geeks, you’ll need a font for code too
 $codefont 						: Monaco, Courier New, monospace;
 

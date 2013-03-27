@@ -209,3 +209,9 @@ margin-top : $baselineheight;
 margin-bottom : $baselineheight;
 padding : ($baselineheight - 1) $gutterwidth $baselineheight;
 @include clearfix; }
+
+// placeholder
+
+[placeholder]:focus::-webkit-input-placeholder {
+opacity : 0;
+transition : opacity .5s .5s ease; }
