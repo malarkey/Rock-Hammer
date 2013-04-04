@@ -18,12 +18,33 @@ var NavigationManager = {
 		});
 	},
 
+	// Supress dead links
+	supressDeadLinks: function() {
+		// Supress clicks on any navigation item
+		$("#panel-navigation-hidden").click(function(e){
+			e.preventDefault();
+		});
+
+		// Supress buttons on modules
+		$("#panel-modules-hidden .btn").click(function(e){
+			e.preventDefault();
+		});
+
+		// Supress buttons on forms
+		$("#panel-forms-hidden .btn").click(function(e){
+			e.preventDefault();
+		});
+	},
+
 	// Entry point for the object
 	init: function(navElementId, backToTopTarget) {
 		$('body').addClass('js');
 		this.initialiseNavigationLinks(navElementId);
 		this.initialiseBackToTopLinks(backToTopTarget);
+		this.supressDeadLinks();
 	}
+
+
 };
 
 // ============================================================================
