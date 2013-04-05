@@ -83,6 +83,15 @@ color : inherit;
 border-radius : $forminputborderradius;
 vertical-align : middle; }
 
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+display: -webkit-inline-flex; }
+
 input,
 textarea {
 width : 100%;
