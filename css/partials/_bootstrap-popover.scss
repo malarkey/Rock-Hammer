@@ -1,0 +1,136 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+// Adapted from: https://github.com/twitter/bootstrap/blob/master/less/popovers.less
+
+.popover {
+position : absolute;
+top : 0;
+left : 0;
+z-index : 1000;
+display : none;
+max-width : 276px;
+padding : 1px;
+text-align : left; // Reset given new insertion method
+background-color : $popoverbackground;
+@include background-clip(padding-box);
+border : 1px solid #ccc;
+border : 1px solid rgba(0,0,0,.2);
+border-radius : 6px;
+@include box-shadow(0 5px 10px rgba(0,0,0,.2));
+
+// Overrides for proper insertion
+white-space : normal;
+
+// Offset the popover to account for the popover arrow
+&.top { 
+margin-top: -10px; }
+
+&.right { 
+margin-left: 10px; }
+
+&.bottom { 
+margin-top: 10px; }
+
+&.left { 
+margin-left: -10px; }
+}
+
+.popover-title {
+margin : 0; // reset heading margin
+padding : 8px 14px;
+font-size : 14px;
+font-weight : normal;
+line-height : 18px;
+background-color : $popovertitlebackground;
+border-bottom : 1px solid darken($popovertitlebackground, 5%);
+border-radius : 5px 5px 0 0;
+
+&:empty {
+display : none; }
+}
+
+.popover-content {
+padding : 9px 14px; }
+
+// Arrows
+//
+// .arrow is outer, .arrow:after is inner
+.popover .arrow,
+.popover .arrow:after {
+position : absolute;
+display : block;
+width : 0;
+height : 0;
+border-color : transparent;
+border-style : solid; }
+
+.popover .arrow {
+border-width : $popoverarrowouterwidth; }
+
+.popover .arrow:after {
+border-width : $popoverarrowwidth;
+content : ""; }
+
+.popover {
+&.top .arrow {
+left : 50%;
+margin-left : -$popoverarrowouterwidth;
+border-bottom-width : 0;
+border-top-color : #999; // IE8 fallback
+border-top-color : $popoverarrowoutercolor;
+bottom : -$popoverarrowouterwidth;
+
+&:after {
+bottom : 1px;
+margin-left : -$popoverarrowwidth;
+border-bottom-width : 0;
+border-top-color : $popoverarrowcolor; }
+}
+
+&.right .arrow {
+top : 50%;
+left : -$popoverarrowouterwidth;
+margin-top : -$popoverarrowouterwidth;
+border-left-width : 0;
+border-right-color : #999; // IE8 fallback
+border-right-color : $popoverarrowoutercolor;
+
+&:after {
+left : 1px;
+bottom : -$popoverarrowwidth;
+border-left-width : 0;
+border-right-color : $popoverarrowcolor; }
+}
+
+&.bottom .arrow {
+left : 50%;
+margin-left : -$popoverarrowouterwidth;
+border-top-width : 0;
+border-bottom-color : #999; // IE8 fallback
+border-bottom-color : $popoverarrowoutercolor;
+top : -$popoverarrowouterwidth;
+
+&:after {
+top : 1px;
+margin-left : -$popoverarrowwidth;
+border-top-width : 0;
+border-bottom-color : $popoverarrowcolor; }
+}
+
+&.left .arrow {
+top : 50%;
+right : -$popoverarrowouterwidth;
+margin-top : -$popoverarrowouterwidth;
+border-right-width : 0;
+border-left-color : #999; // IE8 fallback
+border-left-color : $popoverarrowoutercolor;
+
+&:after {
+right : 1px;
+border-right-width : 0;
+border-left-color : $popoverarrowcolor;
+bottom : -$popoverarrowwidth; }
+}
+}

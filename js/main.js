@@ -1,3 +1,8 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
 // Navigation Manager object takes care of registering the click handlers for our nav patterns
 var NavigationManager = {
 	// Behaviour for the "Top" links
@@ -55,4 +60,17 @@ $(document).ready(function() {
 	NavigationManager.init("navigation-toggle", "rock-hammer");
 	// Initialise the carousel
 	$('.carousel').carousel();
+
+	// Initiaslise tooltips
+	// tooltip demo
+    $('.tooltip-demo').tooltip({
+      selector: "a[data-toggle=tooltip]"
+    });
+
+    // popover demo
+    $("a[data-toggle=popover]")
+      .popover()
+      .click(function(e) {
+        e.preventDefault()
+      })
 });

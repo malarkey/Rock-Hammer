@@ -22,6 +22,7 @@
 //		=tables							Tables
 //		=tooltip						Tooltip
 //		=wells							Wells
+//		=popovers 						Popovers
 
 
 
@@ -680,7 +681,7 @@ $transitionduration				: .25s;
 // =tooltip ============
 
 // Set tooltip font size
-$tooltipfontsize				: 11px;
+$tooltipfontsize				: 11;
 
 // Set tooltip font color
 $tooltipcolor					: $white;
@@ -696,3 +697,26 @@ $tooltiparrowwidth				: 5px;
 
 // Set tooltip arrow colour
 $tooltiparrowcolor				: $tooltipbackgroundcolor;
+
+
+
+
+// =popovers ==========
+
+// Set background color for popover body
+$popoverbackground 				: lighten($tertiarycolor, 50%);
+
+// Set background color for popover title
+$popovertitlebackground 		: lighten($tertiarycolor, 50%);
+
+// Set the outer width of the popover arrow
+$popoverarrowouterwidth 		: 5px;
+
+// Set the actual width of the popover arrow
+$popoverarrowwidth 				: 5px;
+
+// Set the outer color of the popover arrow
+$popoverarrowoutercolor 		: lighten($tertiarycolor, 50%);
+
+// Set the color of the popover arrow
+$popoverarrowcolor  			: lighten($tertiarycolor, 50%);

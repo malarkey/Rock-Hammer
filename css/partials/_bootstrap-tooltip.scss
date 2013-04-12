@@ -10,9 +10,23 @@ z-index : 1000;
 display : block;
 visibility : visible;
 @include font-size($tooltipfontsize);
-line-height : 1.4;
-
+line-height : $baselineheight;
+@include opacity(0);
+  &.in     { @include opacity(80); }
+  &.top    { margin-top:  -3px; padding: 5px 0; }
+  &.right  { margin-left:  3px; padding: 0 5px; }
+  &.bottom { margin-top:   3px; padding: 5px 0; }
+  &.left   { margin-left: -3px; padding: 0 5px; }
 }/*tooltip*/
+
+.fade {
+  @include opacity(0);
+  @include transition(opacity 0.15s linear);
+}
+
+.fade.in {
+  @include opacity(1);
+}
 
 .tooltip-inner {
 max-width : 200px;
@@ -45,7 +59,7 @@ top : 50%;
 left : 0;
 margin-top : -$tooltiparrowwidth;
 border-width : $tooltiparrowwidth $tooltiparrowwidth $tooltiparrowwidth 0;
-border-right-color : $tooltiparrowwidth; }
+border-right-color : $tooltiparrowcolor; }
 
 &.left .tooltip-arrow {
 top : 50%;
