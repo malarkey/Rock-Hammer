@@ -1,0 +1,57 @@
+/*! responsive-nav.js v1.0.14 by @viljamis */
+
+.js nav[role=navigation] {
+clip: rect(0 0 0 0);
+max-height: 0;
+position: absolute;
+display: block;
+overflow: hidden;
+zoom: 1;
+
+.opened {
+  max-height: 9999px;
+}
+
+}
+
+#nav-toggle {
+float : right;
+display : block;
+padding : $baselineheight / 2 $gutterwidth / 2;
+background-color: $navigationbackgroundcolor; 
+color: $navigationlinkcolor;
+border-bottom-left-radius: $borderradius * 2;
+}
+
+.navigation-toggle {
+display: none;
+}
+
+nav[role=navigation] {
+clear : both;
+background-color : $navigationbackgroundcolor;
+@include transition (all $transitionduration ease); }
+
+nav[role=navigation].active {
+max-height : 25em; }
+
+#navigation-toggle {
+list-style-type : none;
+@include zero;
+
+ul {
+list-style-type : none;
+@include zero; }
+
+a {
+display : block;
+padding : .8em;
+border-bottom : $navigationborderwidth $navigationborderstyle $navigationbordercolor;
+color : $navigationlinkcolor;
+text-transform : uppercase;
+
+&:hover {
+color : $navigationlinkcolorhover;
+text-decoration : none; }
+}
+}

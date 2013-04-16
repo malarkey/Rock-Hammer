@@ -3,74 +3,38 @@
 // URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
 // Version: <!-- $license -->
 
-// Navigation Manager object takes care of registering the click handlers for our nav patterns
-var NavigationManager = {
-	// Behaviour for the "Top" links
-	// Scroll up to the "backToTopTarget" supplied, based on the link having 
-	// "backToTopTarget" as the value of its href attribute
-	initialiseBackToTopLinks: function(backToTopTarget) {
-		$("a[href='#" + backToTopTarget + "']").click(function() {
-			$.scrollTo($("#" + backToTopTarget), 600);
-		});
-	},
-
-	// Behaviour for navigation links
-	// Scroll to the destination and automatically open the target panel
-	initialiseNavigationLinks: function(navElementId) {
-		$("#" + navElementId + ">ul>li>a").click(function() {
-			$.scrollTo($($(this).attr("href")), 600);
-			$($(this).attr("href") + "-hidden").collapse('show');
-		});
-	},
-
-	// Supress dead links
-	supressDeadLinks: function() {
-		// Supress clicks on any navigation item
-		$("#panel-navigation-hidden").click(function(e){
-			e.preventDefault();
-		});
-
-		// Supress buttons on modules
-		$("#panel-modules-hidden .btn").click(function(e){
-			e.preventDefault();
-		});
-
-		// Supress buttons on forms
-		$("#panel-forms-hidden .btn").click(function(e){
-			e.preventDefault();
-		});
-	},
-
-	// Entry point for the object
-	init: function(navElementId, backToTopTarget) {
-		$('body').addClass('js');
-		this.initialiseNavigationLinks(navElementId);
-		this.initialiseBackToTopLinks(backToTopTarget);
-		this.supressDeadLinks();
-	}
-
-
-};
-
-// ============================================================================
-
 // Entry point for our JavaScript code
 $(document).ready(function() {
-	// Initialise navigation patterns
+
+	// Initialise the navigation manager object
 	NavigationManager.init("navigation-toggle", "rock-hammer");
+
+	// Used to store responsive nav state
+	var navigation;
+	
+	// Navigation Patterns =========
+	if (config.navpatterns.responsivenav.use === true) {
+		navigation = responsiveNav(config.navpatterns.responsivenav.navelement);
+	};
+
+	// Widgets ===============
+
 	// Initialise the carousel
-	$('.carousel').carousel();
+	if (config.widgets.carousel.use === true) {
+		$(config.widgets.carousel.container).carousel();
+	}
 
 	// Initiaslise tooltips
-	// tooltip demo
-    $('.tooltip-demo').tooltip({
-      selector: "a[data-toggle=tooltip]"
-    });
+	if (config.widgets.tooltips.use === true) {
+		$(config.widgets.tooltips.container).tooltip({
+  			selector: "a[data-toggle=tooltip]"
+		});
+	}
 
-    // popover demo
-    $("a[data-toggle=popover]")
-      .popover()
-      .click(function(e) {
-        e.preventDefault()
-      })
+	// Initialise Popovers
+	if (config.widgets.popovers.use === true) {
+	    $("a[data-toggle=popover]").popover().click(function(e) {
+	        e.preventDefault()
+	    });
+	}
 });

@@ -12,7 +12,8 @@ body:after {
   content: 'bp3';
   display: none; }
 
-.navigation-toggle {
+.navigation-toggle,
+#nav-toggle {
   display: none; }
 
 .js nav[role=navigation] {

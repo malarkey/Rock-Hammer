@@ -2127,10 +2127,27 @@ input.search-query {
     *zoom: 1; }
 
 /*btn.btn-toolbar*/
-.navigation-toggle {
+/* responsive-nav.js v1.0.14 by @viljamis */
+.js nav[role=navigation] {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1; }
+  .js nav[role=navigation] .opened {
+    max-height: 9999px; }
+
+#nav-toggle {
   float: right;
   display: block;
-  padding: 0.75em 12px; }
+  padding: 0.75em 12px;
+  background-color: #292f36;
+  color: white;
+  border-bottom-left-radius: 8px; }
+
+.navigation-toggle {
+  display: none; }
 
 nav[role=navigation] {
   clear: both;
@@ -2140,10 +2157,6 @@ nav[role=navigation] {
   -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
-
-.js nav[role=navigation] {
-  overflow: hidden;
-  max-height: 0; }
 
 nav[role=navigation].active {
   max-height: 25em; }
@@ -2412,7 +2425,8 @@ nav[role=navigation].active {
     content: 'bp3';
     display: none; }
 
-  .navigation-toggle {
+  .navigation-toggle,
+  #nav-toggle {
     display: none; }
 
   .js nav[role=navigation] {

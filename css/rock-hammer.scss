@@ -60,9 +60,10 @@ URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
 @import "partials/bootstrap-form-buttons";
 
 // Choose a responsive navigation pattern, or add a brand new one
-@import "partials/navigation-toggle";
+// @import "partials/navigation-toggle";
 // @import "partials/navigation-footer-anchor";
 // @import "partials/navigation-left-nav-flyout";
+@import "partials/navigation-responsive-nav";
 
 // Styles for the Rock Hammer examples page
 @import "partials/furniture";

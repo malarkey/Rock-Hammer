@@ -12,7 +12,8 @@ display : none; }
 
 // See _navigation-toggle.scss
 
-.navigation-toggle {
+.navigation-toggle,
+#nav-toggle {
 display : none; }
 
 .js nav[role=navigation] {
