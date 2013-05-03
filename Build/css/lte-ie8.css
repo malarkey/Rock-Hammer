@@ -84,7 +84,7 @@ body:after {
 
 #navigation-left-nav-flyout li {
   display: inline-block;
-  margin: 0 0.25em; }
+  margin: 0 .25em; }
 
 body:after {
   content: 'bp5';

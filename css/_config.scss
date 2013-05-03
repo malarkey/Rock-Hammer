@@ -680,14 +680,17 @@ $transitionduration				: .25s;
 
 // =tooltip ============
 
-// Set tooltip font size
-$tooltipfontsize				: 11;
+// Set tooltip background colour
+$tooltipbackgroundcolor			: $primarycolor;
+
+// Set tooltip font family
+$tooltipfontfamily				: $altfontfamily;
 
 // Set tooltip font color
 $tooltipcolor					: $white;
 
-// Set tooltip background colour
-$tooltipbackgroundcolor			: $secondarycolor;
+// Set tooltip font size
+$tooltipfontsize				: 11;
 
 // Set tooltip’s border radius. Default is $borderradius defined above
 $tooltipborderradius 			: $borderradius;
@@ -704,19 +707,37 @@ $tooltiparrowcolor				: $tooltipbackgroundcolor;
 // =popovers ==========
 
 // Set background color for popover body
-$popoverbackground 				: lighten($tertiarycolor, 50%);
+$popoverbackgroundcolor 		: $primarycolor;
 
 // Set background color for popover title
-$popovertitlebackground 		: lighten($tertiarycolor, 50%);
+$popovertitlebackground 		: $popoverbackgroundcolor;
+
+// Set popover font family
+$popoverfontfamily				: $altfontfamily;
+
+// Set popover font color
+$popovercolor					: $white;
+
+// Set popover border-width. Default is twice $borderwidth defined above
+$popoverborderwidth				: $borderwidth * 2;
+
+// Set popover border colour
+$popoverbordercolor 			: darken($popoverbackgroundcolor,5%);
+
+// Set popover border style, Default is $borderstyle defined above
+$popoverborderstyle				: $borderstyle;
+
+// Set popover border radius. Default is $borderradius defined above
+$popoverborderradius			: $borderradius;
 
 // Set the outer width of the popover arrow
-$popoverarrowouterwidth 		: 5px;
+$popoverarrowouterwidth 		: $gutterwidth / 2;
 
 // Set the actual width of the popover arrow
-$popoverarrowwidth 				: 5px;
+$popoverarrowwidth 				: $gutterwidth / 2;
 
 // Set the outer color of the popover arrow
-$popoverarrowoutercolor 		: lighten($tertiarycolor, 50%);
+$popoverarrowoutercolor 		: $popoverbordercolor;
 
 // Set the color of the popover arrow
-$popoverarrowcolor  			: lighten($tertiarycolor, 50%);
+$popoverarrowcolor  			: $popoverbackgroundcolor;

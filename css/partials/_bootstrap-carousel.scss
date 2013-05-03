@@ -88,7 +88,7 @@ right : 0;
 bottom : 0;
 padding : 15px;
 background-color : $darkneutralcolor;
-background-color : rgba(0,0,0,.75); }
+background-color : rgba($darkneutralcolor,.75); }
 
 .carousel-caption h4,
 .carousel-caption p {

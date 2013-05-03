@@ -201,5 +201,15 @@ bottom : -.25em; }
 .amp {
 font-family : $ampfontfamily; }
 
+.footnotes {
+
+li {
+margin-bottom : $baselineheight / 2;
+font-family : $altfontfamily;
+@include font-size($basefontsize / 1.3);
+line-height : 1.4; }
+
+}/*footnotes*/
+
 .spaced {
 letter-spacing : 1px; }

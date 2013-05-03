@@ -12,33 +12,32 @@ visibility : visible;
 @include font-size($tooltipfontsize);
 line-height : $baselineheight;
 @include opacity(0);
-  &.in     { @include opacity(80); }
-  &.top    { margin-top:  -3px; padding: 5px 0; }
-  &.right  { margin-left:  3px; padding: 0 5px; }
-  &.bottom { margin-top:   3px; padding: 5px 0; }
-  &.left   { margin-left: -3px; padding: 0 5px; }
+
+&.in     { @include opacity(80); }
+&.top    { margin-top:  -3px; padding: 5px 0; }
+&.right  { margin-left:  3px; padding: 0 5px; }
+&.bottom { margin-top:   3px; padding: 5px 0; }
+&.left   { margin-left: -3px; padding: 0 5px; }
 }/*tooltip*/
 
 .fade {
-  @include opacity(0);
-  @include transition(opacity 0.15s linear);
-}
+@include opacity(0);
+@include transition(opacity $transitionduration linear); }
 
 .fade.in {
-  @include opacity(1);
-}
+@include opacity(1); }
 
 .tooltip-inner {
 max-width : 200px;
-padding : 8px;
+padding : $baselineheight / 2 $gutterwidth / 2;
 background-color : $tooltipbackgroundcolor;
 border-radius : $tooltipborderradius;
+font-family : $tooltipfontfamily;
 color : $tooltipcolor;
 text-align : center;
 text-decoration : none;
 }/*tooltip-inner */
 
-// Arrows
 .tooltip-arrow {
 position : absolute;
 width : 0;
