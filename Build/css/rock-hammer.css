@@ -949,7 +949,13 @@ a {
   margin-bottom: 1px; }
 
 .tabbable {
-  padding: 0; }
+  padding: 0;
+  *zoom: 1; }
+  .tabbable:before, .tabbable:after {
+    display: table;
+    content: ""; }
+  .tabbable:after {
+    clear: both; }
 
 .tab-content {
   overflow: auto; }
