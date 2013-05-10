@@ -143,7 +143,7 @@ border-radius : 0; }
 border-top-radius : $borderradius; }
 
 .nav-tabs.nav-stacked > li:last-child > a {
-.border-bottom-radius : $borderradius; }
+border-bottom-radius : $borderradius; }
 
 .nav-tabs.nav-stacked > li > a:hover {
 border-color : $bordercolor;
