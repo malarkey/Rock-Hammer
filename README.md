@@ -14,7 +14,7 @@ Clone the repo, `git clone git@github.com:malarkey/Rock-Hammer.git`, (whatever t
 
 Rock Hammer works with [Hammer For Mac](http://hammerformac.com). If you develop in Windows or you don’t (yet) use Hammer, skip to the section ‘Using Only the Build Folder‘ below.
 
-For styling, Rock Hammer uses [Sass](http://sass-lang.org). Hammer For Mac compiles Sass into CSS so you won’t need the Terminal. In most cases, you’ll need to edit just three .scss files to get started:
+For styling, Rock Hammer uses [Sass](http://sass-lang.com). Hammer For Mac compiles Sass into CSS so you won’t need the Terminal. In most cases, you’ll need to edit just three .scss files to get started:
 
 ### rockhammer.scss
 
