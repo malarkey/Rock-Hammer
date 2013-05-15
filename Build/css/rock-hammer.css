@@ -936,7 +936,7 @@ a {
   border-top-radius: 4px; }
 
 .nav-tabs.nav-stacked > li:last-child > a {
-  .border-bottom-radius: 4px; }
+  border-bottom-radius: 4px; }
 
 .nav-tabs.nav-stacked > li > a:hover {
   border-color: #c6bfbf;
@@ -2186,7 +2186,7 @@ nav[role=navigation].active {
   #navigation-toggle a {
     display: block;
     padding: .8em;
-    border-bottom: 1px navigationborderstyle #131619;
+    border-bottom: 1px solid #131619;
     color: white;
     text-transform: uppercase; }
     #navigation-toggle a:hover {
