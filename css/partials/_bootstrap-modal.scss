@@ -48,8 +48,15 @@ padding : $baselineheight / 2 $gutterwidth;
 border-bottom : $borderwidth $borderstyle $bordercolor; }
 
 .modal-header .close {
+float : right;
 margin-top : 2px;
-float : right; }
+background-color : $buttonbackgroundcolor;
+// @include buttongrad;
+border : $buttonborderwidth $buttonborderstyle $buttonbordercolor;
+border-bottom-color : $buttonbottombordercolor;
+border-radius : $buttonborderradius;
+cursor : pointer;
+color : $buttoncolor; }
 
 .modal-header h3 {
 margin : 0;

@@ -206,7 +206,11 @@ $navigationbackgroundcolor 		: $tertiarycolor;
 $navigationborderwidth			: $borderwidth;
 
 // Set navigation items’ bottom border style
+<<<<<<< HEAD
 $navigationborderstyle			: $borderstyle;
+=======
+$navigationborderstyle			: solid;
+>>>>>>> Various bug fixes
 
 // Set navigation items’ bottom border colour
 $navigationbordercolor 			: darken($navigationbackgroundcolor,10%);
@@ -417,7 +421,7 @@ $alertpadding					: 8px 35px 8px 14px;
 // Alerts have a default flat background colour
 // Add an optional gradient in _bootstrap-alerts.scss
 // Configure the gradient colours in _texture.scss
-$alertbackgroundcolor 			: rgb(245,239,191);
+$alertbackgroundcolor 			: $alertcolor;
 
 // Set the alert’s border width
 $alertborderwidth 				: $borderwidth * 2;

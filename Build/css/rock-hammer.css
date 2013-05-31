@@ -501,15 +501,15 @@ a {
 .alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: 1.5em;
-  background-color: #f5efbf;
-  border: 2px solid #e7d967;
+  background-color: #da4f49;
+  border: 2px solid #9d2520;
   border-radius: 4px;
   font-size: 16px;
   font-size: 1.6rem;
-  color: #2e2a07; }
+  color: black; }
   .alert > h4 {
     margin: 0;
-    color: #2e2a07; }
+    color: black; }
 
 /*alert*/
 .alert--success {
@@ -756,8 +756,14 @@ a {
   border-bottom: 1px solid #c6bfbf; }
 
 .modal-header .close {
+  float: right;
   margin-top: 2px;
-  float: right; }
+  background-color: #f6f5f5;
+  border: 1px solid #dedada;
+  border-bottom-color: #d2cccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #8a7b7b; }
 
 .modal-header h3 {
   margin: 0;
