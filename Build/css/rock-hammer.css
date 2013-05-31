@@ -1659,7 +1659,6 @@ textarea {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
   box-sizing: border-box; }
 
 textarea {
@@ -1889,7 +1888,6 @@ textarea[readonly] {
     text-align: right;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box; }
   .form-horizontal .controls {
     *display: inline-block;
@@ -2302,7 +2300,6 @@ nav[role=navigation].active {
       max-width: 768px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
       box-sizing: border-box; }
   .samples nav[role=navigation] {
     width: 100%;
@@ -2337,7 +2334,6 @@ nav[role=navigation].active {
     padding-right: 24px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box; }
 
   #panel-typography .l-trigger .l-summary,

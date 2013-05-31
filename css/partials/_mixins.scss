@@ -255,27 +255,11 @@ background-size : $size; }
 -moz-background-clip : $clip;
 background-clip : $clip; }
 
-// @include box-sizing(VALUE); (border-box, padding-box, content-box)
-
-@mixin box-sizing($boxsize: border-box) {
--webkit-box-sizing : $boxsize;
--moz-box-sizing : $boxsize;
--ms-box-sizing : $boxsize;
-box-sizing : $boxsize; }
-
 // @include resize(VALUE) (none, both, horizontal, vertical, inherit)
 
 @mixin resize($direction: both) {
 resize : $direction;
 overflow : auto; }
-
-// userselect(VALUE) (all, element, none, text)
-
-@mixin user-select($select) {
--webkit-user-select : $select;
--moz-user-select : $select;
--o-user-select : $select;
-user-select : $select; }
 
 // @include placeholder(VALUE) (color)
 
