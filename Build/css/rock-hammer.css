@@ -65,8 +65,8 @@ body:after {
 [role="banner"] {
   *zoom: 1; }
   [role="banner"]:before, [role="banner"]:after {
-    display: table;
-    content: ""; }
+    content: " ";
+    display: table; }
   [role="banner"]:after {
     clear: both; }
 
@@ -240,8 +240,8 @@ dt {
 .dl-horizontal {
   *zoom: 1; }
   .dl-horizontal:before, .dl-horizontal:after {
-    display: table;
-    content: ""; }
+    content: " ";
+    display: table; }
   .dl-horizontal:after {
     clear: both; }
   .dl-horizontal dt {
@@ -362,8 +362,8 @@ a {
   width: 200px;
   *zoom: 1; }
   .swatch-row:before, .swatch-row:after {
-    display: table;
-    content: ""; }
+    content: " ";
+    display: table; }
   .swatch-row:after {
     clear: both; }
 
@@ -864,8 +864,8 @@ a {
   .nav-tabs:before, .nav-tabs:after,
   .nav-pills:before,
   .nav-pills:after {
-    display: table;
-    content: ""; }
+    content: " ";
+    display: table; }
   .nav-tabs:after,
   .nav-pills:after {
     clear: both; }
@@ -952,8 +952,8 @@ a {
   padding: 0;
   *zoom: 1; }
   .tabbable:before, .tabbable:after {
-    display: table;
-    content: ""; }
+    content: " ";
+    display: table; }
   .tabbable:after {
     clear: both; }
 
@@ -1061,8 +1061,8 @@ a {
   border-radius: 4px;
   *zoom: 1; }
   .navbar__inner:before, .navbar__inner:after {
-    display: table;
-    content: ""; }
+    content: " ";
+    display: table; }
   .navbar__inner:after {
     clear: both; }
 
@@ -1143,8 +1143,8 @@ a {
   text-align: center;
   *zoom: 1; }
   .pager:before, .pager:after {
-    display: table;
-    content: ""; }
+    content: " ";
+    display: table; }
   .pager:after {
     clear: both; }
 
@@ -1828,8 +1828,8 @@ textarea[readonly] {
   padding: 0.5em 24px 1.5em;
   *zoom: 1; }
   .form-actions:before, .form-actions:after {
-    display: table;
-    content: ""; }
+    content: " ";
+    display: table; }
   .form-actions:after {
     clear: both; }
 
@@ -1877,8 +1877,8 @@ textarea[readonly] {
     margin-bottom: 1.5em;
     *zoom: 1; }
     .form-horizontal .control-group:before, .form-horizontal .control-group:after {
-      display: table;
-      content: ""; }
+      content: " ";
+      display: table; }
     .form-horizontal .control-group:after {
       clear: both; }
   .form-horizontal .control-label {
@@ -2325,8 +2325,8 @@ nav[role=navigation].active {
     width: 90%;
     max-width: 768px; }
     .l-wrap:before, .l-wrap:after {
-      display: table;
-      content: ""; }
+      content: " ";
+      display: table; }
     .l-wrap:after {
       clear: both; }
 

@@ -34,17 +34,6 @@ background : $lightneutralcolor;
 color : $neutralcolor;
 padding : .2em 0; }
 
-// clearfix
-
-@mixin clearfix {
-*zoom : 1;
-&:before,
-&:after {
-display: table;
-content : ""; }
-&:after {
-clear : both; } }
-
 // columns(250px, 0, 24px, COLOR, solid, 1px)
 
 @mixin columns($colwidth: 250px, $colcount: 0, $colgap: 50px, $columnRuleColor: #eee, $columnRuleStyle: solid, $columnRuleWidth: 1px) {
@@ -234,15 +223,6 @@ transform : scale($ratio); }
 -ms-transform : skew($x, $y);
 -o-transform : skew($x, $y);
 transform : skew($x, $y); }
-
-// @include transition(PROPERTY DURATION DELAY(OPTIONAL) TIMING-FINCTION);
-
-@mixin transition($transition) {
--webkit-transition : $transition;
--moz-transition : $transition;
--ms-transition : $transition;
--o-transition : $transition;
-transition : $transition; }
 
 // .translate(VALUE, VALUE)
 
