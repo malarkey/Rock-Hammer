@@ -206,11 +206,7 @@ $navigationbackgroundcolor 		: $tertiarycolor;
 $navigationborderwidth			: $borderwidth;
 
 // Set navigation items’ bottom border style
-<<<<<<< HEAD
 $navigationborderstyle			: $borderstyle;
-=======
-$navigationborderstyle			: solid;
->>>>>>> Various bug fixes
 
 // Set navigation items’ bottom border colour
 $navigationbordercolor 			: darken($navigationbackgroundcolor,10%);
