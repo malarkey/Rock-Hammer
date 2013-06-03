@@ -22,10 +22,6 @@ font-weight : $font-weight;
 text-transform : lowercase;
 color : $color; }
 
-
-
-
-
 // chromeframe
 
 @mixin chromeframe {
@@ -33,28 +29,6 @@ margin : .2em 0;
 background : $lightneutralcolor;
 color : $neutralcolor;
 padding : .2em 0; }
-
-// columns(250px, 0, 24px, COLOR, solid, 1px)
-
-@mixin columns($colwidth: 250px, $colcount: 0, $colgap: 50px, $columnRuleColor: #eee, $columnRuleStyle: solid, $columnRuleWidth: 1px) {
--webkit-column-width : $colwidth;
--webkit-column-count : $colcount;
--webkit-column-gap : $colgap;
--webkit-column-rule-color : $columnRuleColor;
--webkit-column-rule-style : $columnRuleStyle;
--webkit-column-rule-width : $columnRuleWidth;
--moz-column-width : $colwidth;
--moz-column-count : $colcount;
--moz-column-gap : $colgap;
--moz-column-rule-color : $columnRuleColor;
--moz-column-rule-style : $columnRuleStyle;
--moz-column-rule-width : $columnRuleWidth;
-column-width : $colwidth;
-column-count : $colcount;
-column-gap : $colgap;
-column-rule-color : $columnRuleColor;
-column-rule-style : $columnRuleStyle;
-column-rule-width : $columnRuleWidth; }
 
 // hidden
 
