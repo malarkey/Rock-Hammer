@@ -5,20 +5,11 @@ URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
 
 */
 
-// Import bourbon.io
-@import 'vendor/bourbon/bourbon';
+$media-queries-supported : false;
 
-// Define the ‘atmosphere’ of your design in this config file
-@import "config";
+// Import all SASS imports
+@import 'imports';
 
-// Sass mixins
-@import "partials/mixins";
-
-// All responsive design breakpoints
-@import "partials/bp2"; 
-@import "partials/bp3"; 
-@import "partials/bp4"; 
-@import "partials/bp5"; 
-@import "partials/bp6"; 
-
-// IE override styles
+// IE override styles can be defined here (use classes applied to 
+// the HTML element as per the conditional comments to surround 
+// your selectors and target specific IE versions, such as ".lte-ie8")

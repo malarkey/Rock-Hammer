@@ -269,9 +269,28 @@ white-space : nowrap; }
 margin : 0;
 padding : 0; }
 
-// @include heading(MARGIN, FONT SIZE, LINE HEIGHT)
+// @include media-query-bp(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
+// NOTE: This MUST be used from within a selectore for the parent reference to work
+// Otherwise, an error will be thrown on SASS compile. Love, Aaron.
 
-@mixin heading($margin : 1, $font-size : 1, $line-height : "")  {
-margin-bottom : $baselineheight / $margin;
-@include font-size($basefontsize * $font-size);
-@if $line-height != "" { line-height: $line-height }}
+@mixin media-query-bp($unit, $query1: min, $query2: width, $target: "") {
+	$mqtarget: "";
+	// Check if media queries are supported
+	@if $media-queries-supported == true {
+		@if $target != "" {
+			@media #{$target} and (#{$query1}-#{$query2}: #{$unit}) {
+				@content;
+			}
+		}
+		@else {
+			@media (#{$query1}-#{$query2}: #{$unit}) {
+				@content;
+			}
+		}
+	}
+	@else {
+		#{$no-mq-classname} & {
+			@content;
+		}
+	}
+}

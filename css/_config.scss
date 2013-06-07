@@ -51,9 +51,9 @@ $baselineheight 				: 1.5em;
 
 
 // Now set media types and features for your CSS3 media queries
-
-$media : screen;  
-$feature : min-width; 
+// THIS IS NOW DEPRECATED, AS MEDIA QUERIES ARE DEFINED USING THE NEW
+// MEDIA-QUERY-BP MIXIN AND ARE DEFINED WITH THE SELECTORS TO WHICH 
+// THEY ARE NEEDED
 
 // Now set values for your responsive design breakpoints
 // Ems are default, but you may use px if you prefer
@@ -74,6 +74,11 @@ $bp6 							: 86.375em;
 // Does your design needs a maximum width to maintain readable line lengths? 
 
 $maxwidth						: 90em;
+
+// What is the class name that the media query mixin should use to target 
+// browsers not supporting media queries?
+
+$no-mq-classname 				: ".lt-ie9";
 
 
 

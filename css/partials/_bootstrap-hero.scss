@@ -13,11 +13,20 @@ border : $heroborderwidth $heroborderstyle $herobordercolor;
 border-radius : $heroborderradius;
 color : $herocolor;
 
+@include media-query-bp($bp4) {
+padding : $gutterwidth * 2; 
+
+h1 {
+margin-bottom : $baselineheight / 4;
+@include font-size(48);
+line-height : 1;
+letter-spacing : -1px; }
+}
+
 p {
 @include font-size($basefontsize * 1.25);
 
 &:last-child {
 margin-bottom : 0; }
 }/*p*/
-
 }/*hero-unit*/

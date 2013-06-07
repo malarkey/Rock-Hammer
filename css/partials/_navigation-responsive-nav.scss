@@ -8,6 +8,9 @@ display: block;
 overflow: hidden;
 zoom: 1;
 
+@include media-query-bp($bp3){
+max-height : none;}
+
 .opened {
   max-height: 9999px;
 }
@@ -21,6 +24,9 @@ padding : $baselineheight / 2 $gutterwidth / 2;
 background-color: $navigationbackgroundcolor; 
 color: $navigationlinkcolor;
 border-bottom-left-radius: $borderradius * 2;
+
+@include media-query-bp($bp3){
+display : none;}
 }
 
 .navigation-toggle {
@@ -39,9 +45,22 @@ max-height : 25em; }
 list-style-type : none;
 @include zero;
 
+@include media-query-bp($bp3){
+margin : 0 0 0 -0.25em;
+border-width : 0;}
+
 ul {
 list-style-type : none;
-@include zero; }
+@include zero; 
+@include media-query-bp($bp3){
+margin : 0 auto;}
+}
+
+li {
+@include media-query-bp($bp3){
+display : inline-block;
+margin : 0 $gutterwidth / 2 0 0; }
+}
 
 a {
 display : block;
@@ -49,6 +68,11 @@ padding : .8em;
 border-bottom : $navigationborderwidth $navigationborderstyle $navigationbordercolor;
 color : $navigationlinkcolor;
 text-transform : uppercase;
+
+@include media-query-bp($bp3){
+border-width : 0;
+@include font-size(14); 
+text-transform : none; }
 
 &:hover {
 color : $navigationlinkcolorhover;

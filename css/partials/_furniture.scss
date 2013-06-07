@@ -138,9 +138,10 @@ display : block !important; }
 
 // MEDIA QUERIES 		==============================
 
-@media only #{$media} and ($feature: $bp4) {
+// ALL AT BP4
 
 .samples {
+@include media-query-bp($bp4) {
 
 .l-introduction {
 padding : $baselineheight * 2 0 $baselineheight * 4 0; 
@@ -167,23 +168,30 @@ a, a:visited { color : $white; }
 }
 }
 }
+}
 
 .hidden hr {
+@include media-query-bp($bp4) {
 margin : 0 auto;
 width : 90%;
 max-width : 768px; }
+}
 
 .l-wrap {
+@include media-query-bp($bp4) {
 @include clearfix; 
 width : 90%;
 max-width : 768px; }
+}
 
 .l-summary {
+@include media-query-bp($bp4) {
 float : left;
 margin-right : -100%;
 width : 38.4375%;
 padding-right : $gutterwidth;
 @include box-sizing(border-box); }
+}
 
 #panel-typography .l-trigger .l-summary,
 #panel-colour .l-trigger .l-summary,
@@ -193,42 +201,73 @@ padding-right : $gutterwidth;
 #panel-forms .l-trigger .l-summary,
 #panel-tables .l-trigger .l-summary,
 #panel-widgets .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 min-height : 40px;
 background-image : url(l-trigger-icons.png); 
 background-repeat : no-repeat; }
+}
 
 #panel-typography .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 background-position : 95% 0; }
+}
 
 #panel-colour .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 background-position : 95% -300px; }
+}
 
 #panel-images .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 background-position : 95% -600px; }
+}
 
 #panel-navigation .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 background-position : 95% -100px; }
+}
 
 #panel-modules .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 background-position : 95% -700px; }
+}
 
 #panel-forms .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 background-position : 95% -400px; }
+}
 
 #panel-tables .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 background-position : 95% -500px; }
+}
 
 #panel-widgets .l-trigger .l-summary {
+@include media-query-bp($bp4) {
 background-position : 95% -800px; }
+}
 
 .l-content {
+@include media-query-bp($bp4) {
 clear : right;
 float : left;
 margin-left : 41.0417%;
 margin-right : -100%;
 width : 58.9583%; }
+}
 
 [role="contentinfo"] small {
+@include media-query-bp($bp4) {
 display : block; }
+}
 
+.m-hide {
+@include media-query-bp($bp4) {
+display : inline-block !important; 
+visibility : visible; }
+}
+
+.t-hide {
+@include media-query-bp($bp4) {
+@include hidden; }
 }

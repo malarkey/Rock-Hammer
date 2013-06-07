@@ -7,7 +7,16 @@
 .navigation-toggle {
 float : right;
 display : block;
-padding : $baselineheight / 2 $gutterwidth / 2; }
+padding : $baselineheight / 2 $gutterwidth / 2; 
+
+@include media-query-bp($bp3) {
+display : none; }
+}
+
+#nav-toggle {
+@include media-query-bp($bp3) {
+display : none; }
+}
 
 nav[role=navigation] {
 clear : both;
@@ -17,7 +26,11 @@ background-color : $navigationbackgroundcolor;
 
 .js nav[role=navigation] {
 overflow : hidden;
-max-height : 0; }
+max-height : 0; 
+
+@include media-query-bp($bp3) {
+max-height : none; }
+}
 
 nav[role=navigation].active {
 max-height : 25em; }
@@ -26,9 +39,23 @@ max-height : 25em; }
 list-style-type : none;
 @include zero;
 
+@include media-query-bp($bp3) {
+margin : 0 0 0 -0.25em;
+border-width : 0; 
+
+li {
+display : inline-block;
+margin : 0 $gutterwidth / 2 0 0; }
+}
+}
+
 ul {
 list-style-type : none;
-@include zero; }
+@include zero; 
+
+@include media-query-bp($bp3) {
+margin : 0 auto; }
+}
 
 a {
 display : block;
@@ -36,6 +63,11 @@ padding : .8em;
 border-bottom : $navigationborderwidth $navigationborderstyle $navigationbordercolor;
 color : $navigationlinkcolor;
 text-transform : uppercase;
+
+@include media-query-bp($bp3) {
+border-width : 0;
+@include font-size(14); 
+text-transform : none; }
 
 &:hover {
 color : $navigationlinkcolorhover;

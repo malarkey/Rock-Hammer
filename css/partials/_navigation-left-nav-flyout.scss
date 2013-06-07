@@ -9,12 +9,20 @@ position : relative;
 @include transition (all $transitionduration ease); }
 
 .wrap.active {
-left : 16em; }
+left : 16em; 
+
+@include media-query-bp($bp4) {
+left : 0; }
+}
 
 .navigation-left-nav-flyout-toggle {
 float : left;
 display : block;
-padding : 1em; }
+padding : 1em; 
+
+@include media-query-bp($bp4) {
+display : none; }
+}
 
 nav[role=navigation] {
 background-color : $neutralcolor;
@@ -26,18 +34,34 @@ position : absolute;
 top : 0;
 left : -16em;
 width : 16em;
-height : 100%; }
+height : 100%; 
+
+@include media-query-bp($bp4) {
+position : static;
+width : auto; 
+max-width : none; }
+}
 
 #navigation-left-nav-flyout ul {
 list-style-type : none;
 @include zero; }
+
+#navigation-left-nav-flyout li {
+@include media-query-bp($bp4) {
+display : inline-block;
+margin : 0 .25em; }
+}
 
 #navigation-left-nav-flyout a {
 display : block;
 min-height : 44px;
 line-height : 44px;
 color : $white;
-border-bottom : $borderwidth $borderstyle $midneutralcolor; }
+border-bottom : $borderwidth $borderstyle $midneutralcolor; 
+
+@include media-query-bp($bp4) {
+border-width : 0; }
+}
 
 .content {
 clear : both; }

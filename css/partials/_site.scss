@@ -37,7 +37,23 @@ color : $textcolor; }
 
 body:after {
 content : '320';
-display : none; }
+display : none; 
+
+@include media-query-bp($bp2) {
+content : 'bp2'; }
+
+@include media-query-bp($bp3) {
+content : 'bp3'; }
+
+@include media-query-bp($bp4) {
+content : 'bp4'; }
+
+@include media-query-bp($bp5) {
+content : 'bp5'; }
+
+@include media-query-bp($bp6) {
+content : 'bp6'; }
+}
 
 .m-hide {
 @include hidden; }
