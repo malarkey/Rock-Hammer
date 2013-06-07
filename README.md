@@ -16,7 +16,7 @@ Rock Hammer works with [Hammer For Mac](http://hammerformac.com). If you develop
 
 For styling, Rock Hammer uses [Sass](http://sass-lang.com). Hammer For Mac compiles Sass into CSS so you won’t need the Terminal. In most cases, you’ll need to edit just three .scss files to get started:
 
-### rockhammer.scss
+### _imports.scss
 
 Configure which Sass partials you need for your individual project. We’ve included some of the most useful parts of Bootstrap, but if you don’t need styles for a carousel or a hero box, there’s no sense in including them. Comment out the partials you don’t need //
 
@@ -76,7 +76,7 @@ Rock Hammer includes Sass partials for the three components of ‘design atmosph
 
 2.6. Layout for structural styles. Use it in combination with breakpoint files _bp2 – bp6 as required.
 
-2.7. Speaking of breakpoints, there are six placeholder breakpoint files included. Use them as you need. The defaults are:
+2.7. Speaking of breakpoints, there are six placeholder breakpoint values included. Use and change them as you need in conjunction with the media-query-bp mixin within your SASS selectors. The defaults are:
 
 -   $bp2 		480px		30em		
 -   $bp3 		600px		37.5em  	
@@ -84,7 +84,7 @@ Rock Hammer includes Sass partials for the three components of ‘design atmosph
 -   $bp5 		992px	 	62em		
 -   $bp6 		1382px		86.375em 	
 
-2.8. Matching HTML partials and Sass partials for forms, tables, navigation and other commonly used interface elements derived from Bootstrap. If there are Bootstrap components you use regularly, add them to the partials folder. Don’t forget to reference them from rock-hammer.scss too.
+2.8. Matching HTML partials and Sass partials for forms, tables, navigation and other commonly used interface elements derived from Bootstrap. If there are Bootstrap components you use regularly, add them to the partials folder. Don’t forget to reference them from _imports.scss too.
 
 2.9. Matching HTML partials and Sass partials for responsive navigation patterns. We’ve included three popular patterns but feel free to add more. Brad Frost’s [Responsive Patterns](http://bradfrost.github.com/this-is-responsive/patterns.html#navigation) is a cracking place to start.
 
