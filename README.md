@@ -22,7 +22,7 @@ Configure which Sass partials you need for your individual project. We’ve incl
 
 ### lte-ie8.scss
 
-For versions of Microsoft Internet Explorer that didn’t implement CSS3 Media Queries, this file contains compiled styles from all stylesheets inside Media Queries. Use this file to also serve styles specifically to Internet Explorer 8 and before. We’re looking into a more streamlined Sass solution. One that doesn’t require a degree in geology.
+For versions of Microsoft Internet Explorer that didn’t implement CSS3 Media Queries, this file contains compiled styles from all stylesheets, including those inside Media Queries. These are served up using a completely configurable, conditional class to identify those styles and only apply them to Internet Explorer 8 and before. Use this file to also serve styles specifically to Internet Explorer 8 and before.
 
 ### _config.scss
 
