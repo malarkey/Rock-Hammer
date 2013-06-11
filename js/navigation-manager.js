@@ -49,3 +49,9 @@ NavigationManager = {
 		this.supressDeadLinks();
 	}
 };
+
+// Entry point for Nav Manager JS Code
+$(document).ready(function() {
+	// Initialise the navigation manager object
+	NavigationManager.init("navigation-toggle", "rock-hammer");
+});

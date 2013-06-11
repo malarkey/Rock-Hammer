@@ -1,7 +1,18 @@
-<!-- Load libraries and plugins -->
+<!-- Load libraries -->
 <!-- @javascript jquery-1.8.3-min -->
 <!-- @javascript jquery.scrollTo.min -->
-<!-- @javascript bootstrap-min -->
+
+<!-- Load plugins (including a file turns functionality on) -->
+<!-- Load bootstrap-transition first so that nice glides/fades 
+	etc for the other bootstrap plugins work -->
+<!-- @javascript bootstrap-transition -->
+<!-- @javascript bootstrap-carousel -->
+<!-- @javascript bootstrap-tooltip -->
+<!-- Popover has a dependency on tooltip, so make sure and include 
+	bootstrap-tooltip regardless in order for popovers to work -->
+<!-- @javascript bootstrap-popover -->
+<!-- @javascript bootstrap-modal -->
+<!-- @javascript bootstrap-collapse -->
 
 <!-- Functionality only used by Rock Hammer -->
 <!-- @javascript navigation-manager.js -->
@@ -10,11 +21,6 @@
 <!-- // @javascript nav-toggle -->
 <!-- @javascript left-nav-flyout -->
 <!-- @javascript responsive-nav.min -->
-
-<!-- Load configuration and initialise JavaScripts. 
-	 Look in config.js to see how to turn items on/off -->
-<!-- @javascript config -->
-<!-- @javascript main -->
 
 <script>
 var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

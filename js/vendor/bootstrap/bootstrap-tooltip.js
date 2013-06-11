@@ -285,3 +285,7 @@
   }
 
 }(window.jQuery);
+
+$(document).ready(function() {
+  $(".tooltips").tooltip({selector: "a[data-toggle=tooltip]"});
+});

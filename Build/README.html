@@ -12,13 +12,13 @@
 
 <p>For styling, Rock Hammer uses <a href="http://sass-lang.com">Sass</a>. Hammer For Mac compiles Sass into CSS so you won’t need the Terminal. In most cases, you’ll need to edit just three .scss files to get started:</p>
 
-<h3>rockhammer.scss</h3>
+<h3>_imports.scss</h3>
 
-<p>Configure which Sass partials you need for your individual project. We’ve included some of the most useful parts of Bootstrap, but if you don’t need styles for a carousel or a hero box, there’s no sense in including them. Comment out the partials you don’t need //</p>
+<p>Configure which Sass partials you need for your individual project. We’ve included some of the most useful parts of Bootstrap, but if you don’t need styles for a carousel or a hero box, there’s no sense in including them. Comment out the partials you don’t need with // at the the beginning of the line on which that partial appears.</p>
 
 <h3>lte-ie8.scss</h3>
 
-<p>For versions of Microsoft Internet Explorer that didn’t implement CSS3 Media Queries, this file contains compiled styles from all stylesheets inside Media Queries. Use this file to also serve styles specifically to Internet Explorer 8 and before. We’re looking into a more streamlined Sass solution. One that doesn’t require a degree in geology.</p>
+<p>For versions of Microsoft Internet Explorer that didn’t implement CSS3 Media Queries, this file contains compiled styles from all stylesheets, including those inside Media Queries. These are served up using a completely configurable, conditional class to identify those styles and only apply them to Internet Explorer 8 and before. Use this file to also serve styles specifically to Internet Explorer 8 and before.</p>
 
 <h3>_config.scss</h3>
 
@@ -76,7 +76,7 @@
 
 <p>2.6. Layout for structural styles. Use it in combination with breakpoint files _bp2 – bp6 as required.</p>
 
-<p>2.7. Speaking of breakpoints, there are six placeholder breakpoint files included. Use them as you need. The defaults are:</p>
+<p>2.7. Speaking of breakpoints, there are six placeholder breakpoint values included. Use and change them as you need in conjunction with the media-query-bp mixin within your SASS selectors. The defaults are:</p>
 
 <ul>
   <li>$bp2 		480px		30em		</li>
@@ -86,7 +86,7 @@
   <li>$bp6 		1382px		86.375em 	</li>
 </ul>
 
-<p>2.8. Matching HTML partials and Sass partials for forms, tables, navigation and other commonly used interface elements derived from Bootstrap. If there are Bootstrap components you use regularly, add them to the partials folder. Don’t forget to reference them from rock-hammer.scss too.</p>
+<p>2.8. Matching HTML partials and Sass partials for forms, tables, navigation and other commonly used interface elements derived from Bootstrap. If there are Bootstrap components you use regularly, add them to the partials folder. Don’t forget to reference them from _imports.scss too. Certain Bootstrap plugins require JavaScript to work correctly, so ensure that the required JavaScript files are referenced correctly from the _scripts.html partial. There are a couple of dependencies with Bootstrap plugins, but these are explained in the comments found in _scripts.html.</p>
 
 <p>2.9. Matching HTML partials and Sass partials for responsive navigation patterns. We’ve included three popular patterns but feel free to add more. Brad Frost’s <a href="http://bradfrost.github.com/this-is-responsive/patterns.html#navigation">Responsive Patterns</a> is a cracking place to start.</p>
 
@@ -101,6 +101,7 @@
 <ul>
   <li>Copy the HTML from your chosen pattern into the &lt;body&gt; of a new template</li>
   <li>Uncomment the pattern you’ve chosen in rock-hammer.scss</li>
+  <li>Uncomment the pattern you’ve chosen in _scripts.html</li>
 </ul>
 
 <h2>3. Using Only the Build Folder</h2>

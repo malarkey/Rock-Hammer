@@ -2151,10 +2151,21 @@ Rock Hammer
 </footer>
 </div><!-- container -->
 
-<!-- Load libraries and plugins -->
+<!-- Load libraries -->
 <script src='js/vendor/jquery-1.8.3-min.js'></script>
 <script src='js/vendor/jquery/jquery.scrollTo.min.js'></script>
-<script src='js/vendor/bootstrap-min.js'></script>
+
+<!-- Load plugins (including a file turns functionality on) -->
+<!-- Load bootstrap-transition first so that nice glides/fades 
+	etc for the other bootstrap plugins work -->
+<script src='js/vendor/bootstrap/bootstrap-transition.js'></script>
+<script src='js/vendor/bootstrap/bootstrap-carousel.js'></script>
+<script src='js/vendor/bootstrap/bootstrap-tooltip.js'></script>
+<!-- Popover has a dependency on tooltip, so make sure and include 
+	bootstrap-tooltip regardless in order for popovers to work -->
+<script src='js/vendor/bootstrap/bootstrap-popover.js'></script>
+<script src='js/vendor/bootstrap/bootstrap-modal.js'></script>
+<script src='js/vendor/bootstrap/bootstrap-collapse.js'></script>
 
 <!-- Functionality only used by Rock Hammer -->
 <script src='js/navigation-manager.js'></script>
@@ -2163,11 +2174,6 @@ Rock Hammer
 <!-- // @javascript nav-toggle -->
 <script src='js/nav-patterns/left-nav-flyout.js'></script>
 <script src='js/nav-patterns/responsive-nav.min.js'></script>
-
-<!-- Load configuration and initialise JavaScripts. 
-	 Look in config.js to see how to turn items on/off -->
-<script src='js/config.js'></script>
-<script src='js/main.js'></script>
 
 <script>
 var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
