@@ -30,7 +30,7 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 <![endif]-->
 
 <!-- JavaScript -->
-<script src='js/vendor/modernizr-2.6.2-min.js'></script>
+<script src='js/vendor/head.load.min.js'></script>
 
 <link rel="shortcut icon" href="img/favicon.ico">
 <link rel="shortcut icon" href="img/favicon.png">
@@ -2152,30 +2152,47 @@ Rock Hammer
 </div><!-- container -->
 
 <!-- Load libraries -->
-<script src='js/vendor/jquery-1.8.3-min.js'></script>
-<script src='js/vendor/jquery/jquery.scrollTo.min.js'></script>
-
-<!-- Load plugins (including a file turns functionality on) -->
-<!-- Load bootstrap-transition first so that nice glides/fades 
-	etc for the other bootstrap plugins work -->
-<script src='js/vendor/bootstrap/bootstrap-transition.js'></script>
-<script src='js/vendor/bootstrap/bootstrap-carousel.js'></script>
-<script src='js/vendor/bootstrap/bootstrap-tooltip.js'></script>
-<!-- Popover has a dependency on tooltip, so make sure and include 
-	bootstrap-tooltip regardless in order for popovers to work -->
-<script src='js/vendor/bootstrap/bootstrap-popover.js'></script>
-<script src='js/vendor/bootstrap/bootstrap-modal.js'></script>
-<script src='js/vendor/bootstrap/bootstrap-collapse.js'></script>
-
-<!-- Functionality only used by Rock Hammer -->
-<script src='js/navigation-manager.js'></script>
-
-<!-- Remove any navigation patterns below that arent used -->
-<!-- // @javascript nav-toggle -->
-<script src='js/nav-patterns/left-nav-flyout.js'></script>
-<script src='js/nav-patterns/responsive-nav.min.js'></script>
-
 <script>
+head.js(
+// Place scripts to be loaded here, in the order the need to be executed
+// Typically libraries are needed first, such as jQuery (as the plugins 
+// depend on jQuery to execute). The below configuration is what Rock 
+// Hammer uses, but customise this for your own needs.
+// Notice the use of @path here. This is because we need the file names, 
+// not the script tags being generated. Ensure all filenames you wish
+// head.js to load are surrounded with quotes. Also, this is a list, so
+// ensure that all but the last item are followed by a comma.
+
+// Libraries
+"js/vendor/modernizr-2.6.2-min.js",
+"js/vendor/jquery-1.8.3-min.js",
+
+// Plugins
+"js/vendor/jquery/jquery.scrollTo.min.js",
+
+// Load bootstrap-transition first so that nice glides/fades 
+// etc for the other bootstrap plugins work
+"js/vendor/bootstrap/bootstrap-transition.js",
+"js/vendor/bootstrap/bootstrap-carousel.js",
+"js/vendor/bootstrap/bootstrap-tooltip.js",
+
+// Popover has a dependency on tooltip, so make sure and include 
+// bootstrap-tooltip regardless in order for popovers to work
+"js/vendor/bootstrap/bootstrap-popover.js",
+"js/vendor/bootstrap/bootstrap-modal.js",
+"js/vendor/bootstrap/bootstrap-collapse.js",
+
+// Functionality only used by Rock Hammer
+"js/navigation-manager.js",
+
+// Remove any navigation patterns below that arent used
+// "js/nav-patterns/nav-toggle.js",
+"js/nav-patterns/left-nav-flyout.js",
+"js/nav-patterns/responsive-nav.min.js"
+);
+
+// Google Analytics code
+// Set your account ID appropriately by replacing UA-XXXXX-X
 var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

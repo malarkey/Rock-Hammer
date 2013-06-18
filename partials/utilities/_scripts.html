@@ -1,28 +1,45 @@
 <!-- Load libraries -->
-<!-- @javascript jquery-1.8.3-min -->
-<!-- @javascript jquery.scrollTo.min -->
-
-<!-- Load plugins (including a file turns functionality on) -->
-<!-- Load bootstrap-transition first so that nice glides/fades 
-	etc for the other bootstrap plugins work -->
-<!-- @javascript bootstrap-transition -->
-<!-- @javascript bootstrap-carousel -->
-<!-- @javascript bootstrap-tooltip -->
-<!-- Popover has a dependency on tooltip, so make sure and include 
-	bootstrap-tooltip regardless in order for popovers to work -->
-<!-- @javascript bootstrap-popover -->
-<!-- @javascript bootstrap-modal -->
-<!-- @javascript bootstrap-collapse -->
-
-<!-- Functionality only used by Rock Hammer -->
-<!-- @javascript navigation-manager.js -->
-
-<!-- Remove any navigation patterns below that arent used -->
-<!-- // @javascript nav-toggle -->
-<!-- @javascript left-nav-flyout -->
-<!-- @javascript responsive-nav.min -->
-
 <script>
+head.js(
+// Place scripts to be loaded here, in the order the need to be executed
+// Typically libraries are needed first, such as jQuery (as the plugins 
+// depend on jQuery to execute). The below configuration is what Rock 
+// Hammer uses, but customise this for your own needs.
+// Notice the use of @path here. This is because we need the file names, 
+// not the script tags being generated. Ensure all filenames you wish
+// head.js to load are surrounded with quotes. Also, this is a list, so
+// ensure that all but the last item are followed by a comma.
+
+// Libraries
+"<!-- @path modernizr-2.6.2-min -->",
+"<!-- @path jquery-1.8.3-min.js -->",
+
+// Plugins
+"<!-- @path jquery.scrollTo.min.js -->",
+
+// Load bootstrap-transition first so that nice glides/fades 
+// etc for the other bootstrap plugins work
+"<!-- @path bootstrap-transition.js -->",
+"<!-- @path bootstrap-carousel.js -->",
+"<!-- @path bootstrap-tooltip.js -->",
+
+// Popover has a dependency on tooltip, so make sure and include 
+// bootstrap-tooltip regardless in order for popovers to work
+"<!-- @path bootstrap-popover.js -->",
+"<!-- @path bootstrap-modal.js -->",
+"<!-- @path bootstrap-collapse.js -->",
+
+// Functionality only used by Rock Hammer
+"<!-- @path navigation-manager.js -->",
+
+// Remove any navigation patterns below that arent used
+// "<!-- @path nav-toggle.js -->",
+"<!-- @path left-nav-flyout.js -->",
+"<!-- @path responsive-nav.min.js -->"
+);
+
+// Google Analytics code
+// Set your account ID appropriately by replacing UA-XXXXX-X
 var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
