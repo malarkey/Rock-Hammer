@@ -1,0 +1,60 @@
+.crumbs-container {
+	position: relative;
+	overflow: hidden;
+	height: 3.2em;
+	@include transition(height 0.5s ease-out);
+}
+.crumbs-container.active {
+	height: 13.6em;
+
+	@include media-query-bp($bp3) {
+		height: 3.2em;
+	}
+}
+.crumbs {
+	width: 100%;
+	position: absolute;
+}
+.crumbs li {
+	@include media-query-bp($bp3) {
+		display: inline-block;
+	}
+}
+.crumbs li:after {
+	@include media-query-bp($bp3) {
+		content: '→';
+		padding: 0 0.25em 0 0.5em;
+		color: #999;
+	}
+}
+.crumbs li.last:before, .crumbs li.last:after {
+	@include media-query-bp($bp3) {
+		content: '';
+	}
+}
+.crumbs li a {
+	display: block;
+	padding: 1em;
+	border-bottom: $borderwidth $borderstyle $bordercolor;
+
+	@include media-query-bp($bp3) {
+		display: inline;
+		border: 0;
+		padding: 0;
+	}
+}
+.crumbs li:last-child a {
+	border-bottom: 0;
+}
+#crumbs-trigger {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: block;
+	font-size: 2em; 
+	padding: 0 0.5em 0.2em;
+
+	@include media-query-bp($bp3) {
+		display: none;
+	}
+}

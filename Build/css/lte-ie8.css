@@ -2238,6 +2238,58 @@ nav[role=navigation].active {
       color: #e6e6e6;
       text-decoration: none; }
 
+.crumbs-container {
+  position: relative;
+  overflow: hidden;
+  height: 3.2em;
+  -webkit-transition: height 0.5s ease-out;
+  -moz-transition: height 0.5s ease-out;
+  -ms-transition: height 0.5s ease-out;
+  -o-transition: height 0.5s ease-out;
+  transition: height 0.5s ease-out; }
+
+.crumbs-container.active {
+  height: 13.6em; }
+  .lt-ie9 .crumbs-container.active {
+    height: 3.2em; }
+
+.crumbs {
+  width: 100%;
+  position: absolute; }
+
+.lt-ie9 .crumbs li {
+  display: inline-block; }
+
+.lt-ie9 .crumbs li:after {
+  content: '→';
+  padding: 0 0.25em 0 0.5em;
+  color: #999; }
+
+.lt-ie9 .crumbs li.last:before, .lt-ie9 .crumbs li.last:after {
+  content: ''; }
+
+.crumbs li a {
+  display: block;
+  padding: 1em;
+  border-bottom: 1px solid #c6bfbf; }
+  .lt-ie9 .crumbs li a {
+    display: inline;
+    border: 0;
+    padding: 0; }
+
+.crumbs li:last-child a {
+  border-bottom: 0; }
+
+#crumbs-trigger {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  font-size: 2em;
+  padding: 0 0.5em 0.2em; }
+  .lt-ie9 #crumbs-trigger {
+    display: none; }
+
 .l-panel {
   border-top: 1px solid #f3ff1b;
   border-bottom: 7px solid #473f3f; }
