@@ -1,0 +1,67 @@
+// Rock Hammer by Stuff and Nonsense
+// Version: <!-- $version -->
+// URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
+// Version: <!-- $license -->
+
+// Adapted from http://filamentgroup.com/examples/rwd-table-patterns/ 
+// by Aaron Allport
+
+.table-wrapper {
+   position: relative;
+}
+
+.table-menu-wrapper {
+   float: right;
+   top: 0;
+   right: 0;
+   margin-bottom: $gutterwidth / 4;
+}
+
+.table-menu {
+   position: absolute;
+   background-color: $white;
+   padding: $gutterwidth / 4;
+   border: $borderwidth $borderstyle $bordercolor;
+   border-radius: $borderradius;
+   font-size: $basefontsize;
+   right: 0;
+   left: auto;
+
+   ul {
+      margin-bottom: 0;
+   }
+}
+
+.table-menu-hidden {
+   left: -999em;
+   right: auto;
+}
+
+.table-menu li {
+   padding: $gutterwidth / 4;
+   list-style-type: none;
+
+   label {
+      display: inline;
+   }
+}
+
+.rwd-table {
+   td, th {
+      display: none;
+
+      @include media-query-bp($bp4) {
+         display: table-cell;
+      }
+   }
+
+   .optional {
+      @include media-query-bp($bp2) {
+         display: table-cell;
+      }
+   }
+
+   .essential {
+      display: table-cell;
+   }
+}

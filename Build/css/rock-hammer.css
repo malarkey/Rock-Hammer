@@ -2175,6 +2175,48 @@ input.search-query {
     *zoom: 1; }
 
 /*btn.btn-toolbar*/
+.table-wrapper {
+  position: relative; }
+
+.table-menu-wrapper {
+  float: right;
+  top: 0;
+  right: 0;
+  margin-bottom: 6px; }
+
+.table-menu {
+  position: absolute;
+  background-color: white;
+  padding: 6px;
+  border: 1px solid #c6bfbf;
+  border-radius: 4px;
+  font-size: 16;
+  right: 0;
+  left: auto; }
+  .table-menu ul {
+    margin-bottom: 0; }
+
+.table-menu-hidden {
+  left: -999em;
+  right: auto; }
+
+.table-menu li {
+  padding: 6px;
+  list-style-type: none; }
+  .table-menu li label {
+    display: inline; }
+
+.rwd-table td, .rwd-table th {
+  display: none; }
+  @media (min-width: 48em) {
+    .rwd-table td, .rwd-table th {
+      display: table-cell; } }
+@media (min-width: 30em) {
+  .rwd-table .optional {
+    display: table-cell; } }
+.rwd-table .essential {
+  display: table-cell; }
+
 /* responsive-nav.js v1.0.14 by @viljamis */
 .js nav[role=navigation] {
   clip: rect(0 0 0 0);

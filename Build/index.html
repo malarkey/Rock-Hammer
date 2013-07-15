@@ -1840,6 +1840,69 @@ Radio option</label></p>
 </div><!-- l-content -->
 </div><!-- l-wrap -->
 
+<!-- Next -->
+
+<div class="l-wrap">
+<div class="l-summary">
+<h3>Responsive table</h3>
+<!-- http://filamentgroup.com/examples/rwd-table-patterns/ -->
+<p>Make a table responsive by adding a <code>rwd-table</code> class to it. <code>essential</code>, and <code>optional</code> classese may be added to the <code>th</code> elements to denote them always being visible, and what can be displayed optionally depending on screen 
+width. This requires JavaScript to function properly.</p>
+<p>Additional <code>table-condensed</code>, <code>table-bordered</code> and <code>table-striped</code> classes may be combined, 
+as before.</p>
+</div><!-- l-summary -->
+
+<div class="l-content">
+
+<div class="table-wrapper">
+<table class="table table-bordered table-striped rwd-table">
+
+<thead>
+<tr>
+<th scope="col" class="essential">Header 1</th>
+<th class="optional">Header 2</th>
+<th class="essential">Header 3</th>
+<th>Header 4</th>
+<th>Header 5</th>
+<th class="optional">Header 6</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th scope="row"><span class="row-name">Data</span></th>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row"><span class="row-name">Data</span></th>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+</tr>
+
+<tr>
+<th scope="row"><span class="row-name">Data</span></th>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+<td>Data</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+
+</div><!-- l-content -->
+</div><!-- l-wrap -->
+
 </div><!-- hidden -->
 
 </section><!-- section -->
@@ -2202,6 +2265,9 @@ head.js(
 "js/vendor/bootstrap/bootstrap-popover.js",
 "js/vendor/bootstrap/bootstrap-modal.js",
 "js/vendor/bootstrap/bootstrap-collapse.js",
+
+// Responsive data tables
+"js/rwd-table.js",
 
 // Functionality only used by Rock Hammer
 "js/navigation-manager.js",
