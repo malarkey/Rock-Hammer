@@ -5,7 +5,11 @@ URL: http://stuffandnonsense.co.uk/projects/rock-hammer/
 
 */
 
+// Media query support required?
 $media-queries-supported : true;
+
+// Opacity support in IE required via the proprietry ActiveX?
+$ie8-opacity-supported 	 : false;
 
 // Import all SASS imports
 @import 'imports';

@@ -169,7 +169,11 @@ box-shadow : $x-axis $y-axis $blur rgba(0, 0, 0, $alpha); }
 @mixin opacity($opacity : .5) {
 -webkit-opacity : $opacity;
 -moz-opacity : $opacity;
-opacity : $opacity; }
+opacity : $opacity;
+@if ($ie8-opacity-supported == true) {
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+}
+}
 
 // .rotate(VALUEdeg);
 
