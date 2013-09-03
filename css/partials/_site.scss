@@ -15,6 +15,9 @@ width : device-width; }
 @-o-viewport { 
 width : device-width; }
 
+// This can cause issues with Chrome Dev Tools on both stable and Canary (tested on v29 and v31).
+// For more, see https://code.google.com/p/chromium/issues/detail?id=232102
+// Therefore, you may wish to comment out this declaration for now.
 @viewport { 
 width : device-width; }
 

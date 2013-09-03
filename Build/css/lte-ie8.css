@@ -2209,7 +2209,7 @@ input.search-query {
 .rwd-table .essential {
   display: table-cell; }
 
-/* responsive-nav.js v1.0.14 by @viljamis */
+/*! responsive-nav.js v1.0.14 by @viljamis */
 .js nav[role=navigation] {
   clip: rect(0 0 0 0);
   max-height: 0;
