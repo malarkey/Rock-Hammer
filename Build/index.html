@@ -1931,6 +1931,7 @@ as before.</p>
 <div class="l-wrap">
 <div class="l-summary">
 <h3>Accordion</h3>
+<p>Accordion's require bootstrap-collapse.js to be included in your project. Add the attribute <code>data-toggle=&quot;collapse&quot;</code> to an anchor tag you wish to use as an accordion header item, with the child item (the thing that is shown/hidden, denoted by the <code>href</code> value of the anchor) having a <code>collapse</code> class applied. An optional <code>in</code> class can be added for an item that should be expanded by default.</p>
 </div><!-- l-summary -->
 
 <div class="l-content">
@@ -1993,6 +1994,7 @@ Rock Hammer
 <div class="l-wrap">
 <div class="l-summary">
 <h2>Carousel</h2>
+<p>Carousel's require bootstrap-carousel.js to be included in your project. Add a <code>carousel</code> class to the containing element for your carousel.</p>
 </div><!-- l-summary -->
 
 <div class="l-content">
@@ -2034,6 +2036,7 @@ Rock Hammer
 <div class="l-wrap">
 <div class="l-summary">
 <h2>Modal</h2>
+<p>Modals require bootstrap-modal.js to be included in your project. Ensure that the <code>href</code> attribute of any trigger links refernce the element denoted to be the modal and its contents. These trigger links also need <code>data-toggle=&quot;modal&quot;</code> adding as an attribute. Modal containers need <code>class=&quot;modal hide fade&quot;</code>. See the code driving the links opposite for more information and a working example.</p>
 </div><!-- l-summary -->
 
 <div class="l-content">
@@ -2183,7 +2186,7 @@ Rock Hammer
 <div class="l-wrap">
 <div class="l-summary">
 <h2>Tooltips</h2>
-<p>Tooltips need to activated in JavaScript in order to work. See main.js for an example.</p>
+<p>Tooltip's require bootstrap-tooltip.js to be included in your project. Add <code>data-toggle=&quot;tooltip&quot;</code> and <code>data-placement=&quot;top&quot;</code> attributes to an item you'd like to be a tooltip. &quot;<code>top</code>&quot; can be one of top, left, bottom, or right, do denote which position the tooltip should appear.</p>
 </div><!-- l-summary -->
 
 <div class="l-content">
@@ -2204,7 +2207,7 @@ Rock Hammer
 <div class="l-wrap">
 <div class="l-summary">
 <h2>Popover</h2>
-<p>Popovers need to activated in JavaScript in order to work. See main.js for an example. Popovers also require bootstrap-tooltip.js to be imported.</p>
+<p>Popovers's require bootstrap-tooltip.js and bootstrap-popover.js to be included in your project. Add <code>data-toggle=&quot;popover&quot;</code> and <code>data-placement=&quot;top&quot;</code> attributes to an item you'd like to be a popover. &quot;<code>top</code>&quot; can be one of top, left, bottom, or right, do denote which position the popover should appear.</p>
 </div><!-- l-summary -->
 
 <div class="l-content">
@@ -2267,14 +2270,14 @@ head.js(
 // Responsive data tables
 "js/rwd-table.js",
 
-// Functionality only used by Rock Hammer
-"js/navigation-manager.js",
-
 // Remove any navigation patterns below that arent used
 // "js/nav-patterns/nav-toggle.js",
 "js/nav-patterns/left-nav-flyout.js",
 "js/nav-patterns/responsive-nav.min.js",
-"js/nav-patterns/responsive-breadcrumb.js"
+"js/nav-patterns/responsive-breadcrumb.js",
+
+// Functionality only used by Rock Hammer - this should be removed in production projects!
+"js/navigation-manager.js"
 );
 
 // Google Analytics code
