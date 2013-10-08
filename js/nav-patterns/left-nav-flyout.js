@@ -2,22 +2,7 @@
 // http://codepen.io/bradfrost/pen/IEBrz
 // No need to thouch this block of code, only the initialisation line below
 var LeftNavFlyout = {
-	init: function(menu, menuLink, wrap, toggleClass) {
-		var $menu = document.querySelector(menu);
-		var $menulink = document.querySelector(menuLink),
-		var $wrap = document.querySelector(wrap);
-
-		this.addClass(document.querySelector("body"), "js");
-
-		this.addEventListener($menuLink, "click", function() {
-			LeftNavFlyout.toggleClass($menulink, toggleClass);
-			LeftNavFlyout.toggleClass($wrap, toggleClass);
-
-			return false;
-		});
-	},
-
-	addEventListener: function(element, eventName, handler) {
+	addListener: function(element, eventName, handler) {
 		if (element.addEventListener) {
 			element.addEventListener(eventName, handler, false);
 		}
@@ -34,7 +19,7 @@ var LeftNavFlyout = {
     },
 
     addClass: function(elem, className) {
-	    if (!hasClass(elem, className)) {
+	    if (!this.hasClass(elem, className)) {
 	        elem.className += ' ' + className;
 	    }
 	},
@@ -52,6 +37,21 @@ var LeftNavFlyout = {
 	    else {
 	        elem.className += ' ' + className;
 	    }
+	},
+
+	init: function(menu, menuLink, wrap, toggleClass) {
+		var $menu = document.querySelector(menu);
+		var $menulink = document.querySelector(menuLink);
+		var $wrap = document.querySelector(wrap);
+
+		this.addClass(document.querySelector("body"), "js");
+
+		this.addListener($menulink, "click", function() {
+			LeftNavFlyout.toggleClass($menulink, toggleClass);
+			LeftNavFlyout.toggleClass($wrap, toggleClass);
+
+			return false;
+		});
 	}
 };
 

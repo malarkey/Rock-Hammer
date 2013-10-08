@@ -2,21 +2,7 @@
 // http://codepen.io/bradfrost/pen/sHvaz
 // No need to thouch this block of code, only the initialisation line below
 var NavigationToggle = {
-	init: function(menu, menuLink, toggleClass) {
-		this.addClass(document.querySelector("body"), "js");
-		
-		var $menu = document.querySelector(menu);
-		var $menulink = document.querySelector(menuLink);
-
-		this.addEventListener($menuLink, "click", function() {
-			NavigationToggle.toggleClass($menulink, toggleClass);
-			NavigationToggle.toggleClass($menu, toggleClass);
-
-			return false;
-		});
-	},
-
-	addEventListener: function(element, eventName, handler) {
+	addListener: function(element, eventName, handler) {
 		if (element.addEventListener) {
 			element.addEventListener(eventName, handler, false);
 		}
@@ -51,6 +37,20 @@ var NavigationToggle = {
 	    else {
 	        elem.className += ' ' + className;
 	    }
+	},
+
+	init: function(menu, menuLink, toggleClass) {
+		this.addClass(document.querySelector("body"), "js");
+		
+		var $menu = document.querySelector(menu);
+		var $menulink = document.querySelector(menuLink);
+
+		this.addListener($menuLink, "click", function() {
+			NavigationToggle.toggleClass($menulink, toggleClass);
+			NavigationToggle.toggleClass($menu, toggleClass);
+
+			return false;
+		});
 	}
 };
 
