@@ -19,7 +19,7 @@ var NavigationToggle = {
     },
 
     addClass: function(elem, className) {
-	    if (!hasClass(elem, className)) {
+	    if (!this.hasClass(elem, className)) {
 	        elem.className += ' ' + className;
 	    }
 	},
@@ -27,7 +27,7 @@ var NavigationToggle = {
     toggleClass: function(elem, className) {
 	    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
 
-	    if (hasClass(elem, className)) {
+	    if (this.hasClass(elem, className)) {
 	        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
 	            newClass = newClass.replace( ' ' + className + ' ' , ' ' );
 	        }
@@ -45,7 +45,7 @@ var NavigationToggle = {
 		var $menu = document.querySelector(menu);
 		var $menulink = document.querySelector(menuLink);
 
-		this.addListener($menuLink, "click", function() {
+		this.addListener($menulink, "click", function() {
 			NavigationToggle.toggleClass($menulink, toggleClass);
 			NavigationToggle.toggleClass($menu, toggleClass);
 
