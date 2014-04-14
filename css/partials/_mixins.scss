@@ -5,7 +5,7 @@
 
 // Typography =============================================
 
-@mixin font-size($font-size: 16){
+@mixin font-size($font-size: $basefontsize){
 font-size : #{$font-size}px;
 font-size : #{$font-size / 10}rem; }
 
@@ -274,8 +274,19 @@ margin : 0;
 padding : 0; }
 
 // @include media-query-bp(UNIT, QUERY PART LEFT, QUERY PART RIGHT, TARGET)
-// NOTE: This MUST be used from within a selectore for the parent reference to work
+// NOTE: This MUST be used from within a selector for the parent reference to work
 // Otherwise, an error will be thrown on SASS compile. Love, Aaron.
+//
+// Example SASS:
+// body {
+// @include media-query-bp($bp2) {
+// background-color: red;
+// }
+//
+// Example output:
+// .lt-ie9 body {
+// background-color: red;	
+// }
 
 @mixin media-query-bp($unit, $query1: min, $query2: width, $target: "") {
 	$mqtarget: "";
@@ -296,5 +307,97 @@ padding : 0; }
 		#{$no-mq-classname} & {
 			@content;
 		}
+	}
+}
+
+//
+// Below taken from https://gist.github.com/stowball/7229746
+//
+ 
+// Variables for media query operators. Saves typing
+$min: unquote('min-width:');
+$max: unquote('max-width:');
+$min-h: unquote('min-height:');
+$max-h: unquote('max-height:');
+ 
+// --------------------------------------------
+//	Helper Functions
+// --------------------------------------------
+ 
+// Strips the units from the $number passed in
+@function strip-units($number) {
+	@return $number / ($number * 0 + 1);
+}
+ 
+// Converts pixels to em, based off 16px default. Can also be unitless for use in line-height
+@function em($pixels, $context: 16, $unitless: false) {
+	@if ($unitless == false) {
+		@return #{strip-units($pixels) / strip-units($context)}em;
+	}
+	@else {
+		@return #{strip-units($pixels) / strip-units($context)};
+	}
+}
+ 
+// --------------------------------------------
+//	Media Query Mixins
+// --------------------------------------------
+ 
+// Standard, one-condition media query
+// Defaults to min-width, outputs a non-mq fallback (if the value is appropriate) and converts px to ems
+// Simple usage: @include media-query(xxx)
+@mixin media-query($value, $operator: $min, $px: false) {	
+	@if ($px == false) {
+		@media (#{$operator} #{em($value)}) {
+			@content;
+		}
+	}
+	@else {
+		@media (#{$operator} #{strip-units($value)}px) {
+			@content;
+		}
+	}
+	
+	@if ($media-queries-supported == false) {
+		@if ($operator == $max and $value < $site-width) {
+			// Using max-width media query that's smaller than $site-width: do nothing
+		}
+		@else if ($operator == $min and $value > $site-width) {
+			// Using min-width media query that's larger than $site-width: do nothing
+		}
+		@else {
+			#{$no-mq-classname} & {
+				@content;
+			}
+		}
+	}
+}
+ 
+// Two-condition media query
+// Defaults to min-width and max-width, outputs a non-mq fallback (if the value is appropriate) and converts px to ems
+// Simple usage: @include media-query-and(xxx, yyy)
+@mixin media-query-and($first-value, $second-value, $first-operator: $min, $second-operator: $max, $px: false) {	
+	@if ($px == false) {
+		@media (#{$first-operator} #{em($first-value)}) and (#{$second-operator} #{em($second-value)}) {
+			@content;
+		}
+	}
+	@else {
+		@media (#{$first-operator} #{strip-units($first-value)}px) and (#{$second-operator} #{strip-units($second-value)}px) {
+			@content;
+		}
+	}
+	
+	@if ($media-queries-supported == false and $second-value >= $site-width and $first-operator == $min and $second-operator == $max) {
+		#{$no-mq-classname} & {
+			@content;
+		}
+	}
+}
+ 
+// Outputs a "retina" media query
+@mixin media-query-retina {
+	@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+		@content;
 	}
 }
