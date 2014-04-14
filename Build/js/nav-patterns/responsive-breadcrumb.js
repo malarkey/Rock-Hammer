@@ -15,28 +15,28 @@ var ResponsiveBreadcrumbs = {
 	},
 
 	hasClass: function (elem, className) {
-    	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-    },
-
-    addClass: function(elem, className) {
-	    if (!hasClass(elem, className)) {
-	        elem.className += ' ' + className;
-	    }
+		return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
 	},
 
-    toggleClass: function(elem, className) {
-	    var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+	addClass: function(elem, className) {
+		if (!ResponsiveBreadcrumbs.hasClass(elem, className)) {
+			elem.className += ' ' + className;
+		}
+	},
 
-	    if (hasClass(elem, className)) {
-	        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-	            newClass = newClass.replace( ' ' + className + ' ' , ' ' );
-	        }
+	toggleClass: function(elem, className) {
+		var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
 
-	        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-	    } 
-	    else {
-	        elem.className += ' ' + className;
-	    }
+		if (ResponsiveBreadcrumbs.hasClass(elem, className)) {
+			while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+				newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+			}
+
+			elem.className = newClass.replace(/^\s+|\s+$/g, '');
+		}
+		else {
+			elem.className += ' ' + className;
+		}
 	},
 
 	init: function(crumbsContainerSelector, activeClassName) {
@@ -45,6 +45,7 @@ var ResponsiveBreadcrumbs = {
 		var crumbsTrigger = document.createElement("a");
 		crumbsTrigger.setAttribute("id", "crumbs-trigger");
 		crumbsTrigger.setAttribute("href", "#");
+		crumbsTrigger.appendChild(document.createTextNode("+"));
 
 		breadCrumbsContainer.appendChild(crumbsTrigger);
 
@@ -54,14 +55,10 @@ var ResponsiveBreadcrumbs = {
 			ResponsiveBreadcrumbs.toggleClass(breadCrumbsContainer, activeClassName);
 
 			if (ResponsiveBreadcrumbs.hasClass(breadCrumbsContainer, activeClassName)) {
-				// $this.text('-');
-				var minusText = document.createTextNode("-");
-				this.replaceChild(minusText, this.childNodes[0]);
+				this.replaceChild(document.createTextNode("-"), this.childNodes[0]);
 			}
 			else {
-				// $this.text('+');
-				var plusText = document.createTextNode("+");
-				this.replaceChild(plusText, this.childNodes[0]);
+				this.replaceChild(document.createTextNode("+"), this.childNodes[0]);
 			}
 		});
 	}
@@ -69,12 +66,12 @@ var ResponsiveBreadcrumbs = {
 
 // START HERE!!
 window.onload = function() {
-	// Here is where you need to edit. Arguments are as follows:
-	// crumbsContainerSelector - The container item (if it is referenced by ID, prefix with "#". Classes require a ".")
-	// activeClassName - The class name to toggle on/off when the container is in small-screen mode
-	//
-	// Example:
-	// ResponsiveBreadcrumbs.init(crumbsContainerSelector, activeClassName);
+// Here is where you need to edit. Arguments are as follows:
+// crumbsContainerSelector - The container item (if it is referenced by ID, prefix with "#". Classes require a ".")
+// activeClassName - The class name to toggle on/off when the container is in small-screen mode
+//
+// Example:
+// ResponsiveBreadcrumbs.init(crumbsContainerSelector, activeClassName);
 
 	ResponsiveBreadcrumbs.init(".crumbs-container", "active");
 };

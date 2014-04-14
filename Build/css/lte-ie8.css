@@ -501,8 +501,6 @@ a {
   overflow: hidden;
   -webkit-transition: height 0.25s ease-in;
   -moz-transition: height 0.25s ease-in;
-  -ms-transition: height 0.25s ease-in;
-  -o-transition: height 0.25s ease-in;
   transition: height 0.25s ease-in;
   opacity: 0; }
 
@@ -511,8 +509,6 @@ a {
   opacity: 1;
   -webkit-transition: opacity 0.25s linear;
   -moz-transition: opacity 0.25s linear;
-  -ms-transition: opacity 0.25s linear;
-  -o-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear; }
 
 .alert {
@@ -602,8 +598,6 @@ a {
     position: relative;
     -webkit-transition: left 0.25s ease;
     -moz-transition: left 0.25s ease;
-    -ms-transition: left 0.25s ease;
-    -o-transition: left 0.25s ease;
     transition: left 0.25s ease; }
   .carousel-inner > .item > img {
     display: block;
@@ -646,8 +640,6 @@ a {
   border-radius: 23px;
   -webkit-transition: background-color 0.25s ease;
   -moz-transition: background-color 0.25s ease;
-  -ms-transition: background-color 0.25s ease;
-  -o-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease; }
   .carousel-control font {
     size: 60px;
@@ -1451,8 +1443,6 @@ table {
   .table tbody tr th {
     -webkit-transition: background-color 0.25s 0 ease;
     -moz-transition: background-color 0.25s 0 ease;
-    -ms-transition: background-color 0.25s 0 ease;
-    -o-transition: background-color 0.25s 0 ease;
     transition: background-color 0.25s 0 ease; }
   .table tbody tr:hover td,
   .table tbody tr:hover th {
@@ -1524,8 +1514,6 @@ table {
   opacity: 0;
   -webkit-transition: opacity 0.25s linear;
   -moz-transition: opacity 0.25s linear;
-  -ms-transition: opacity 0.25s linear;
-  -o-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear; }
 
 .fade.in {
@@ -2241,8 +2229,6 @@ nav[role=navigation] {
   background-color: #292f36;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
 
 nav[role=navigation].active {
@@ -2285,8 +2271,6 @@ nav[role=navigation].active {
   height: 3.2em;
   -webkit-transition: height 0.5s ease-out;
   -moz-transition: height 0.5s ease-out;
-  -ms-transition: height 0.5s ease-out;
-  -o-transition: height 0.5s ease-out;
   transition: height 0.5s ease-out; }
 
 .crumbs-container.active {
