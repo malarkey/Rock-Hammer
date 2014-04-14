@@ -1,0 +1,10 @@
+{
+  "name": "malarkey/Rock-Hammer",
+  "version": "0.2.0",
+  "main": "path/to/main.css",
+  "description": "A curated project library for Hammer For Mac. Rock Hammer contains baseline typography, plus styling for common HTML elements including images, forms and tables, as well as navigation, responsive modules and widgets",
+  "license": "Eclipse",
+  "dependencies": {
+    "bourbon": "~3.1.8"
+  }
+}
